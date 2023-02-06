@@ -51,7 +51,7 @@ namespace Model
             this.buttonPoint = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
             this.buttonPlus = new System.Windows.Forms.Button();
-            this.buttonMin = new System.Windows.Forms.Button();
+            this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonDivision = new System.Windows.Forms.Button();
             this.buttonMultipl = new System.Windows.Forms.Button();
             this.buttonSin = new System.Windows.Forms.Button();
@@ -74,7 +74,7 @@ namespace Model
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Location = new System.Drawing.Point(70, 264);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(56, 27);
             this.buttonClose.TabIndex = 0;
@@ -90,7 +90,7 @@ namespace Model
             this.buttonOk.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOk.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonOk.Location = new System.Drawing.Point(9, 264);
-            this.buttonOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonOk.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(56, 27);
             this.buttonOk.TabIndex = 1;
@@ -99,12 +99,12 @@ namespace Model
             // 
             // textBoxMasterF
             // 
-            this.textBoxMasterF.Location = new System.Drawing.Point(9, 10);
-            this.textBoxMasterF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBoxMasterF.Multiline = true;
+            this.textBoxMasterF.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMasterF.Location = new System.Drawing.Point(9, 4);
+            this.textBoxMasterF.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxMasterF.MaxLength = 80;
             this.textBoxMasterF.Name = "textBoxMasterF";
-            this.textBoxMasterF.ReadOnly = true;
-            this.textBoxMasterF.Size = new System.Drawing.Size(408, 24);
+            this.textBoxMasterF.Size = new System.Drawing.Size(408, 29);
             this.textBoxMasterF.TabIndex = 2;
             // 
             // button1
@@ -115,12 +115,13 @@ namespace Model
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(9, 88);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 38);
             this.button1.TabIndex = 3;
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -130,12 +131,13 @@ namespace Model
             this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(68, 88);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 38);
             this.button2.TabIndex = 4;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -145,12 +147,13 @@ namespace Model
             this.button3.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(126, 88);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 38);
             this.button3.TabIndex = 5;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -160,12 +163,13 @@ namespace Model
             this.button4.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button4.Location = new System.Drawing.Point(9, 128);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(56, 38);
             this.button4.TabIndex = 6;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -175,12 +179,13 @@ namespace Model
             this.button5.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button5.Location = new System.Drawing.Point(68, 128);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(56, 38);
             this.button5.TabIndex = 7;
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -190,12 +195,13 @@ namespace Model
             this.button6.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button6.Location = new System.Drawing.Point(126, 128);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(56, 38);
             this.button6.TabIndex = 8;
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -205,12 +211,13 @@ namespace Model
             this.button7.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button7.Location = new System.Drawing.Point(9, 169);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(56, 38);
             this.button7.TabIndex = 9;
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -220,12 +227,13 @@ namespace Model
             this.button8.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button8.Location = new System.Drawing.Point(68, 169);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(56, 38);
             this.button8.TabIndex = 10;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -235,12 +243,13 @@ namespace Model
             this.button9.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button9.Location = new System.Drawing.Point(126, 169);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(56, 38);
             this.button9.TabIndex = 11;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // buttonPoint
             // 
@@ -250,12 +259,13 @@ namespace Model
             this.buttonPoint.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonPoint.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonPoint.Location = new System.Drawing.Point(9, 210);
-            this.buttonPoint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPoint.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPoint.Name = "buttonPoint";
             this.buttonPoint.Size = new System.Drawing.Size(56, 38);
             this.buttonPoint.TabIndex = 12;
             this.buttonPoint.Text = ".";
             this.buttonPoint.UseVisualStyleBackColor = false;
+            this.buttonPoint.Click += new System.EventHandler(this.buttonPoint_Click);
             // 
             // button0
             // 
@@ -265,12 +275,13 @@ namespace Model
             this.button0.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button0.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button0.Location = new System.Drawing.Point(68, 210);
-            this.button0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button0.Margin = new System.Windows.Forms.Padding(2);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(56, 38);
             this.button0.TabIndex = 13;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = false;
+            this.button0.Click += new System.EventHandler(this.button0_Click);
             // 
             // buttonPlus
             // 
@@ -280,27 +291,29 @@ namespace Model
             this.buttonPlus.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonPlus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonPlus.Location = new System.Drawing.Point(243, 88);
-            this.buttonPlus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPlus.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(56, 38);
             this.buttonPlus.TabIndex = 14;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = false;
+            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
             // 
-            // buttonMin
+            // buttonMinus
             // 
-            this.buttonMin.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonMin.FlatAppearance.BorderSize = 0;
-            this.buttonMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMin.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
-            this.buttonMin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonMin.Location = new System.Drawing.Point(243, 128);
-            this.buttonMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonMin.Name = "buttonMin";
-            this.buttonMin.Size = new System.Drawing.Size(56, 38);
-            this.buttonMin.TabIndex = 15;
-            this.buttonMin.Text = "-";
-            this.buttonMin.UseVisualStyleBackColor = false;
+            this.buttonMinus.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonMinus.FlatAppearance.BorderSize = 0;
+            this.buttonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinus.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.buttonMinus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonMinus.Location = new System.Drawing.Point(243, 128);
+            this.buttonMinus.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMinus.Name = "buttonMinus";
+            this.buttonMinus.Size = new System.Drawing.Size(56, 38);
+            this.buttonMinus.TabIndex = 15;
+            this.buttonMinus.Text = "-";
+            this.buttonMinus.UseVisualStyleBackColor = false;
+            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
             // 
             // buttonDivision
             // 
@@ -310,12 +323,13 @@ namespace Model
             this.buttonDivision.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonDivision.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonDivision.Location = new System.Drawing.Point(243, 169);
-            this.buttonDivision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDivision.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDivision.Name = "buttonDivision";
             this.buttonDivision.Size = new System.Drawing.Size(56, 38);
             this.buttonDivision.TabIndex = 16;
             this.buttonDivision.Text = "/";
             this.buttonDivision.UseVisualStyleBackColor = false;
+            this.buttonDivision.Click += new System.EventHandler(this.buttonDivision_Click);
             // 
             // buttonMultipl
             // 
@@ -325,12 +339,13 @@ namespace Model
             this.buttonMultipl.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonMultipl.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonMultipl.Location = new System.Drawing.Point(243, 210);
-            this.buttonMultipl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMultipl.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMultipl.Name = "buttonMultipl";
             this.buttonMultipl.Size = new System.Drawing.Size(56, 38);
             this.buttonMultipl.TabIndex = 17;
             this.buttonMultipl.Text = "*";
             this.buttonMultipl.UseVisualStyleBackColor = false;
+            this.buttonMultipl.Click += new System.EventHandler(this.buttonMultipl_Click);
             // 
             // buttonSin
             // 
@@ -340,7 +355,7 @@ namespace Model
             this.buttonSin.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonSin.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonSin.Location = new System.Drawing.Point(302, 88);
-            this.buttonSin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSin.Name = "buttonSin";
             this.buttonSin.Size = new System.Drawing.Size(56, 38);
             this.buttonSin.TabIndex = 18;
@@ -355,7 +370,7 @@ namespace Model
             this.buttonCos.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonCos.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonCos.Location = new System.Drawing.Point(302, 128);
-            this.buttonCos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCos.Name = "buttonCos";
             this.buttonCos.Size = new System.Drawing.Size(56, 38);
             this.buttonCos.TabIndex = 19;
@@ -370,7 +385,7 @@ namespace Model
             this.buttonExp.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonExp.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonExp.Location = new System.Drawing.Point(302, 169);
-            this.buttonExp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonExp.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExp.Name = "buttonExp";
             this.buttonExp.Size = new System.Drawing.Size(56, 38);
             this.buttonExp.TabIndex = 20;
@@ -385,7 +400,7 @@ namespace Model
             this.buttonLn.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonLn.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonLn.Location = new System.Drawing.Point(302, 210);
-            this.buttonLn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLn.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLn.Name = "buttonLn";
             this.buttonLn.Size = new System.Drawing.Size(56, 38);
             this.buttonLn.TabIndex = 21;
@@ -400,7 +415,7 @@ namespace Model
             this.buttonStepen.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonStepen.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonStepen.Location = new System.Drawing.Point(360, 88);
-            this.buttonStepen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonStepen.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStepen.Name = "buttonStepen";
             this.buttonStepen.Size = new System.Drawing.Size(56, 38);
             this.buttonStepen.TabIndex = 22;
@@ -415,12 +430,13 @@ namespace Model
             this.buttonPi.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonPi.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonPi.Location = new System.Drawing.Point(126, 210);
-            this.buttonPi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPi.Name = "buttonPi";
             this.buttonPi.Size = new System.Drawing.Size(56, 38);
             this.buttonPi.TabIndex = 23;
             this.buttonPi.Text = "Pi";
             this.buttonPi.UseVisualStyleBackColor = false;
+            this.buttonPi.Click += new System.EventHandler(this.buttonPi_Click);
             // 
             // button10
             // 
@@ -430,7 +446,7 @@ namespace Model
             this.button10.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button10.Location = new System.Drawing.Point(68, 37);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(56, 38);
             this.button10.TabIndex = 24;
@@ -445,7 +461,7 @@ namespace Model
             this.button11.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button11.Location = new System.Drawing.Point(126, 37);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(56, 38);
             this.button11.TabIndex = 25;
@@ -460,7 +476,7 @@ namespace Model
             this.button12.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button12.Location = new System.Drawing.Point(9, 37);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(56, 38);
             this.button12.TabIndex = 26;
@@ -475,7 +491,7 @@ namespace Model
             this.button13.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button13.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button13.Location = new System.Drawing.Point(184, 37);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(56, 38);
             this.button13.TabIndex = 27;
@@ -490,7 +506,7 @@ namespace Model
             this.button14.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button14.Location = new System.Drawing.Point(243, 37);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(86, 38);
             this.button14.TabIndex = 28;
@@ -506,13 +522,14 @@ namespace Model
             this.button15.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.button15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button15.Location = new System.Drawing.Point(331, 37);
-            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(86, 38);
             this.button15.TabIndex = 29;
             this.button15.Text = "Очистить";
             this.button15.UseMnemonic = false;
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Master
             // 
@@ -534,7 +551,7 @@ namespace Model
             this.Controls.Add(this.buttonSin);
             this.Controls.Add(this.buttonMultipl);
             this.Controls.Add(this.buttonDivision);
-            this.Controls.Add(this.buttonMin);
+            this.Controls.Add(this.buttonMinus);
             this.Controls.Add(this.buttonPlus);
             this.Controls.Add(this.button0);
             this.Controls.Add(this.buttonPoint);
@@ -551,7 +568,7 @@ namespace Model
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.buttonClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Master";
             this.Text = "Master";
             this.ResumeLayout(false);
@@ -572,7 +589,7 @@ namespace Model
 		private System.Windows.Forms.Button buttonSin;
 		private System.Windows.Forms.Button buttonMultipl;
 		private System.Windows.Forms.Button buttonDivision;
-		private System.Windows.Forms.Button buttonMin;
+		private System.Windows.Forms.Button buttonMinus;
 		private System.Windows.Forms.Button buttonPlus;
 		private System.Windows.Forms.Button button0;
 		private System.Windows.Forms.Button buttonPoint;
