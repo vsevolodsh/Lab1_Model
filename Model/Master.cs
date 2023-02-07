@@ -135,7 +135,7 @@ namespace Model
                 {
                     finish = temp.Substring(index, textBoxMasterF.Text.Length - index);
                 }
-                if (temp.Length > 2 && (temp.Substring(index - 3, 3).Equals("sin") || temp.Substring(index - 3, 3).Equals("cos")))
+                if (index > 2 && (temp.Substring(index - 3, 3).Equals("sin") || temp.Substring(index - 3, 3).Equals("cos")))
                 {
                     start = temp.Substring(0, index - 3);
                     index -= 2;
@@ -231,7 +231,7 @@ namespace Model
             if (index > 0)
             {
                 string temp = textBoxMasterF.Text;
-                if (temp.Length > 2 && (temp.Substring(index - 3, 3).Equals("sin") || temp.Substring(index - 3, 3).Equals("cos")))
+                if (index > 2 && (temp.Substring(index-3, 3).Equals("sin") || temp.Substring(index-3, 3).Equals("cos")))
                 {
                     index -= 3;
                     textBoxMasterF.SelectionStart = index;
@@ -256,7 +256,7 @@ namespace Model
             if (index < textBoxMasterF.Text.Length)
             {
                 string temp = textBoxMasterF.Text;
-                if (temp.Length > 2 && (temp.Substring(index - 3, 3).Equals("sin") || temp.Substring(index - 3, 3).Equals("cos")))
+                if (index < textBoxMasterF.Text.Length - 2 && (temp.Substring(index, 3).Equals("sin") || temp.Substring(index, 3).Equals("cos")))
                 {
                     index += 3;
                     textBoxMasterF.SelectionStart = index;
