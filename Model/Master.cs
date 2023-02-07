@@ -15,8 +15,20 @@ namespace Model
         }
 
         List<string> stringList = new List<string>(80);
-        List<int> intList = new List<int>();
+        List<string> stringListBuff = new List<string>();
         int index = 0;
+        bool checkPoint = false;
+        Dictionary<int, string> operatorDictionary = new Dictionary<int, string>()
+        {
+            {0, "+"}, {1, "-"}, {2, "*"},
+            {3, "/"}, {4, "^"}, {5, "("},
+            {6, ")"}
+        };
+        Dictionary<int, string> funcDictionary = new Dictionary<int, string>()
+        {
+            {0, "sin"}, {1, "cos"}, {2, "ln"},
+        };
+
 
         #region Обработчики событий для кнопок
 
@@ -24,11 +36,12 @@ namespace Model
         {
             Close();
         }
-        private void button15_Click(object sender, EventArgs e)
+        private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxMasterF.Clear();
             stringList.Clear();
             index = 0;
+            labelError.Text = "";
         }
         private void button0_Click(object sender, EventArgs e)
         {
@@ -108,7 +121,7 @@ namespace Model
 
         private void buttonMultipl_Click(object sender, EventArgs e)
         {
-
+            printNewElement('*');
         }
 
         private void buttonSin_Click(object sender, EventArgs e)
@@ -180,26 +193,42 @@ namespace Model
 
         private bool isNewElementCorrect<T>(T symbol)
         {
-            if (int.TryParse(symbol.ToString(), out var intVariable))
+            if (int.TryParse(symbol.ToString(), out int intVariable))
             {
                 //проверка будет здесь.
 
 
-                intList.Add(intVariable);
+                stringListBuff.Add(intVariable.ToString());
                 return true;
             }
             else if (symbol.Equals('.'))
             {
-                //
-                return true;
+                if (textBoxMasterF.Text.Length == 0 || !int.TryParse(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1), out intVariable))
+                {
+                    labelError.Text = "Перед точкой должна стоять цифра!";
+                }
+                else if (checkPoint)
+                {
+                    labelError.Text = "В одном числе не может быть несколько точек!";
+                }
+                else
+                {
+                    labelError.Text = "";
+                    checkPoint = true;
+                    stringListBuff.Add(symbol.ToString());
+                    return true;
+                }
+                //сообщение об ошибки
+                return false;
             }
             else
             {
                 if (true) //проверка для символов
                 {
 
-                    stringList.Add(intListToString());
+                    stringList.Add(stringListToString());
                     stringList.Add(symbol.ToString());
+                    checkPoint = false;
                 }
 
                 return true;
@@ -212,15 +241,15 @@ namespace Model
 
         //}
 
-        private string intListToString()
+        private string stringListToString()
         {
-            string intListString = "";
-            foreach (var item in intList)
+            string stringListString = "";
+            foreach (var item in stringListBuff)
             {
-                intListString += item.ToString();
+                stringListString += item;
             }
-            intList.Clear();
-            return intListString;
+            stringListBuff.Clear();
+            return stringListString;
         }
 
         #region Перенос курсора
@@ -231,7 +260,7 @@ namespace Model
             if (index > 0)
             {
                 string temp = textBoxMasterF.Text;
-                if (index > 2 && (temp.Substring(index-3, 3).Equals("sin") || temp.Substring(index-3, 3).Equals("cos")))
+                if (index > 2 && (temp.Substring(index - 3, 3).Equals("sin") || temp.Substring(index - 3, 3).Equals("cos")))
                 {
                     index -= 3;
                     textBoxMasterF.SelectionStart = index;
@@ -293,7 +322,7 @@ namespace Model
 
         #endregion
 
-        
+
     }
 }
 
