@@ -40,6 +40,8 @@ namespace Model
         {
             textBoxMasterF.Clear();
             stringList.Clear();
+            stringListBuff.Clear();
+            checkPoint = false;
             index = 0;
             labelError.Text = "";
         }
@@ -171,7 +173,7 @@ namespace Model
 
         private void printNewElement<T>(T symbol)
         {
-            if (stringList.Count < 80 && isNewElementCorrect(symbol))
+            if (stringList.Count < 80 && isElementCorrect(symbol, false))
             {
                 //textBoxMasterF.AppendText(symbol.ToString());
                 string temp = textBoxMasterF.Text;
@@ -191,43 +193,59 @@ namespace Model
             }
         }
 
-        private bool isNewElementCorrect<T>(T symbol)
+
+        private bool isElementCorrect<T>(T symbol, bool isFinalCheck)
         {
             if (int.TryParse(symbol.ToString(), out int intVariable))
             {
                 //проверка будет здесь.
+                if (stringListBuff.Count > 1 && stringListBuff[0].Equals("0") && !stringListBuff[1].Equals("."))
+                {
+                    labelError.Text = "Жопа!";
+                    return false;
+                }
+                else
+                {
+                    if (!isFinalCheck)
+                    {
+                        stringListBuff.Add(intVariable.ToString());
+                    }
+                    return true;
+                }
 
-
-                stringListBuff.Add(intVariable.ToString());
-                return true;
             }
             else if (symbol.Equals('.'))
             {
                 if (textBoxMasterF.Text.Length == 0 || !int.TryParse(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1), out intVariable))
                 {
                     labelError.Text = "Перед точкой должна стоять цифра!";
+                    return false;
                 }
                 else if (checkPoint)
                 {
                     labelError.Text = "В одном числе не может быть несколько точек!";
+                    return false;
                 }
                 else
                 {
                     labelError.Text = "";
                     checkPoint = true;
-                    stringListBuff.Add(symbol.ToString());
+                    if (!isFinalCheck)
+                    {
+                        stringListBuff.Add(symbol.ToString());
+                    }
                     return true;
                 }
-                //сообщение об ошибки
-                return false;
             }
             else
             {
                 if (true) //проверка для символов
                 {
-
-                    stringList.Add(stringListToString());
-                    stringList.Add(symbol.ToString());
+                    if (!isFinalCheck)
+                    {
+                        stringList.Add(stringListToString());
+                        stringList.Add(symbol.ToString());
+                    }
                     checkPoint = false;
                 }
 
@@ -235,11 +253,6 @@ namespace Model
             }
 
         }
-
-        //private void addNewElement<T>(T symbol)
-        //{
-
-        //}
 
         private string stringListToString()
         {
