@@ -20,9 +20,12 @@ namespace Model
         bool checkPoint = false;
         Dictionary<int, string> operatorDictionary = new Dictionary<int, string>()
         {
+            //{0, '+'}, {1, '-'}, {2, '*'},
+            //{3, '/'}, {4, '^'}, {5, '('},
+            //{6, ')'}
+
             {0, "+"}, {1, "-"}, {2, "*"},
-            {3, "/"}, {4, "^"}, {5, "("},
-            {6, ")"}
+            {3, "/"}, {4, "^"}, {7, "."}
         };
         Dictionary<int, string> funcDictionary = new Dictionary<int, string>()
         {
@@ -40,14 +43,16 @@ namespace Model
         {
             textBoxMasterF.Clear();
             stringList.Clear();
-            stringListBuff.Clear();
-            checkPoint = false;
             index = 0;
             labelError.Text = "";
         }
         private void button0_Click(object sender, EventArgs e)
         {
             printNewElement(0);
+            if (stringListBuff.Count == 1)
+            {
+                printNewElement('.');
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,7 +105,15 @@ namespace Model
         {
             printNewElement(3.14);
         }
+        private void buttonParenthesesOpened_Click(object sender, EventArgs e)
+        {
+            printNewElement('(');
+        }
 
+        private void buttonParenthesesClosed_Click(object sender, EventArgs e)
+        {
+            printNewElement(')');
+        }
         private void buttonPoint_Click(object sender, EventArgs e)
         {
             printNewElement('.');
@@ -173,7 +186,7 @@ namespace Model
 
         private void printNewElement<T>(T symbol)
         {
-            if (stringList.Count < 80 && isElementCorrect(symbol, false))
+            if (stringList.Count < 80 && isNewElementCorrect(symbol))
             {
                 //textBoxMasterF.AppendText(symbol.ToString());
                 string temp = textBoxMasterF.Text;
@@ -193,66 +206,64 @@ namespace Model
             }
         }
 
-
-        private bool isElementCorrect<T>(T symbol, bool isFinalCheck)
+        private bool isNewElementCorrect<T>(T symbol)
         {
             if (int.TryParse(symbol.ToString(), out int intVariable))
             {
-                //проверка будет здесь.
-                if (stringListBuff.Count > 1 && stringListBuff[0].Equals("0") && !stringListBuff[1].Equals("."))
-                {
-                    labelError.Text = "Жопа!";
-                    return false;
-                }
-                else
-                {
-                    if (!isFinalCheck)
-                    {
-                        stringListBuff.Add(intVariable.ToString());
-                    }
-                    return true;
-                }
-
+                stringListBuff.Add(intVariable.ToString());
+                labelError.Text = "";
+                return true;
             }
+
+
             else if (symbol.Equals('.'))
             {
                 if (textBoxMasterF.Text.Length == 0 || !int.TryParse(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1), out intVariable))
                 {
                     labelError.Text = "Перед точкой должна стоять цифра!";
-                    return false;
                 }
                 else if (checkPoint)
                 {
                     labelError.Text = "В одном числе не может быть несколько точек!";
-                    return false;
                 }
                 else
                 {
                     labelError.Text = "";
                     checkPoint = true;
-                    if (!isFinalCheck)
-                    {
-                        stringListBuff.Add(symbol.ToString());
-                    }
+                    stringListBuff.Add(symbol.ToString());
                     return true;
                 }
+                return false;
             }
-            else
+
+
+            else if (operatorDictionary.ContainsValue(symbol.ToString())) //проверка для символов
             {
-                if (true) //проверка для символов
+                if (stringListBuff.Count == 0 || operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1)))
                 {
-                    if (!isFinalCheck)
-                    {
-                        stringList.Add(stringListToString());
-                        stringList.Add(symbol.ToString());
-                    }
+                    labelError.Text = "Напишите число!";
+                    return false;
+                } 
+                else if (false)
+                {
+                    return false; 
+                }
+                else
+                {
+                    stringList.Add(stringListToString());
+                    stringList.Add(symbol.ToString());
                     checkPoint = false;
+                    return true;
                 }
 
-                return true;
             }
-
+            return false;
         }
+
+        //private void addNewElement<T>(T symbol)
+        //{
+
+        //}
 
         private string stringListToString()
         {
@@ -333,9 +344,9 @@ namespace Model
             textBoxMasterF.Focus();
         }
 
+
         #endregion
 
-
+      
     }
 }
-

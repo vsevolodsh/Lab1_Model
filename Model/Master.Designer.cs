@@ -67,6 +67,8 @@ namespace Model
             this.buttonBackSp = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
+            this.buttonParenthesesClosed = new System.Windows.Forms.Button();
+            this.buttonParenthesesOpened = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -355,7 +357,7 @@ namespace Model
             this.buttonSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSin.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonSin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonSin.Location = new System.Drawing.Point(321, 88);
+            this.buttonSin.Location = new System.Drawing.Point(382, 88);
             this.buttonSin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSin.Name = "buttonSin";
             this.buttonSin.Size = new System.Drawing.Size(56, 38);
@@ -371,7 +373,7 @@ namespace Model
             this.buttonCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCos.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonCos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonCos.Location = new System.Drawing.Point(321, 128);
+            this.buttonCos.Location = new System.Drawing.Point(382, 128);
             this.buttonCos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCos.Name = "buttonCos";
             this.buttonCos.Size = new System.Drawing.Size(56, 38);
@@ -387,7 +389,7 @@ namespace Model
             this.buttonExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExp.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonExp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExp.Location = new System.Drawing.Point(321, 169);
+            this.buttonExp.Location = new System.Drawing.Point(322, 210);
             this.buttonExp.Margin = new System.Windows.Forms.Padding(2);
             this.buttonExp.Name = "buttonExp";
             this.buttonExp.Size = new System.Drawing.Size(56, 38);
@@ -402,7 +404,7 @@ namespace Model
             this.buttonLn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLn.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonLn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonLn.Location = new System.Drawing.Point(321, 210);
+            this.buttonLn.Location = new System.Drawing.Point(382, 169);
             this.buttonLn.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLn.Name = "buttonLn";
             this.buttonLn.Size = new System.Drawing.Size(56, 38);
@@ -417,7 +419,7 @@ namespace Model
             this.buttonStepen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStepen.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
             this.buttonStepen.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonStepen.Location = new System.Drawing.Point(379, 88);
+            this.buttonStepen.Location = new System.Drawing.Point(322, 170);
             this.buttonStepen.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStepen.Name = "buttonStepen";
             this.buttonStepen.Size = new System.Drawing.Size(56, 38);
@@ -549,12 +551,46 @@ namespace Model
             this.labelError.Size = new System.Drawing.Size(0, 16);
             this.labelError.TabIndex = 30;
             // 
+            // buttonParenthesesClosed
+            // 
+            this.buttonParenthesesClosed.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonParenthesesClosed.FlatAppearance.BorderSize = 0;
+            this.buttonParenthesesClosed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonParenthesesClosed.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.buttonParenthesesClosed.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonParenthesesClosed.Location = new System.Drawing.Point(322, 128);
+            this.buttonParenthesesClosed.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonParenthesesClosed.Name = "buttonParenthesesClosed";
+            this.buttonParenthesesClosed.Size = new System.Drawing.Size(56, 38);
+            this.buttonParenthesesClosed.TabIndex = 32;
+            this.buttonParenthesesClosed.Text = ")";
+            this.buttonParenthesesClosed.UseVisualStyleBackColor = false;
+            this.buttonParenthesesClosed.Click += new System.EventHandler(this.buttonParenthesesClosed_Click);
+            // 
+            // buttonParenthesesOpened
+            // 
+            this.buttonParenthesesOpened.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonParenthesesOpened.FlatAppearance.BorderSize = 0;
+            this.buttonParenthesesOpened.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonParenthesesOpened.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.buttonParenthesesOpened.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonParenthesesOpened.Location = new System.Drawing.Point(322, 88);
+            this.buttonParenthesesOpened.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonParenthesesOpened.Name = "buttonParenthesesOpened";
+            this.buttonParenthesesOpened.Size = new System.Drawing.Size(56, 38);
+            this.buttonParenthesesOpened.TabIndex = 31;
+            this.buttonParenthesesOpened.Text = "(";
+            this.buttonParenthesesOpened.UseVisualStyleBackColor = false;
+            this.buttonParenthesesOpened.Click += new System.EventHandler(this.buttonParenthesesOpened_Click);
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(487, 301);
+            this.Controls.Add(this.buttonParenthesesClosed);
+            this.Controls.Add(this.buttonParenthesesOpened);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonBackSp);
@@ -625,5 +661,7 @@ namespace Model
 		private System.Windows.Forms.Button buttonOk;
 		private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Button buttonParenthesesClosed;
+        private System.Windows.Forms.Button buttonParenthesesOpened;
     }
 }
