@@ -58,10 +58,10 @@ namespace Model
             this.buttonCos = new System.Windows.Forms.Button();
             this.buttonLn = new System.Windows.Forms.Button();
             this.buttonStepen = new System.Windows.Forms.Button();
-            this.buttonLeft = new System.Windows.Forms.Button();
-            this.buttonRight = new System.Windows.Forms.Button();
-            this.buttonFullLeft = new System.Windows.Forms.Button();
-            this.buttonFullRight = new System.Windows.Forms.Button();
+       //     this.buttonLeft = new System.Windows.Forms.Button();
+       //     this.buttonRight = new System.Windows.Forms.Button();
+       //     this.buttonFullLeft = new System.Windows.Forms.Button();
+       //     this.buttonFullRight = new System.Windows.Forms.Button();
             this.buttonBackSp = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
@@ -412,69 +412,33 @@ namespace Model
             this.buttonStepen.UseVisualStyleBackColor = false;
             this.buttonStepen.Click += new System.EventHandler(this.buttonStepen_Click);
             // 
-            // buttonLeft
+            /*// buttonLeft
             // 
-            this.buttonLeft.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonLeft.FlatAppearance.BorderSize = 0;
-            this.buttonLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLeft.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
-            this.buttonLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonLeft.Location = new System.Drawing.Point(79, 37);
-            this.buttonLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLeft.Location = new System.Drawing.Point(0, 0);
             this.buttonLeft.Name = "buttonLeft";
-            this.buttonLeft.Size = new System.Drawing.Size(56, 38);
-            this.buttonLeft.TabIndex = 24;
-            this.buttonLeft.Text = "←";
-            this.buttonLeft.UseVisualStyleBackColor = false;
-            this.buttonLeft.Click += new System.EventHandler(this.buttonLeft_Click);
+            this.buttonLeft.Size = new System.Drawing.Size(75, 23);
+            this.buttonLeft.TabIndex = 36;
             // 
             // buttonRight
             // 
-            this.buttonRight.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonRight.FlatAppearance.BorderSize = 0;
-            this.buttonRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRight.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
-            this.buttonRight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonRight.Location = new System.Drawing.Point(139, 37);
-            this.buttonRight.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRight.Location = new System.Drawing.Point(0, 0);
             this.buttonRight.Name = "buttonRight";
-            this.buttonRight.Size = new System.Drawing.Size(56, 38);
-            this.buttonRight.TabIndex = 25;
-            this.buttonRight.Text = "→";
-            this.buttonRight.UseVisualStyleBackColor = false;
-            this.buttonRight.Click += new System.EventHandler(this.buttonRight_Click);
+            this.buttonRight.Size = new System.Drawing.Size(75, 23);
+            this.buttonRight.TabIndex = 35;
             // 
             // buttonFullLeft
             // 
-            this.buttonFullLeft.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonFullLeft.FlatAppearance.BorderSize = 0;
-            this.buttonFullLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFullLeft.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
-            this.buttonFullLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonFullLeft.Location = new System.Drawing.Point(19, 37);
-            this.buttonFullLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonFullLeft.Location = new System.Drawing.Point(0, 0);
             this.buttonFullLeft.Name = "buttonFullLeft";
-            this.buttonFullLeft.Size = new System.Drawing.Size(56, 38);
-            this.buttonFullLeft.TabIndex = 26;
-            this.buttonFullLeft.Text = "«";
-            this.buttonFullLeft.UseVisualStyleBackColor = false;
-            this.buttonFullLeft.Click += new System.EventHandler(this.buttonFullLeft_Click);
+            this.buttonFullLeft.Size = new System.Drawing.Size(75, 23);
+            this.buttonFullLeft.TabIndex = 34;
             // 
             // buttonFullRight
             // 
-            this.buttonFullRight.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonFullRight.FlatAppearance.BorderSize = 0;
-            this.buttonFullRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFullRight.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
-            this.buttonFullRight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonFullRight.Location = new System.Drawing.Point(199, 37);
-            this.buttonFullRight.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonFullRight.Location = new System.Drawing.Point(1, 0);
             this.buttonFullRight.Name = "buttonFullRight";
-            this.buttonFullRight.Size = new System.Drawing.Size(56, 38);
-            this.buttonFullRight.TabIndex = 27;
-            this.buttonFullRight.Text = "»";
-            this.buttonFullRight.UseVisualStyleBackColor = false;
-            this.buttonFullRight.Click += new System.EventHandler(this.buttonFullRight_Click);
+            this.buttonFullRight.Size = new System.Drawing.Size(75, 23);
+            this.buttonFullRight.TabIndex = 33;*/
             // 
             // buttonBackSp
             // 
@@ -563,10 +527,10 @@ namespace Model
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonBackSp);
-            this.Controls.Add(this.buttonFullRight);
-            this.Controls.Add(this.buttonFullLeft);
-            this.Controls.Add(this.buttonRight);
-            this.Controls.Add(this.buttonLeft);
+         //   this.Controls.Add(this.buttonFullRight);
+         //   this.Controls.Add(this.buttonFullLeft);
+         //   this.Controls.Add(this.buttonRight);
+         //   this.Controls.Add(this.buttonLeft);
             this.Controls.Add(this.buttonStepen);
             this.Controls.Add(this.buttonLn);
             this.Controls.Add(this.buttonCos);
@@ -599,10 +563,10 @@ namespace Model
 		}
 		private System.Windows.Forms.Button buttonClear;
 		private System.Windows.Forms.Button buttonBackSp;
-		private System.Windows.Forms.Button buttonFullRight;
-		private System.Windows.Forms.Button buttonFullLeft;
-		private System.Windows.Forms.Button buttonRight;
-		private System.Windows.Forms.Button buttonLeft;
+	//	private System.Windows.Forms.Button buttonFullRight;
+	//	private System.Windows.Forms.Button buttonFullLeft;
+	//	private System.Windows.Forms.Button buttonRight;
+	//	private System.Windows.Forms.Button buttonLeft;
 		private System.Windows.Forms.Button buttonStepen;
 		private System.Windows.Forms.Button buttonLn;
 		private System.Windows.Forms.Button buttonCos;

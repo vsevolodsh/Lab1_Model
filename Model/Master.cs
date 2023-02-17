@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -53,10 +54,11 @@ namespace Model
             {
                 labelError.Text = "asda";
             }
-            else if (int.TryParse(stringList[stringList.Count-1], out int Variable) || stringList[stringList.Count-1].Equals(")"))
+            else if (int.TryParse(stringList[stringList.Count - 1], out int Variable) || stringList[stringList.Count - 1].Equals(")"))
             {
-                Close();            }
-           
+                Close();
+            }
+
             else
             {
                 labelError.Text = "Выражение должно заканчиваться числом или закрывающей скобкой";
@@ -114,21 +116,62 @@ namespace Model
         private void buttonStepen_Click(object sender, EventArgs e) => printNewElement('^');
         private void buttonSin_Click(object sender, EventArgs e)
         {
-            printNewElement('s');
-            printNewElement('i');
-            printNewElement('n');
+            printNewElement("sin");
+            index += 2;
         }
 
         private void buttonCos_Click(object sender, EventArgs e)
         {
-            printNewElement('c');
-            printNewElement('o');
-            printNewElement('s');
+            printNewElement("cos");
+            index += 2;
         }
 
         private void buttonBackSp_Click(object sender, EventArgs e)
         {
-            if (index > 0)
+            string temp = textBoxMasterF.Text, str;
+            if (stringList.Count > 0 || stringListBuff.Count > 0)
+            {
+                if (stringListBuff.Count == 0)
+                {
+                    str = stringList[stringList.Count - 1];
+                    for (int i = 0; i < str.Length; i++)
+                    {
+                        stringListBuff.Add(str.Substring(i, 1));
+                    }
+                    //stringListBuff = stringList[stringList.Count - 1];
+                    if (str.Length == 1)
+                    {
+                        stringList.RemoveAt(stringList.Count - 1);
+                        stringListBuff.Clear();
+                    }
+                    else
+                    {
+                        str = stringListBuff[stringListBuff.Count - 1];
+                        if (str.Substring(str.Length - 1, 1).Equals(".")) checkPoint = false;
+
+                        stringList.RemoveAt(stringList.Count - 1);
+
+                        
+                        stringListBuff.RemoveAt(stringListBuff.Count - 1);
+
+                    }
+                }
+                else
+                {
+                    str = stringListBuff[stringListBuff.Count - 1];
+                    if (str.Substring(str.Length - 1, 1).Equals(".")) checkPoint = false;
+                    stringListBuff.RemoveAt(stringListBuff.Count - 1);
+
+                }
+                temp = temp.Substring(0, temp.Length - 1);
+                textBoxMasterF.Clear();
+                textBoxMasterF.AppendText(temp);
+                index--;
+                textBoxMasterF.Focus();
+            }
+
+
+            /*if (index > 0)
             {
                 string temp = textBoxMasterF.Text;
                 string start, finish = "";
@@ -152,7 +195,7 @@ namespace Model
                 index--;
             }
             textBoxMasterF.SelectionStart = index;
-            textBoxMasterF.Focus();
+            textBoxMasterF.Focus();*/
         }
 
         #endregion
@@ -161,8 +204,8 @@ namespace Model
         {
             if (stringList.Count < 80 && isNewElementCorrect(symbol))
             {
-                //textBoxMasterF.AppendText(symbol.ToString());
-                string temp = textBoxMasterF.Text;
+                textBoxMasterF.AppendText(symbol.ToString());
+               /* string temp = textBoxMasterF.Text;
                 string start = temp.Substring(0, index);
                 string finish = "";
                 if (index < temp.Length)
@@ -174,7 +217,7 @@ namespace Model
                 textBoxMasterF.AppendText(symbol.ToString());
                 textBoxMasterF.AppendText(finish);
                 index++;
-                textBoxMasterF.SelectionStart = index;
+                textBoxMasterF.SelectionStart = index;*/
                 textBoxMasterF.Focus();
             }
         }
@@ -269,7 +312,7 @@ namespace Model
             return stringListString;
         }
 
-        #region Перенос курсора
+        /*#region Перенос курсора
 
         // Перенос курсора на 1 символ влево
         private void buttonLeft_Click(object sender, EventArgs e)
@@ -340,7 +383,7 @@ namespace Model
 
 
 
-        #endregion
+        #endregion*/
 
 
     }
