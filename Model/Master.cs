@@ -13,8 +13,8 @@ namespace Model
         {
             InitializeComponent();
         }
-
-        List<string> stringList = new List<string>(80);
+        // public string dataBuffer = "";
+        public List<string> stringList = new List<string>(80);
         List<string> stringListBuff = new List<string>();
         int index = 0;
         bool checkPoint = false;
@@ -25,7 +25,7 @@ namespace Model
             //{6, ')'}
 
             {0, "+"}, {1, "-"}, {2, "*"},
-            {3, "/"}, {4, "^"}, {7, "."}
+            {3, "/"}, {4, "^"}, {5, "."}
         };
         Dictionary<int, string> funcDictionary = new Dictionary<int, string>()
         {
@@ -37,8 +37,32 @@ namespace Model
 
         void buttonCloseClick(object sender, EventArgs e)
         {
+            textBoxMasterF.Clear();
+            stringList.Clear();
+            index = 0;
             Close();
         }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            if (stringListBuff.Count != 0)
+            {
+                stringList.Add(stringListBuffToString());
+            }
+            if (stringList.Count <= 1)
+            {
+                labelError.Text = "asda";
+            }
+            else if (int.TryParse(stringList[stringList.Count-1], out int Variable) || stringList[stringList.Count-1].Equals(")"))
+            {
+                Close();            }
+           
+            else
+            {
+                labelError.Text = "Выражение должно заканчиваться числом или закрывающей скобкой";
+            }
+        }
+
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxMasterF.Clear();
@@ -55,90 +79,39 @@ namespace Model
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            printNewElement(1);
-        }
+        private void button1_Click(object sender, EventArgs e) => printNewElement(1);
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            printNewElement(2);
-        }
+        private void button2_Click(object sender, EventArgs e) => printNewElement(2);
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            printNewElement(3);
-        }
+        private void button3_Click(object sender, EventArgs e) => printNewElement(3);
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            printNewElement(4);
-        }
+        private void button4_Click(object sender, EventArgs e) => printNewElement(4);
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            printNewElement(5);
-        }
+        private void button5_Click(object sender, EventArgs e) => printNewElement(5);
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            printNewElement(6);
-        }
+        private void button6_Click(object sender, EventArgs e) => printNewElement(6);
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            printNewElement(7);
-        }
+        private void button7_Click(object sender, EventArgs e) => printNewElement(7);
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            printNewElement(8);
-        }
+        private void button8_Click(object sender, EventArgs e) => printNewElement(8);
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            printNewElement(9);
-        }
+        private void button9_Click(object sender, EventArgs e) => printNewElement(9);
 
+        private void buttonParenthesesOpened_Click(object sender, EventArgs e) => printNewElement('(');
 
-        private void buttonPi_Click(object sender, EventArgs e)
-        {
-            printNewElement(3.14);
-        }
-        private void buttonParenthesesOpened_Click(object sender, EventArgs e)
-        {
-            printNewElement('(');
-        }
+        private void buttonParenthesesClosed_Click(object sender, EventArgs e) => printNewElement(')');
 
-        private void buttonParenthesesClosed_Click(object sender, EventArgs e)
-        {
-            printNewElement(')');
-        }
-        private void buttonPoint_Click(object sender, EventArgs e)
-        {
-            printNewElement('.');
-        }
+        private void buttonPoint_Click(object sender, EventArgs e) => printNewElement('.');
 
-        private void buttonPlus_Click(object sender, EventArgs e)
-        {
-            printNewElement('+');
-        }
+        private void buttonPlus_Click(object sender, EventArgs e) => printNewElement('+');
 
-        private void buttonMinus_Click(object sender, EventArgs e)
-        {
-            printNewElement('-');
-        }
+        private void buttonMinus_Click(object sender, EventArgs e) => printNewElement('-');
 
-        private void buttonDivision_Click(object sender, EventArgs e)
-        {
-            printNewElement('/');
-        }
+        private void buttonDivision_Click(object sender, EventArgs e) => printNewElement('/');
 
-        private void buttonMultipl_Click(object sender, EventArgs e)
-        {
-            printNewElement('*');
-        }
+        private void buttonMultipl_Click(object sender, EventArgs e) => printNewElement('*');
 
+        private void buttonStepen_Click(object sender, EventArgs e) => printNewElement('^');
         private void buttonSin_Click(object sender, EventArgs e)
         {
             printNewElement('s');
@@ -236,21 +209,41 @@ namespace Model
                 return false;
             }
 
-
-            else if (operatorDictionary.ContainsValue(symbol.ToString())) //проверка для символов
+            else if (symbol.Equals('('))
             {
-                if (stringListBuff.Count == 0 || operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1)))
+                labelError.Text = "";
+                stringListBuff.Add(symbol.ToString());
+                return true;
+            }
+            else if (symbol.Equals(')'))
+            {
+                if (textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
                 {
-                    labelError.Text = "Напишите число!";
+                    labelError.Text = "Скобки не могут быть пустыми!";
                     return false;
-                } 
-                else if (false)
-                {
-                    return false; 
                 }
                 else
                 {
-                    stringList.Add(stringListToString());
+                    labelError.Text = "";
+                    stringListBuff.Add(symbol.ToString());
+                    return true;
+                }
+            }
+            else if (operatorDictionary.ContainsValue(symbol.ToString())) //проверка для символов
+            {
+                if (stringListBuff.Count == 0 || operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1))
+                    || textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
+                {
+                    labelError.Text = "Напишите число!";
+                    return false;
+                }
+                else if (false)
+                {
+                    return false;
+                }
+                else
+                {
+                    stringList.Add(stringListBuffToString());
                     stringList.Add(symbol.ToString());
                     checkPoint = false;
                     return true;
@@ -265,7 +258,7 @@ namespace Model
 
         //}
 
-        private string stringListToString()
+        private string stringListBuffToString()
         {
             string stringListString = "";
             foreach (var item in stringListBuff)
@@ -345,8 +338,10 @@ namespace Model
         }
 
 
+
+
         #endregion
 
-      
+
     }
 }

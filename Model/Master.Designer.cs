@@ -56,10 +56,8 @@ namespace Model
             this.buttonMultipl = new System.Windows.Forms.Button();
             this.buttonSin = new System.Windows.Forms.Button();
             this.buttonCos = new System.Windows.Forms.Button();
-            this.buttonExp = new System.Windows.Forms.Button();
             this.buttonLn = new System.Windows.Forms.Button();
             this.buttonStepen = new System.Windows.Forms.Button();
-            this.buttonPi = new System.Windows.Forms.Button();
             this.buttonLeft = new System.Windows.Forms.Button();
             this.buttonRight = new System.Windows.Forms.Button();
             this.buttonFullLeft = new System.Windows.Forms.Button();
@@ -99,6 +97,7 @@ namespace Model
             this.buttonOk.TabIndex = 1;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = false;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // textBoxMasterF
             // 
@@ -382,21 +381,6 @@ namespace Model
             this.buttonCos.UseVisualStyleBackColor = false;
             this.buttonCos.Click += new System.EventHandler(this.buttonCos_Click);
             // 
-            // buttonExp
-            // 
-            this.buttonExp.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonExp.FlatAppearance.BorderSize = 0;
-            this.buttonExp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExp.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
-            this.buttonExp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonExp.Location = new System.Drawing.Point(322, 210);
-            this.buttonExp.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonExp.Name = "buttonExp";
-            this.buttonExp.Size = new System.Drawing.Size(56, 38);
-            this.buttonExp.TabIndex = 20;
-            this.buttonExp.Text = "exp";
-            this.buttonExp.UseVisualStyleBackColor = false;
-            // 
             // buttonLn
             // 
             this.buttonLn.BackColor = System.Drawing.SystemColors.Control;
@@ -426,22 +410,7 @@ namespace Model
             this.buttonStepen.TabIndex = 22;
             this.buttonStepen.Text = "^";
             this.buttonStepen.UseVisualStyleBackColor = false;
-            // 
-            // buttonPi
-            // 
-            this.buttonPi.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonPi.FlatAppearance.BorderSize = 0;
-            this.buttonPi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPi.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
-            this.buttonPi.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonPi.Location = new System.Drawing.Point(137, 210);
-            this.buttonPi.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonPi.Name = "buttonPi";
-            this.buttonPi.Size = new System.Drawing.Size(56, 38);
-            this.buttonPi.TabIndex = 23;
-            this.buttonPi.Text = "Pi";
-            this.buttonPi.UseVisualStyleBackColor = false;
-            this.buttonPi.Click += new System.EventHandler(this.buttonPi_Click);
+            this.buttonStepen.Click += new System.EventHandler(this.buttonStepen_Click);
             // 
             // buttonLeft
             // 
@@ -598,10 +567,8 @@ namespace Model
             this.Controls.Add(this.buttonFullLeft);
             this.Controls.Add(this.buttonRight);
             this.Controls.Add(this.buttonLeft);
-            this.Controls.Add(this.buttonPi);
             this.Controls.Add(this.buttonStepen);
             this.Controls.Add(this.buttonLn);
-            this.Controls.Add(this.buttonExp);
             this.Controls.Add(this.buttonCos);
             this.Controls.Add(this.buttonSin);
             this.Controls.Add(this.buttonMultipl);
@@ -636,10 +603,8 @@ namespace Model
 		private System.Windows.Forms.Button buttonFullLeft;
 		private System.Windows.Forms.Button buttonRight;
 		private System.Windows.Forms.Button buttonLeft;
-		private System.Windows.Forms.Button buttonPi;
 		private System.Windows.Forms.Button buttonStepen;
 		private System.Windows.Forms.Button buttonLn;
-		private System.Windows.Forms.Button buttonExp;
 		private System.Windows.Forms.Button buttonCos;
 		private System.Windows.Forms.Button buttonSin;
 		private System.Windows.Forms.Button buttonMultipl;
