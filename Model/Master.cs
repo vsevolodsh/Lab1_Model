@@ -255,7 +255,7 @@ namespace Model
             else if (symbol.Equals('('))
             {
                 labelError.Text = "";
-                stringListBuff.Add(symbol.ToString());
+                stringList.Add(symbol.ToString());
                 return true;
             }
             else if (symbol.Equals(')'))
@@ -268,7 +268,7 @@ namespace Model
                 else
                 {
                     labelError.Text = "";
-                    stringListBuff.Add(symbol.ToString());
+                    stringList.Add(symbol.ToString());
                     return true;
                 }
             }
@@ -295,11 +295,6 @@ namespace Model
             }
             return false;
         }
-
-        //private void addNewElement<T>(T symbol)
-        //{
-
-        //}
 
         private string stringListBuffToString()
         {

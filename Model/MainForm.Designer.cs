@@ -143,8 +143,8 @@ namespace Model
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonStart = new System.Windows.Forms.Button();
+            this.buttonTact = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -314,8 +314,8 @@ namespace Model
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonStart);
+            this.panel1.Controls.Add(this.buttonTact);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.groupBox2);
@@ -1251,33 +1251,35 @@ namespace Model
             this.button4.Text = "Стоп";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonStart
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button3.Location = new System.Drawing.Point(298, 310);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Старт";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonStart.BackColor = System.Drawing.Color.White;
+            this.buttonStart.FlatAppearance.BorderSize = 0;
+            this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStart.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
+            this.buttonStart.Location = new System.Drawing.Point(298, 310);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(105, 23);
+            this.buttonStart.TabIndex = 7;
+            this.buttonStart.Text = "Старт";
+            this.buttonStart.UseVisualStyleBackColor = false;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
-            // button2
+            // buttonTact
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button2.Location = new System.Drawing.Point(189, 310);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Такт";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonTact.BackColor = System.Drawing.Color.White;
+            this.buttonTact.FlatAppearance.BorderSize = 0;
+            this.buttonTact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTact.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
+            this.buttonTact.Location = new System.Drawing.Point(189, 310);
+            this.buttonTact.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTact.Name = "buttonTact";
+            this.buttonTact.Size = new System.Drawing.Size(105, 23);
+            this.buttonTact.TabIndex = 6;
+            this.buttonTact.Text = "Такт";
+            this.buttonTact.UseVisualStyleBackColor = false;
+            this.buttonTact.Click += new System.EventHandler(this.buttonTact_Click);
             // 
             // button1
             // 
@@ -1635,8 +1637,8 @@ namespace Model
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button buttonTact;
+		private System.Windows.Forms.Button buttonStart;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;

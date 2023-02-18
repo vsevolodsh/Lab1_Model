@@ -58,10 +58,6 @@ namespace Model
             this.buttonCos = new System.Windows.Forms.Button();
             this.buttonLn = new System.Windows.Forms.Button();
             this.buttonStepen = new System.Windows.Forms.Button();
-       //     this.buttonLeft = new System.Windows.Forms.Button();
-       //     this.buttonRight = new System.Windows.Forms.Button();
-       //     this.buttonFullLeft = new System.Windows.Forms.Button();
-       //     this.buttonFullRight = new System.Windows.Forms.Button();
             this.buttonBackSp = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
@@ -412,34 +408,6 @@ namespace Model
             this.buttonStepen.UseVisualStyleBackColor = false;
             this.buttonStepen.Click += new System.EventHandler(this.buttonStepen_Click);
             // 
-            /*// buttonLeft
-            // 
-            this.buttonLeft.Location = new System.Drawing.Point(0, 0);
-            this.buttonLeft.Name = "buttonLeft";
-            this.buttonLeft.Size = new System.Drawing.Size(75, 23);
-            this.buttonLeft.TabIndex = 36;
-            // 
-            // buttonRight
-            // 
-            this.buttonRight.Location = new System.Drawing.Point(0, 0);
-            this.buttonRight.Name = "buttonRight";
-            this.buttonRight.Size = new System.Drawing.Size(75, 23);
-            this.buttonRight.TabIndex = 35;
-            // 
-            // buttonFullLeft
-            // 
-            this.buttonFullLeft.Location = new System.Drawing.Point(0, 0);
-            this.buttonFullLeft.Name = "buttonFullLeft";
-            this.buttonFullLeft.Size = new System.Drawing.Size(75, 23);
-            this.buttonFullLeft.TabIndex = 34;
-            // 
-            // buttonFullRight
-            // 
-            this.buttonFullRight.Location = new System.Drawing.Point(1, 0);
-            this.buttonFullRight.Name = "buttonFullRight";
-            this.buttonFullRight.Size = new System.Drawing.Size(75, 23);
-            this.buttonFullRight.TabIndex = 33;*/
-            // 
             // buttonBackSp
             // 
             this.buttonBackSp.BackColor = System.Drawing.SystemColors.Control;
@@ -527,10 +495,6 @@ namespace Model
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonBackSp);
-         //   this.Controls.Add(this.buttonFullRight);
-         //   this.Controls.Add(this.buttonFullLeft);
-         //   this.Controls.Add(this.buttonRight);
-         //   this.Controls.Add(this.buttonLeft);
             this.Controls.Add(this.buttonStepen);
             this.Controls.Add(this.buttonLn);
             this.Controls.Add(this.buttonCos);
