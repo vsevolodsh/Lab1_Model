@@ -118,7 +118,7 @@ namespace Model
             Stack<string> printStack = new Stack<string>(stack);
             for (int i = 0; i < stack.Count; i++)
             {
-                labelStack.Text = "\n" + printStack.Pop();
+                labelStack.Text = printStack.Pop() + "\n" + labelStack.Text;
             }
 
         }
@@ -150,5 +150,6 @@ namespace Model
             }
             return isSecondOperation;
         }
+
     }
 }
