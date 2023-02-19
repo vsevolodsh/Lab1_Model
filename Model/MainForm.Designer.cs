@@ -164,7 +164,9 @@ namespace Model
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.labelStack = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1222,6 +1224,7 @@ namespace Model
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.labelStack);
             this.panel3.Location = new System.Drawing.Point(58, 32);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -1504,6 +1507,16 @@ namespace Model
             this.trackBar1.Size = new System.Drawing.Size(416, 45);
             this.trackBar1.TabIndex = 8;
             // 
+            // labelStack
+            // 
+            this.labelStack.AutoSize = true;
+            this.labelStack.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelStack.Location = new System.Drawing.Point(18, 141);
+            this.labelStack.Name = "labelStack";
+            this.labelStack.Size = new System.Drawing.Size(52, 21);
+            this.labelStack.TabIndex = 0;
+            this.labelStack.Text = "label9";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1518,6 +1531,8 @@ namespace Model
             this.Name = "MainForm";
             this.Text = "Model";
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1657,6 +1672,6 @@ namespace Model
 		private System.Windows.Forms.TextBox textBoxInfix;
 		private System.Windows.Forms.TextBox textBoxPostfix;
 		private System.Windows.Forms.Button buttonMasterF;
-		
-	}
+        private System.Windows.Forms.Label labelStack;
+    }
 }

@@ -113,6 +113,14 @@ namespace Model
                 infixStringList.RemoveAt(0);
             }
 
+            labelStack.Text = "";
+
+            Stack<string> printStack = new Stack<string>(stack);
+            for (int i = 0; i < stack.Count; i++)
+            {
+                labelStack.Text = "\n" + printStack.Pop();
+            }
+
         }
 
         private bool doInstruction()
