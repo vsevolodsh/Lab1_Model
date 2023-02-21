@@ -31,6 +31,7 @@ namespace Model
         Dictionary<int, string> funcDictionary = new Dictionary<int, string>()
         {
             {0, "sin"}, {1, "cos"}, {2, "ln"},
+            {3, "arcsin"}, {4, "arccos"}, 
         };
 
 
@@ -114,16 +115,35 @@ namespace Model
         private void buttonMultipl_Click(object sender, EventArgs e) => printNewElement('*');
 
         private void buttonStepen_Click(object sender, EventArgs e) => printNewElement('^');
+        private void buttonLn_Click(object sender, EventArgs e)
+        {
+            printNewElement("ln");
+            printNewElement('(');
+        }
         private void buttonSin_Click(object sender, EventArgs e)
         {
             printNewElement("sin");
-            index += 2;
+            printNewElement('(');
+            //index += 2;
         }
 
         private void buttonCos_Click(object sender, EventArgs e)
         {
             printNewElement("cos");
-            index += 2;
+            printNewElement('(');
+            //index += 2;
+        }
+
+        private void buttonArcsin_Click(object sender, EventArgs e)
+        {
+            printNewElement("arcsin");
+            printNewElement('(');
+        }
+
+        private void buttonArccos_Click(object sender, EventArgs e)
+        {
+            printNewElement("arccos");
+            printNewElement('(');
         }
 
         private void buttonBackSp_Click(object sender, EventArgs e)
@@ -254,15 +274,17 @@ namespace Model
 
             else if (symbol.Equals('('))
             {
-                labelError.Text = "";
-                stringList.Add(symbol.ToString());
-                return true;
-            }
-            else if (symbol.Equals(')'))
-            {
-                if (textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
+                if (stringList.Count==0)
                 {
-                    labelError.Text = "Скобки не могут быть пустыми!";
+                    labelError.Text = "";
+                    stringList.Add(symbol.ToString());
+                    return true;
+                    return true;
+                }
+                if (!operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1))
+                    && !funcDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1)) && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
+                {
+                    labelError.Text = "Перед скобкой должен стоять знак!";
                     return false;
                 }
                 else
@@ -271,17 +293,35 @@ namespace Model
                     stringList.Add(symbol.ToString());
                     return true;
                 }
+                
+            }
+            else if (symbol.Equals(')'))
+            {
+                if (textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
+                {
+                    labelError.Text = "Скобки не могут быть пустыми!";
+                    return false;
+                }
+                else if(!int.TryParse(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1), out intVariable)) 
+                {
+                    labelError.Text = "Слева от закрывающей скобки должно стоять какое-то число!";
+                    return false;
+                }
+                else
+                {
+                    labelError.Text = "";
+                    stringList.Add(stringListBuffToString());
+                    stringList.Add(symbol.ToString()); 
+                    return true;
+                }
             }
             else if (operatorDictionary.ContainsValue(symbol.ToString())) //проверка для символов
             {
-                if (stringListBuff.Count == 0 || operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1))
+                if (stringListBuff.Count == 0 && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals(")") 
+                    || operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1))
                     || textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
                 {
                     labelError.Text = "Напишите число!";
-                    return false;
-                }
-                else if (false)
-                {
                     return false;
                 }
                 else
@@ -293,7 +333,21 @@ namespace Model
                 }
 
             }
-            return false;
+            else
+            {
+                if (!operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1)) && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
+                {
+                    labelError.Text = "";
+                    return false;
+                }
+                else
+                {
+                    stringList.Add(symbol.ToString());
+                    return true;
+                }
+             
+            }
+           
         }
 
         private string stringListBuffToString()
@@ -306,6 +360,10 @@ namespace Model
             stringListBuff.Clear();
             return stringListString;
         }
+
+        
+
+
 
         /*#region Перенос курсора
 

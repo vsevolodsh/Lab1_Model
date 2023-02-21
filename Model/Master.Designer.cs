@@ -63,6 +63,8 @@ namespace Model
             this.labelError = new System.Windows.Forms.Label();
             this.buttonParenthesesClosed = new System.Windows.Forms.Button();
             this.buttonParenthesesOpened = new System.Windows.Forms.Button();
+            this.buttonArccos = new System.Windows.Forms.Button();
+            this.buttonArcsin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonClose
@@ -391,6 +393,7 @@ namespace Model
             this.buttonLn.TabIndex = 21;
             this.buttonLn.Text = "ln";
             this.buttonLn.UseVisualStyleBackColor = false;
+            this.buttonLn.Click += new System.EventHandler(this.buttonLn_Click);
             // 
             // buttonStepen
             // 
@@ -484,12 +487,46 @@ namespace Model
             this.buttonParenthesesOpened.UseVisualStyleBackColor = false;
             this.buttonParenthesesOpened.Click += new System.EventHandler(this.buttonParenthesesOpened_Click);
             // 
+            // buttonArccos
+            // 
+            this.buttonArccos.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonArccos.FlatAppearance.BorderSize = 0;
+            this.buttonArccos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonArccos.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.buttonArccos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonArccos.Location = new System.Drawing.Point(382, 211);
+            this.buttonArccos.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonArccos.Name = "buttonArccos";
+            this.buttonArccos.Size = new System.Drawing.Size(56, 38);
+            this.buttonArccos.TabIndex = 34;
+            this.buttonArccos.Text = "arccos";
+            this.buttonArccos.UseVisualStyleBackColor = false;
+            this.buttonArccos.Click += new System.EventHandler(this.buttonArccos_Click);
+            // 
+            // buttonArcsin
+            // 
+            this.buttonArcsin.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonArcsin.FlatAppearance.BorderSize = 0;
+            this.buttonArcsin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonArcsin.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.buttonArcsin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonArcsin.Location = new System.Drawing.Point(322, 211);
+            this.buttonArcsin.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonArcsin.Name = "buttonArcsin";
+            this.buttonArcsin.Size = new System.Drawing.Size(56, 38);
+            this.buttonArcsin.TabIndex = 33;
+            this.buttonArcsin.Text = "arcsin";
+            this.buttonArcsin.UseVisualStyleBackColor = true;
+            this.buttonArcsin.Click += new System.EventHandler(this.buttonArcsin_Click);
+            // 
             // Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(487, 301);
+            this.Controls.Add(this.buttonArccos);
+            this.Controls.Add(this.buttonArcsin);
             this.Controls.Add(this.buttonParenthesesClosed);
             this.Controls.Add(this.buttonParenthesesOpened);
             this.Controls.Add(this.labelError);
@@ -556,5 +593,7 @@ namespace Model
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button buttonParenthesesClosed;
         private System.Windows.Forms.Button buttonParenthesesOpened;
+        private System.Windows.Forms.Button buttonArccos;
+        private System.Windows.Forms.Button buttonArcsin;
     }
 }

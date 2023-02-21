@@ -8,34 +8,36 @@
  */
 namespace Model
 {
-	partial class MainForm
-	{
-		/// <summary>
-		/// Designer variable used to keep track of non-visual components.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
-		
-		/// <summary>
-		/// Disposes resources used by the form.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing) {
-				if (components != null) {
-					components.Dispose();
-				}
-			}
-			base.Dispose(disposing);
-		}
-		
-		/// <summary>
-		/// This method is required for Windows Forms designer support.
-		/// Do not change the method contents inside the source code editor. The Forms designer might
-		/// not be able to load this method if it was changed manually.
-		/// </summary>
-		private void InitializeComponent()
-		{
+    partial class MainForm
+    {
+        /// <summary>
+        /// Designer variable used to keep track of non-visual components.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Disposes resources used by the form.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
+
+        /// <summary>
+        /// This method is required for Windows Forms designer support.
+        /// Do not change the method contents inside the source code editor. The Forms designer might
+        /// not be able to load this method if it was changed manually.
+        /// </summary>
+        private void InitializeComponent()
+        {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.buttonMasterF = new System.Windows.Forms.Button();
             this.textBoxPostfix = new System.Windows.Forms.TextBox();
@@ -141,6 +143,7 @@ namespace Model
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labelStack = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
@@ -164,7 +167,6 @@ namespace Model
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.labelStack = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1225,11 +1227,22 @@ namespace Model
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.labelStack);
-            this.panel3.Location = new System.Drawing.Point(58, 32);
+            this.panel3.Location = new System.Drawing.Point(98, 32);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(90, 227);
+            this.panel3.Size = new System.Drawing.Size(50, 227);
             this.panel3.TabIndex = 10;
+            // 
+            // labelStack
+            // 
+            this.labelStack.AutoSize = true;
+            this.labelStack.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelStack.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelStack.Location = new System.Drawing.Point(0, 206);
+            this.labelStack.Name = "labelStack";
+            this.labelStack.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelStack.Size = new System.Drawing.Size(0, 21);
+            this.labelStack.TabIndex = 0;
             // 
             // panel2
             // 
@@ -1462,7 +1475,7 @@ namespace Model
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(246, 62);
+            this.groupBox3.Size = new System.Drawing.Size(257, 62);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Режим";
@@ -1472,7 +1485,7 @@ namespace Model
             this.radioButton2.Location = new System.Drawing.Point(4, 36);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(172, 20);
+            this.radioButton2.Size = new System.Drawing.Size(231, 20);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Автоматический (по таймеру)";
@@ -1483,7 +1496,7 @@ namespace Model
             this.radioButton1.Location = new System.Drawing.Point(4, 15);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(231, 20);
+            this.radioButton1.Size = new System.Drawing.Size(243, 20);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Пошаговый ( управление пользователем)";
@@ -1506,16 +1519,6 @@ namespace Model
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(416, 45);
             this.trackBar1.TabIndex = 8;
-            // 
-            // labelStack
-            // 
-            this.labelStack.AutoSize = true;
-            this.labelStack.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelStack.Location = new System.Drawing.Point(18, 141);
-            this.labelStack.Name = "labelStack";
-            this.labelStack.Size = new System.Drawing.Size(52, 21);
-            this.labelStack.TabIndex = 0;
-            this.labelStack.Text = "label9";
             // 
             // MainForm
             // 
@@ -1544,134 +1547,134 @@ namespace Model
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TrackBar trackBar1;
-		private System.Windows.Forms.CheckBox checkBox1;
-		private System.Windows.Forms.RadioButton radioButton2;
-		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.Panel panel9;
-		private System.Windows.Forms.Panel panel14;
-		private System.Windows.Forms.Panel panel13;
-		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.Panel panel12;
-		private System.Windows.Forms.Panel panel6;
-		private System.Windows.Forms.Panel panel11;
-		private System.Windows.Forms.Panel panel7;
-		private System.Windows.Forms.Panel panel10;
-		private System.Windows.Forms.Panel panel21;
-		private System.Windows.Forms.Panel panel17;
-		private System.Windows.Forms.Panel panel51;
-		private System.Windows.Forms.Panel panel30;
-		private System.Windows.Forms.Panel panel50;
-		private System.Windows.Forms.Panel panel20;
-		private System.Windows.Forms.Panel panel52;
-		private System.Windows.Forms.Panel panel29;
-		private System.Windows.Forms.Panel panel49;
-		private System.Windows.Forms.Panel panel15;
-		private System.Windows.Forms.Panel panel53;
-		private System.Windows.Forms.Panel panel28;
-		private System.Windows.Forms.Panel panel48;
-		private System.Windows.Forms.Panel panel27;
-		private System.Windows.Forms.Panel panel54;
-		private System.Windows.Forms.Panel panel19;
-		private System.Windows.Forms.Panel panel47;
-		private System.Windows.Forms.Panel panel26;
-		private System.Windows.Forms.Panel panel55;
-		private System.Windows.Forms.Panel panel38;
-		private System.Windows.Forms.Panel panel46;
-		private System.Windows.Forms.Panel panel16;
-		private System.Windows.Forms.Panel panel56;
-		private System.Windows.Forms.Panel panel37;
-		private System.Windows.Forms.Panel panel45;
-		private System.Windows.Forms.Panel panel25;
-		private System.Windows.Forms.Panel panel86;
-		private System.Windows.Forms.Panel panel58;
-		private System.Windows.Forms.Panel panel85;
-		private System.Windows.Forms.Panel panel36;
-		private System.Windows.Forms.Panel panel84;
-		private System.Windows.Forms.Panel panel44;
-		private System.Windows.Forms.Panel panel83;
-		private System.Windows.Forms.Panel panel35;
-		private System.Windows.Forms.Panel panel82;
-		private System.Windows.Forms.Panel panel59;
-		private System.Windows.Forms.Panel panel81;
-		private System.Windows.Forms.Panel panel18;
-		private System.Windows.Forms.Panel panel80;
-		private System.Windows.Forms.Panel panel43;
-		private System.Windows.Forms.Panel panel79;
-		private System.Windows.Forms.Panel panel34;
-		private System.Windows.Forms.Panel panel78;
-		private System.Windows.Forms.Panel panel60;
-		private System.Windows.Forms.Panel panel77;
-		private System.Windows.Forms.Panel panel24;
-		private System.Windows.Forms.Panel panel76;
-		private System.Windows.Forms.Panel panel42;
-		private System.Windows.Forms.Panel panel75;
-		private System.Windows.Forms.Panel panel33;
-		private System.Windows.Forms.Panel panel74;
-		private System.Windows.Forms.Panel panel61;
-		private System.Windows.Forms.Panel panel73;
-		private System.Windows.Forms.Panel panel22;
-		private System.Windows.Forms.Panel panel72;
-		private System.Windows.Forms.Panel panel41;
-		private System.Windows.Forms.Panel panel71;
-		private System.Windows.Forms.Panel panel32;
-		private System.Windows.Forms.Panel panel102;
-		private System.Windows.Forms.Panel panel70;
-		private System.Windows.Forms.Panel panel101;
-		private System.Windows.Forms.Panel panel62;
-		private System.Windows.Forms.Panel panel100;
-		private System.Windows.Forms.Panel panel69;
-		private System.Windows.Forms.Panel panel99;
-		private System.Windows.Forms.Panel panel23;
-		private System.Windows.Forms.Panel panel98;
-		private System.Windows.Forms.Panel panel68;
-		private System.Windows.Forms.Panel panel97;
-		private System.Windows.Forms.Panel panel40;
-		private System.Windows.Forms.Panel panel96;
-		private System.Windows.Forms.Panel panel67;
-		private System.Windows.Forms.Panel panel95;
-		private System.Windows.Forms.Panel panel57;
-		private System.Windows.Forms.Panel panel94;
-		private System.Windows.Forms.Panel panel66;
-		private System.Windows.Forms.Panel panel93;
-		private System.Windows.Forms.Panel panel31;
-		private System.Windows.Forms.Panel panel92;
-		private System.Windows.Forms.Panel panel65;
-		private System.Windows.Forms.Panel panel91;
-		private System.Windows.Forms.Panel panel64;
-		private System.Windows.Forms.Panel panel90;
-		private System.Windows.Forms.Panel panel39;
-		private System.Windows.Forms.Panel panel89;
-		private System.Windows.Forms.Panel panel63;
-		private System.Windows.Forms.Panel panel88;
-		private System.Windows.Forms.Panel panel87;
-		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.Panel panel3;
-		private System.Windows.Forms.Panel panel4;
-		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.Button buttonTact;
-		private System.Windows.Forms.Button buttonStart;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.TextBox textBoxInfix;
-		private System.Windows.Forms.TextBox textBoxPostfix;
-		private System.Windows.Forms.Button buttonMasterF;
+        }
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel50;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel52;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel49;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel53;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel54;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel47;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel55;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel56;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel86;
+        private System.Windows.Forms.Panel panel58;
+        private System.Windows.Forms.Panel panel85;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Panel panel84;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Panel panel83;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel82;
+        private System.Windows.Forms.Panel panel59;
+        private System.Windows.Forms.Panel panel81;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel80;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Panel panel79;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Panel panel78;
+        private System.Windows.Forms.Panel panel60;
+        private System.Windows.Forms.Panel panel77;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel76;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel75;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel74;
+        private System.Windows.Forms.Panel panel61;
+        private System.Windows.Forms.Panel panel73;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel72;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel71;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel102;
+        private System.Windows.Forms.Panel panel70;
+        private System.Windows.Forms.Panel panel101;
+        private System.Windows.Forms.Panel panel62;
+        private System.Windows.Forms.Panel panel100;
+        private System.Windows.Forms.Panel panel69;
+        private System.Windows.Forms.Panel panel99;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel98;
+        private System.Windows.Forms.Panel panel68;
+        private System.Windows.Forms.Panel panel97;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Panel panel96;
+        private System.Windows.Forms.Panel panel67;
+        private System.Windows.Forms.Panel panel95;
+        private System.Windows.Forms.Panel panel57;
+        private System.Windows.Forms.Panel panel94;
+        private System.Windows.Forms.Panel panel66;
+        private System.Windows.Forms.Panel panel93;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel92;
+        private System.Windows.Forms.Panel panel65;
+        private System.Windows.Forms.Panel panel91;
+        private System.Windows.Forms.Panel panel64;
+        private System.Windows.Forms.Panel panel90;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel89;
+        private System.Windows.Forms.Panel panel63;
+        private System.Windows.Forms.Panel panel88;
+        private System.Windows.Forms.Panel panel87;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button buttonTact;
+        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBoxInfix;
+        private System.Windows.Forms.TextBox textBoxPostfix;
+        private System.Windows.Forms.Button buttonMasterF;
         private System.Windows.Forms.Label labelStack;
     }
 }
