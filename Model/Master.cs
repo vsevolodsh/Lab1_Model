@@ -279,7 +279,6 @@ namespace Model
                     labelError.Text = "";
                     stringList.Add(symbol.ToString());
                     return true;
-                    return true;
                 }
                 if (!operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1))
                     && !funcDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1)) && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))

@@ -150,5 +150,6 @@ namespace Model
             }
             return isSecondOperation;
         }
+
     }
 }
