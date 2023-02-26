@@ -245,10 +245,9 @@ namespace Model
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelStack = new System.Windows.Forms.Label();
-<<<<<<< HEAD
+
             this.panel2 = new System.Windows.Forms.Panel();
-=======
->>>>>>> 59b4b7fceb9a92fd5ad229dbf8d202132afee56d
+
             this.button4 = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonTact = new System.Windows.Forms.Button();
@@ -2736,19 +2735,18 @@ namespace Model
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.labelStack);
-<<<<<<< HEAD
+
             this.panel3.Location = new System.Drawing.Point(98, 32);
-=======
+
             this.panel3.Location = new System.Drawing.Point(50, 33);
->>>>>>> 59b4b7fceb9a92fd5ad229dbf8d202132afee56d
+
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(50, 227);
             this.panel3.TabIndex = 10;
             // 
             // labelStack
-<<<<<<< HEAD
+
             // 
             this.labelStack.AutoSize = true;
             this.labelStack.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -2760,8 +2758,7 @@ namespace Model
             this.labelStack.TabIndex = 0;
             // 
             // panel2
-=======
->>>>>>> 59b4b7fceb9a92fd5ad229dbf8d202132afee56d
+
             // 
             this.labelStack.AutoSize = true;
             this.labelStack.Dock = System.Windows.Forms.DockStyle.Bottom;
