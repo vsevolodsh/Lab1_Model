@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Model
 {
@@ -59,7 +61,26 @@ namespace Model
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            if (radioButtonStep.Checked)
+            {
+                MessageBox.Show("Вы выбрали " + radioButtonStep.Text);
+            }
 
+            if (radioButtonAuto.Checked)
+            {
+                MessageBox.Show("Вы выбрали " + radioButtonAuto.Text);
+                while (stack.Count != 0 || infixStringList.Count!= 0)
+                {
+                    doOneStep();
+                    Thread.Sleep(trackBar1.Value * 1000);
+                }
+               
+            }
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label110.Text = String.Format("Задержка: {0} секунд", trackBar1.Value);
         }
 
         private int getRowOfInstruction()
@@ -106,6 +127,12 @@ namespace Model
 
         private void buttonTact_Click(object sender, EventArgs e)
         {
+            doOneStep();    
+
+        }
+
+        private void doOneStep()
+        {
             instruction = arrTable[getColumnOfInstruction(), getRowOfInstruction()];
             bool isSecondOperation = doInstruction();
             if (infixStringList.Count != 0 && !isSecondOperation)
@@ -120,7 +147,6 @@ namespace Model
             {
                 labelStack.Text = printStack.Pop() + "\n" + labelStack.Text;
             }
-
         }
 
         private bool doInstruction()
@@ -153,3 +179,4 @@ namespace Model
 
     }
 }
+ 
