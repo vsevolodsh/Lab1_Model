@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
@@ -15,6 +16,7 @@ namespace Model
         public MainForm()
         {
             InitializeComponent();
+
         }
         List<string> infixStringList = new List<string>();
         Dictionary<int, string> operatorDictionary = new Dictionary<int, string>()
@@ -28,7 +30,7 @@ namespace Model
         };
         Stack<string> stack = new Stack<string>();
         int instruction = 0;
-
+        bool error = false;
         // !!!! Словарь перевода цифр в символы
 
         int[,] arrTable = {
@@ -45,10 +47,17 @@ namespace Model
         void buttonMasterFClick(object sender, EventArgs e)
         {
             Master newForm = new Master();
+            infixStringList.Clear();
+            stack.Clear();
+            textBoxRealTime.Text = "";
+            textBoxInfix.Text = "";
+            textBoxPostfix.Text = "";
+            error = false;
             newForm.FormClosing += (sender1, e1) =>
             {
                 infixStringList = newForm.stringList;
                 textBoxInfix.Text = String.Join("", infixStringList.ToArray());
+                textBoxRealTime.Text = textBoxInfix.Text;
             };
             newForm.Show();
 
@@ -59,22 +68,26 @@ namespace Model
 
         }
 
-        private void buttonStart_Click(object sender, EventArgs e)
+        private async void buttonStart_Click(object sender, EventArgs e)
         {
             if (radioButtonStep.Checked)
             {
-                MessageBox.Show("Вы выбрали " + radioButtonStep.Text);
+                buttonTact.Enabled = true;
             }
 
             if (radioButtonAuto.Checked)
             {
-                MessageBox.Show("Вы выбрали " + radioButtonAuto.Text);
-                while (stack.Count != 0 || infixStringList.Count!= 0)
+
+                while (stack.Count != 0 || infixStringList.Count != 0)
                 {
+                    if (error)
+                    {
+                        return;    
+                    }
                     doOneStep();
-                    Thread.Sleep(trackBar1.Value * 1000);
+                    await Task.Delay(trackBar1.Value * 1000);
                 }
-               
+
             }
         }
 
@@ -127,27 +140,100 @@ namespace Model
 
         private void buttonTact_Click(object sender, EventArgs e)
         {
-            doOneStep();    
+            doOneStep();
 
         }
 
         private void doOneStep()
         {
+
             instruction = arrTable[getColumnOfInstruction(), getRowOfInstruction()];
+            textBoxRealTime.Text = "";
             bool isSecondOperation = doInstruction();
             if (infixStringList.Count != 0 && !isSecondOperation)
             {
                 infixStringList.RemoveAt(0);
             }
 
-            labelStack.Text = "";
+            labelStack.Text = null;
 
             Stack<string> printStack = new Stack<string>(stack);
             for (int i = 0; i < stack.Count; i++)
             {
-                labelStack.Text = printStack.Pop() + "\n" + labelStack.Text;
+                /*if (printStack.Count == 1)
+                {
+                    labelStack.Text = printStack.Pop() + "  <--" + labelStack.Text;
+                }
+                else*/
+                {
+                    labelStack.Text = "\n" + printStack.Pop() + labelStack.Text;
+                }
+            }
+
+            for (int i = 0; i < infixStringList.Count; i++)
+            {
+                textBoxRealTime.Text += infixStringList[i];
+            }
+            indStack();
+
+
+        }
+
+        private void indStack()
+        {
+            panelInd1.Visible = false;
+            panelInd2.Visible = false;
+            panelInd3.Visible = false;
+            panelInd4.Visible = false;
+            panelInd5.Visible = false;
+            panelInd6.Visible = false;
+            panelInd7.Visible = false;
+            panelInd8.Visible = false;
+            panelInd9.Visible = false;
+            panelInd10.Visible = false;
+            panelInd11.Visible = false;
+            switch (stack.Count)
+            {
+                case 0:
+
+                    break;
+                case 1:
+                    panelInd1.Visible = true;
+                    break;
+                case 2:
+                    panelInd2.Visible = true;
+                    break;
+                case 3:
+                    panelInd3.Visible = true;
+                    break;
+                case 4:
+                    panelInd4.Visible = true;
+                    break;
+                case 5:
+                    panelInd5.Visible = true;
+                    break;
+                case 6:
+                    panelInd6.Visible = true;
+                    break;
+                case 7:
+                    panelInd7.Visible = true;
+                    break;
+                case 8:
+                    panelInd8.Visible = true;
+                    break;
+                case 9:
+                    panelInd9.Visible = true;
+                    break;
+                case 10:
+                    panelInd10.Visible = true;
+                    break;
+                case 11:
+                    panelInd11.Visible = true;
+                    break;
             }
         }
+
+
 
         private bool doInstruction()
         {
@@ -159,16 +245,17 @@ namespace Model
                     break;
                 case 2:
                     textBoxPostfix.Text += stack.Pop() + " ";
-                    isSecondOperation = true;   
+                    isSecondOperation = true;
                     break;
                 case 3:
                     stack.Pop();
                     break;
                 case 4:
-                    textBoxPostfix.Text += " успешное окончание преобразования;";
+                    //textBoxPostfix.Text += " успешное окончание преобразования;";
                     break;
                 case 5:
-                    textBoxPostfix.Text += " ошибка скобочной структуры;";
+                    MessageBox.Show("Ошибка скобочной структуры;");
+                    error = true;
                     break;
                 case 6:
                     textBoxPostfix.Text += infixStringList[0] + " ";
@@ -179,4 +266,3 @@ namespace Model
 
     }
 }
- 

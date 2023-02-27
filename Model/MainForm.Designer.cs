@@ -6,6 +6,8 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
+using System.Drawing;
+
 namespace Model
 {
     partial class MainForm
@@ -43,20 +45,31 @@ namespace Model
             this.textBoxPostfix = new System.Windows.Forms.TextBox();
             this.textBoxInfix = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelInd11 = new System.Windows.Forms.Panel();
+            this.panelInd10 = new System.Windows.Forms.Panel();
             this.panel87 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
+            this.panelInd2 = new System.Windows.Forms.Panel();
+            this.panelInd1 = new System.Windows.Forms.Panel();
             this.panel88 = new System.Windows.Forms.Panel();
             this.label53 = new System.Windows.Forms.Label();
+            this.panelInd8 = new System.Windows.Forms.Panel();
             this.panel63 = new System.Windows.Forms.Panel();
             this.label55 = new System.Windows.Forms.Label();
+            this.panelInd7 = new System.Windows.Forms.Panel();
             this.panel89 = new System.Windows.Forms.Panel();
             this.label78 = new System.Windows.Forms.Label();
+            this.panelInd6 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
             this.label58 = new System.Windows.Forms.Label();
+            this.panelInd9 = new System.Windows.Forms.Panel();
+            this.panelInd5 = new System.Windows.Forms.Panel();
             this.panel90 = new System.Windows.Forms.Panel();
             this.label47 = new System.Windows.Forms.Label();
+            this.panelInd3 = new System.Windows.Forms.Panel();
             this.panel64 = new System.Windows.Forms.Panel();
             this.label33 = new System.Windows.Forms.Label();
+            this.panelInd4 = new System.Windows.Forms.Panel();
             this.panel91 = new System.Windows.Forms.Panel();
             this.label54 = new System.Windows.Forms.Label();
             this.panel65 = new System.Windows.Forms.Panel();
@@ -245,9 +258,6 @@ namespace Model
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelStack = new System.Windows.Forms.Label();
-
-            this.panel2 = new System.Windows.Forms.Panel();
-
             this.button4 = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonTact = new System.Windows.Forms.Button();
@@ -259,6 +269,8 @@ namespace Model
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label111 = new System.Windows.Forms.Label();
+            this.textBoxRealTime = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -386,7 +398,7 @@ namespace Model
             this.buttonMasterF.FlatAppearance.BorderSize = 0;
             this.buttonMasterF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMasterF.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.buttonMasterF.Location = new System.Drawing.Point(357, 20);
+            this.buttonMasterF.Location = new System.Drawing.Point(0, 23);
             this.buttonMasterF.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMasterF.Name = "buttonMasterF";
             this.buttonMasterF.Size = new System.Drawing.Size(345, 23);
@@ -407,7 +419,7 @@ namespace Model
             // 
             // textBoxInfix
             // 
-            this.textBoxInfix.Location = new System.Drawing.Point(357, 72);
+            this.textBoxInfix.Location = new System.Drawing.Point(361, 25);
             this.textBoxInfix.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInfix.Multiline = true;
             this.textBoxInfix.Name = "textBoxInfix";
@@ -418,13 +430,24 @@ namespace Model
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.Controls.Add(this.panelInd11);
+            this.panel1.Controls.Add(this.panelInd10);
             this.panel1.Controls.Add(this.panel87);
+            this.panel1.Controls.Add(this.panelInd2);
+            this.panel1.Controls.Add(this.panelInd1);
             this.panel1.Controls.Add(this.panel88);
+            this.panel1.Controls.Add(this.panelInd8);
             this.panel1.Controls.Add(this.panel63);
+            this.panel1.Controls.Add(this.panelInd7);
             this.panel1.Controls.Add(this.panel89);
+            this.panel1.Controls.Add(this.panelInd6);
             this.panel1.Controls.Add(this.panel39);
+            this.panel1.Controls.Add(this.panelInd9);
+            this.panel1.Controls.Add(this.panelInd5);
             this.panel1.Controls.Add(this.panel90);
+            this.panel1.Controls.Add(this.panelInd3);
             this.panel1.Controls.Add(this.panel64);
+            this.panel1.Controls.Add(this.panelInd4);
             this.panel1.Controls.Add(this.panel91);
             this.panel1.Controls.Add(this.panel65);
             this.panel1.Controls.Add(this.panel92);
@@ -533,6 +556,26 @@ namespace Model
             this.panel1.Size = new System.Drawing.Size(706, 338);
             this.panel1.TabIndex = 3;
             // 
+            // panelInd11
+            // 
+            this.panelInd11.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd11.Location = new System.Drawing.Point(14, 38);
+            this.panelInd11.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd11.Name = "panelInd11";
+            this.panelInd11.Size = new System.Drawing.Size(50, 20);
+            this.panelInd11.TabIndex = 14;
+            this.panelInd11.Visible = false;
+            // 
+            // panelInd10
+            // 
+            this.panelInd10.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd10.Location = new System.Drawing.Point(14, 58);
+            this.panelInd10.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd10.Name = "panelInd10";
+            this.panelInd10.Size = new System.Drawing.Size(50, 20);
+            this.panelInd10.TabIndex = 13;
+            this.panelInd10.Visible = false;
+            // 
             // panel87
             // 
             this.panel87.BackColor = System.Drawing.Color.White;
@@ -553,6 +596,26 @@ namespace Model
             this.label36.Size = new System.Drawing.Size(22, 25);
             this.label36.TabIndex = 19;
             this.label36.Text = "1";
+            // 
+            // panelInd2
+            // 
+            this.panelInd2.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd2.Location = new System.Drawing.Point(14, 218);
+            this.panelInd2.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd2.Name = "panelInd2";
+            this.panelInd2.Size = new System.Drawing.Size(50, 20);
+            this.panelInd2.TabIndex = 13;
+            this.panelInd2.Visible = false;
+            // 
+            // panelInd1
+            // 
+            this.panelInd1.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd1.Location = new System.Drawing.Point(14, 238);
+            this.panelInd1.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd1.Name = "panelInd1";
+            this.panelInd1.Size = new System.Drawing.Size(50, 20);
+            this.panelInd1.TabIndex = 18;
+            this.panelInd1.Visible = false;
             // 
             // panel88
             // 
@@ -575,6 +638,16 @@ namespace Model
             this.label53.TabIndex = 31;
             this.label53.Text = "6";
             // 
+            // panelInd8
+            // 
+            this.panelInd8.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd8.Location = new System.Drawing.Point(14, 98);
+            this.panelInd8.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd8.Name = "panelInd8";
+            this.panelInd8.Size = new System.Drawing.Size(50, 20);
+            this.panelInd8.TabIndex = 17;
+            this.panelInd8.Visible = false;
+            // 
             // panel63
             // 
             this.panel63.BackColor = System.Drawing.Color.White;
@@ -595,6 +668,16 @@ namespace Model
             this.label55.Size = new System.Drawing.Size(22, 25);
             this.label55.TabIndex = 33;
             this.label55.Text = "7";
+            // 
+            // panelInd7
+            // 
+            this.panelInd7.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd7.Location = new System.Drawing.Point(14, 118);
+            this.panelInd7.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd7.Name = "panelInd7";
+            this.panelInd7.Size = new System.Drawing.Size(50, 20);
+            this.panelInd7.TabIndex = 16;
+            this.panelInd7.Visible = false;
             // 
             // panel89
             // 
@@ -617,6 +700,16 @@ namespace Model
             this.label78.TabIndex = 54;
             this.label78.Text = "1";
             // 
+            // panelInd6
+            // 
+            this.panelInd6.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd6.Location = new System.Drawing.Point(14, 138);
+            this.panelInd6.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd6.Name = "panelInd6";
+            this.panelInd6.Size = new System.Drawing.Size(50, 20);
+            this.panelInd6.TabIndex = 15;
+            this.panelInd6.Visible = false;
+            // 
             // panel39
             // 
             this.panel39.BackColor = System.Drawing.Color.White;
@@ -637,6 +730,26 @@ namespace Model
             this.label58.Size = new System.Drawing.Size(22, 25);
             this.label58.TabIndex = 36;
             this.label58.Text = "2";
+            // 
+            // panelInd9
+            // 
+            this.panelInd9.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd9.Location = new System.Drawing.Point(14, 78);
+            this.panelInd9.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd9.Name = "panelInd9";
+            this.panelInd9.Size = new System.Drawing.Size(50, 20);
+            this.panelInd9.TabIndex = 12;
+            this.panelInd9.Visible = false;
+            // 
+            // panelInd5
+            // 
+            this.panelInd5.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd5.Location = new System.Drawing.Point(14, 158);
+            this.panelInd5.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd5.Name = "panelInd5";
+            this.panelInd5.Size = new System.Drawing.Size(50, 20);
+            this.panelInd5.TabIndex = 14;
+            this.panelInd5.Visible = false;
             // 
             // panel90
             // 
@@ -659,6 +772,16 @@ namespace Model
             this.label47.TabIndex = 25;
             this.label47.Text = "1";
             // 
+            // panelInd3
+            // 
+            this.panelInd3.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd3.Location = new System.Drawing.Point(14, 198);
+            this.panelInd3.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd3.Name = "panelInd3";
+            this.panelInd3.Size = new System.Drawing.Size(50, 20);
+            this.panelInd3.TabIndex = 13;
+            this.panelInd3.Visible = false;
+            // 
             // panel64
             // 
             this.panel64.BackColor = System.Drawing.Color.White;
@@ -679,6 +802,16 @@ namespace Model
             this.label33.Size = new System.Drawing.Size(22, 25);
             this.label33.TabIndex = 16;
             this.label33.Text = "1";
+            // 
+            // panelInd4
+            // 
+            this.panelInd4.BackColor = System.Drawing.Color.IndianRed;
+            this.panelInd4.Location = new System.Drawing.Point(14, 178);
+            this.panelInd4.Margin = new System.Windows.Forms.Padding(2);
+            this.panelInd4.Name = "panelInd4";
+            this.panelInd4.Size = new System.Drawing.Size(50, 20);
+            this.panelInd4.TabIndex = 13;
+            this.panelInd4.Visible = false;
             // 
             // panel91
             // 
@@ -2635,44 +2768,28 @@ namespace Model
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-
-            this.panel3.Location = new System.Drawing.Point(98, 32);
-
-            this.panel3.Location = new System.Drawing.Point(50, 33);
-
+            this.panel3.Controls.Add(this.labelStack);
+            this.panel3.Location = new System.Drawing.Point(68, 38);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(50, 227);
+            this.panel3.Size = new System.Drawing.Size(51, 220);
             this.panel3.TabIndex = 10;
             // 
             // labelStack
-
             // 
             this.labelStack.AutoSize = true;
             this.labelStack.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelStack.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelStack.Location = new System.Drawing.Point(0, 206);
+            this.labelStack.Location = new System.Drawing.Point(0, 199);
             this.labelStack.Name = "labelStack";
             this.labelStack.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelStack.Size = new System.Drawing.Size(0, 21);
             this.labelStack.TabIndex = 0;
             // 
-            // panel2
-
-            // 
-            this.labelStack.AutoSize = true;
-            this.labelStack.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelStack.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelStack.Location = new System.Drawing.Point(0, 185);
-            this.labelStack.Name = "labelStack";
-            this.labelStack.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelStack.Size = new System.Drawing.Size(52, 21);
-            this.labelStack.TabIndex = 0;
-            this.labelStack.Text = "label9";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
@@ -2702,6 +2819,7 @@ namespace Model
             // buttonTact
             // 
             this.buttonTact.BackColor = System.Drawing.Color.White;
+            this.buttonTact.Enabled = false;
             this.buttonTact.FlatAppearance.BorderSize = 0;
             this.buttonTact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTact.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
@@ -2801,6 +2919,8 @@ namespace Model
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label111);
+            this.groupBox1.Controls.Add(this.textBoxRealTime);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxInfix);
@@ -2818,12 +2938,31 @@ namespace Model
             this.groupBox1.Text = "1 — Поместить символ из входной строки в стек";
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1Enter);
             // 
+            // label111
+            // 
+            this.label111.Location = new System.Drawing.Point(361, 51);
+            this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(312, 19);
+            this.label111.TabIndex = 7;
+            this.label111.Text = "Входная строка (в инфиксной форме) в реальном времени";
+            // 
+            // textBoxRealTime
+            // 
+            this.textBoxRealTime.Location = new System.Drawing.Point(361, 72);
+            this.textBoxRealTime.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxRealTime.Multiline = true;
+            this.textBoxRealTime.Name = "textBoxRealTime";
+            this.textBoxRealTime.ReadOnly = true;
+            this.textBoxRealTime.Size = new System.Drawing.Size(346, 24);
+            this.textBoxRealTime.TabIndex = 6;
+            // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(357, 51);
+            this.label2.Location = new System.Drawing.Point(361, 4);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(268, 19);
+            this.label2.Size = new System.Drawing.Size(199, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Входная строка (в инфиксной форме)";
             // 
@@ -2892,7 +3031,7 @@ namespace Model
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(257, 62);
+            this.groupBox3.Size = new System.Drawing.Size(246, 62);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Режим";
@@ -3171,134 +3310,133 @@ namespace Model
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TrackBar trackBar1;
-		private System.Windows.Forms.CheckBox checkBox1;
-		private System.Windows.Forms.RadioButton radioButtonAuto;
-		private System.Windows.Forms.RadioButton radioButtonStep;
-		private System.Windows.Forms.GroupBox groupBox3;
-		private System.Windows.Forms.Panel panel9;
-		private System.Windows.Forms.Panel panel14;
-		private System.Windows.Forms.Panel panel13;
-		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.Panel panel12;
-		private System.Windows.Forms.Panel panel6;
-		private System.Windows.Forms.Panel panel11;
-		private System.Windows.Forms.Panel panel7;
-		private System.Windows.Forms.Panel panel10;
-		private System.Windows.Forms.Panel panel21;
-		private System.Windows.Forms.Panel panel17;
-		private System.Windows.Forms.Panel panel51;
-		private System.Windows.Forms.Panel panel30;
-		private System.Windows.Forms.Panel panel50;
-		private System.Windows.Forms.Panel panel20;
-		private System.Windows.Forms.Panel panel52;
-		private System.Windows.Forms.Panel panel29;
-		private System.Windows.Forms.Panel panel49;
-		private System.Windows.Forms.Panel panel15;
-		private System.Windows.Forms.Panel panel53;
-		private System.Windows.Forms.Panel panel28;
-		private System.Windows.Forms.Panel panel48;
-		private System.Windows.Forms.Panel panel27;
-		private System.Windows.Forms.Panel panel54;
-		private System.Windows.Forms.Panel panel19;
-		private System.Windows.Forms.Panel panel47;
-		private System.Windows.Forms.Panel panel26;
-		private System.Windows.Forms.Panel panel55;
-		private System.Windows.Forms.Panel panel38;
-		private System.Windows.Forms.Panel panel46;
-		private System.Windows.Forms.Panel panel16;
-		private System.Windows.Forms.Panel panel56;
-		private System.Windows.Forms.Panel panel37;
-		private System.Windows.Forms.Panel panel45;
-		private System.Windows.Forms.Panel panel25;
-		private System.Windows.Forms.Panel panel86;
-		private System.Windows.Forms.Panel panel58;
-		private System.Windows.Forms.Panel panel85;
-		private System.Windows.Forms.Panel panel36;
-		private System.Windows.Forms.Panel panel84;
-		private System.Windows.Forms.Panel panel44;
-		private System.Windows.Forms.Panel panel83;
-		private System.Windows.Forms.Panel panel35;
-		private System.Windows.Forms.Panel panel82;
-		private System.Windows.Forms.Panel panel59;
-		private System.Windows.Forms.Panel panel81;
-		private System.Windows.Forms.Panel panel18;
-		private System.Windows.Forms.Panel panel80;
-		private System.Windows.Forms.Panel panel43;
-		private System.Windows.Forms.Panel panel79;
-		private System.Windows.Forms.Panel panel34;
-		private System.Windows.Forms.Panel panel78;
-		private System.Windows.Forms.Panel panel60;
-		private System.Windows.Forms.Panel panel77;
-		private System.Windows.Forms.Panel panel24;
-		private System.Windows.Forms.Panel panel76;
-		private System.Windows.Forms.Panel panel42;
-		private System.Windows.Forms.Panel panel75;
-		private System.Windows.Forms.Panel panel33;
-		private System.Windows.Forms.Panel panel74;
-		private System.Windows.Forms.Panel panel61;
-		private System.Windows.Forms.Panel panel73;
-		private System.Windows.Forms.Panel panel22;
-		private System.Windows.Forms.Panel panel72;
-		private System.Windows.Forms.Panel panel41;
-		private System.Windows.Forms.Panel panel71;
-		private System.Windows.Forms.Panel panel32;
-		private System.Windows.Forms.Panel panel102;
-		private System.Windows.Forms.Panel panel70;
-		private System.Windows.Forms.Panel panel101;
-		private System.Windows.Forms.Panel panel62;
-		private System.Windows.Forms.Panel panel100;
-		private System.Windows.Forms.Panel panel69;
-		private System.Windows.Forms.Panel panel99;
-		private System.Windows.Forms.Panel panel23;
-		private System.Windows.Forms.Panel panel98;
-		private System.Windows.Forms.Panel panel68;
-		private System.Windows.Forms.Panel panel97;
-		private System.Windows.Forms.Panel panel40;
-		private System.Windows.Forms.Panel panel96;
-		private System.Windows.Forms.Panel panel67;
-		private System.Windows.Forms.Panel panel95;
-		private System.Windows.Forms.Panel panel57;
-		private System.Windows.Forms.Panel panel94;
-		private System.Windows.Forms.Panel panel66;
-		private System.Windows.Forms.Panel panel93;
-		private System.Windows.Forms.Panel panel31;
-		private System.Windows.Forms.Panel panel92;
-		private System.Windows.Forms.Panel panel65;
-		private System.Windows.Forms.Panel panel91;
-		private System.Windows.Forms.Panel panel64;
-		private System.Windows.Forms.Panel panel90;
-		private System.Windows.Forms.Panel panel39;
-		private System.Windows.Forms.Panel panel89;
-		private System.Windows.Forms.Panel panel63;
-		private System.Windows.Forms.Panel panel88;
-		private System.Windows.Forms.Panel panel87;
-		private System.Windows.Forms.Panel panel3;
-		private System.Windows.Forms.Panel panel4;
-		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.Button buttonTact;
-		private System.Windows.Forms.Button buttonStart;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.TabControl tabControl1;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.TextBox textBoxInfix;
-		private System.Windows.Forms.TextBox textBoxPostfix;
-		private System.Windows.Forms.Button buttonMasterF;
-        private System.Windows.Forms.Label labelStack;
+        }
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton radioButtonAuto;
+        private System.Windows.Forms.RadioButton radioButtonStep;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel50;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel52;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel49;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel53;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel54;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel47;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel55;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel56;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel86;
+        private System.Windows.Forms.Panel panel58;
+        private System.Windows.Forms.Panel panel85;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Panel panel84;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Panel panel83;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel82;
+        private System.Windows.Forms.Panel panel59;
+        private System.Windows.Forms.Panel panel81;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel80;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Panel panel79;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Panel panel78;
+        private System.Windows.Forms.Panel panel60;
+        private System.Windows.Forms.Panel panel77;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel76;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel75;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel74;
+        private System.Windows.Forms.Panel panel61;
+        private System.Windows.Forms.Panel panel73;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel72;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel71;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel102;
+        private System.Windows.Forms.Panel panel70;
+        private System.Windows.Forms.Panel panel101;
+        private System.Windows.Forms.Panel panel62;
+        private System.Windows.Forms.Panel panel100;
+        private System.Windows.Forms.Panel panel69;
+        private System.Windows.Forms.Panel panel99;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel98;
+        private System.Windows.Forms.Panel panel68;
+        private System.Windows.Forms.Panel panel97;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Panel panel96;
+        private System.Windows.Forms.Panel panel67;
+        private System.Windows.Forms.Panel panel95;
+        private System.Windows.Forms.Panel panel57;
+        private System.Windows.Forms.Panel panel94;
+        private System.Windows.Forms.Panel panel66;
+        private System.Windows.Forms.Panel panel93;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel92;
+        private System.Windows.Forms.Panel panel65;
+        private System.Windows.Forms.Panel panel91;
+        private System.Windows.Forms.Panel panel64;
+        private System.Windows.Forms.Panel panel90;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel89;
+        private System.Windows.Forms.Panel panel63;
+        private System.Windows.Forms.Panel panel88;
+        private System.Windows.Forms.Panel panel87;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button buttonTact;
+        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBoxInfix;
+        private System.Windows.Forms.TextBox textBoxPostfix;
+        private System.Windows.Forms.Button buttonMasterF;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label55;
@@ -3401,5 +3539,19 @@ namespace Model
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.TextBox textBoxRealTime;
+        private System.Windows.Forms.Panel panelInd1;
+        private System.Windows.Forms.Panel panelInd8;
+        private System.Windows.Forms.Panel panelInd7;
+        private System.Windows.Forms.Panel panelInd6;
+        private System.Windows.Forms.Panel panelInd9;
+        private System.Windows.Forms.Panel panelInd5;
+        private System.Windows.Forms.Panel panelInd3;
+        private System.Windows.Forms.Panel panelInd4;
+        private System.Windows.Forms.Panel panelInd2;
+        private System.Windows.Forms.Label labelStack;
+        private System.Windows.Forms.Panel panelInd11;
+        private System.Windows.Forms.Panel panelInd10;
     }
 }

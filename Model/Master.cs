@@ -31,7 +31,7 @@ namespace Model
         Dictionary<int, string> funcDictionary = new Dictionary<int, string>()
         {
             {0, "sin"}, {1, "cos"}, {2, "ln"},
-            {3, "arcsin"}, {4, "arccos"}, 
+            {3, "arcsin"}, {4, "arccos"},
         };
 
 
@@ -53,7 +53,7 @@ namespace Model
             }
             if (stringList.Count <= 1)
             {
-                labelError.Text = "asda";
+                labelError.Text = "Выражение должно содержать хотя бы 1 элемент";
             }
             else if (int.TryParse(stringList[stringList.Count - 1], out int Variable) || stringList[stringList.Count - 1].Equals(")"))
             {
@@ -171,7 +171,7 @@ namespace Model
 
                         stringList.RemoveAt(stringList.Count - 1);
 
-                        
+
                         stringListBuff.RemoveAt(stringListBuff.Count - 1);
 
                     }
@@ -225,19 +225,19 @@ namespace Model
             if (stringList.Count < 80 && isNewElementCorrect(symbol))
             {
                 textBoxMasterF.AppendText(symbol.ToString());
-               /* string temp = textBoxMasterF.Text;
-                string start = temp.Substring(0, index);
-                string finish = "";
-                if (index < temp.Length)
-                {
-                    finish = temp.Substring(index, textBoxMasterF.Text.Length - index);
-                }
-                textBoxMasterF.Clear();
-                textBoxMasterF.AppendText(start);
-                textBoxMasterF.AppendText(symbol.ToString());
-                textBoxMasterF.AppendText(finish);
-                index++;
-                textBoxMasterF.SelectionStart = index;*/
+                /* string temp = textBoxMasterF.Text;
+                 string start = temp.Substring(0, index);
+                 string finish = "";
+                 if (index < temp.Length)
+                 {
+                     finish = temp.Substring(index, textBoxMasterF.Text.Length - index);
+                 }
+                 textBoxMasterF.Clear();
+                 textBoxMasterF.AppendText(start);
+                 textBoxMasterF.AppendText(symbol.ToString());
+                 textBoxMasterF.AppendText(finish);
+                 index++;
+                 textBoxMasterF.SelectionStart = index;*/
                 textBoxMasterF.Focus();
             }
         }
@@ -274,14 +274,14 @@ namespace Model
 
             else if (symbol.Equals('('))
             {
-                if (stringList.Count==0)
+                if (stringList.Count == 0)
                 {
                     labelError.Text = "";
                     stringList.Add(symbol.ToString());
                     return true;
                 }
                 if (!operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1))
-                    && !funcDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1)) && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
+                    && !funcDictionary.ContainsValue(stringList[stringList.Count - 1]) && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
                 {
                     labelError.Text = "Перед скобкой должен стоять знак!";
                     return false;
@@ -292,7 +292,7 @@ namespace Model
                     stringList.Add(symbol.ToString());
                     return true;
                 }
-                
+
             }
             else if (symbol.Equals(')'))
             {
@@ -301,7 +301,8 @@ namespace Model
                     labelError.Text = "Скобки не могут быть пустыми!";
                     return false;
                 }
-                else if(!int.TryParse(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1), out intVariable)) 
+                else if (!int.TryParse(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1), out intVariable) 
+                    && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals(")"))
                 {
                     labelError.Text = "Слева от закрывающей скобки должно стоять какое-то число!";
                     return false;
@@ -310,13 +311,13 @@ namespace Model
                 {
                     labelError.Text = "";
                     stringList.Add(stringListBuffToString());
-                    stringList.Add(symbol.ToString()); 
+                    stringList.Add(symbol.ToString());
                     return true;
                 }
             }
             else if (operatorDictionary.ContainsValue(symbol.ToString())) //проверка для символов
             {
-                if (stringListBuff.Count == 0 && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals(")") 
+                if (stringListBuff.Count == 0 && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals(")")
                     || operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1))
                     || textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
                 {
@@ -325,7 +326,8 @@ namespace Model
                 }
                 else
                 {
-                    stringList.Add(stringListBuffToString());
+                    if(stringListBuff.Count != 0)
+                        stringList.Add(stringListBuffToString());
                     stringList.Add(symbol.ToString());
                     checkPoint = false;
                     return true;
@@ -334,19 +336,31 @@ namespace Model
             }
             else
             {
+                if (stringList.Count == 0)
+                {
+                    labelError.Text = "";
+                    stringList.Add(symbol.ToString());
+                    return true;
+                }
+                if (int.TryParse(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1), out intVariable))
+                {
+                    labelError.Text = "Перед функцией должен стоять знак!";
+                    return false;
+                }
                 if (!operatorDictionary.ContainsValue(textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1)) && !textBoxMasterF.Text.Substring(textBoxMasterF.Text.Length - 1).Equals("("))
                 {
                     labelError.Text = "";
                     return false;
                 }
+                
                 else
                 {
                     stringList.Add(symbol.ToString());
                     return true;
                 }
-             
+
             }
-           
+
         }
 
         private string stringListBuffToString()
@@ -360,7 +374,7 @@ namespace Model
             return stringListString;
         }
 
-        
+
 
 
 
