@@ -18,20 +18,21 @@ namespace Model
             InitializeComponent();
 
         }
-        List<string> infixStringList = new List<string>();
-        Dictionary<int, string> operatorDictionary = new Dictionary<int, string>()
+        List<string> infixStringList = new List<string>(); // входная строка
+        Dictionary<int, string> operatorDictionary = new Dictionary<int, string>() //Словарь операторов 
         {
             {1, "+"}, {2, "-"}, {3, "*"},
             {4, "/"}, {5, "^"}, {6, "("}, {7, ")"}
         };
-        Dictionary<int, string> funcDictionary = new Dictionary<int, string>()
+        Dictionary<int, string> funcDictionary = new Dictionary<int, string>() //Словарь функций
         {
-            {1, "cos"}, {2, "sin"}, {3, "ln"}
+            {1, "cos"}, {2, "sin"}, {3, "ln"},
+            {4, "arcsin"}, {5, "arccos"},
         };
-        Stack<string> stack = new Stack<string>();
+        Stack<string> stack = new Stack<string>(); //Стэк
         int instruction = 0;
         bool error = false;
-        // !!!! Словарь перевода цифр в символы
+
 
         int[,] arrTable = {
             {4, 1, 1, 1, 1, 1, 1, 5, 1, 6},
@@ -42,12 +43,12 @@ namespace Model
             {2, 2, 2, 2, 2, 2, 1, 2, 1, 6 },
             {5, 1, 1, 1, 1, 1, 1, 3, 1, 6 },
             {2, 2, 2, 2, 2, 1, 1, 7, 7, 6 },
-        };
+        }; // Таблица принятий решений в виде двумерного массива
 
-        void buttonMasterFClick(object sender, EventArgs e)
+        void buttonMasterFClick(object sender, EventArgs e) // Запуск мастера функций 
         {
             Master newForm = new Master();
-            infixStringList.Clear();
+            infixStringList.Clear(); //Перед запуском очистить все списки и строки
             stack.Clear();
             textBoxRealTime.Text = "";
             textBoxInfix.Text = "";
@@ -58,34 +59,29 @@ namespace Model
                 infixStringList = newForm.stringList;
                 textBoxInfix.Text = String.Join("", infixStringList.ToArray());
                 textBoxRealTime.Text = textBoxInfix.Text;
-            };
+            }; // Получение входной строки из мастера функций
             newForm.Show();
 
         }
 
-        void GroupBox1Enter(object sender, EventArgs e)
+        private async void buttonStart_Click(object sender, EventArgs e) //Обработчик события кнопки старт
         {
-
-        }
-
-        private async void buttonStart_Click(object sender, EventArgs e)
-        {
-            if (radioButtonStep.Checked)
+            if (radioButtonStep.Checked) // Если пошаговый режим
             {
                 buttonTact.Enabled = true;
             }
 
-            if (radioButtonAuto.Checked)
+            if (radioButtonAuto.Checked) //Если автоматический режми
             {
 
-                while (stack.Count != 0 || infixStringList.Count != 0)
+                while (stack.Count != 0 || infixStringList.Count != 0) //Пока не пустой стэк и входная строка
                 {
-                    if (error)
+                    if (error) // Если ошибка скобочной структуры, остановить работу
                     {
                         return;    
                     }
                     doOneStep();
-                    await Task.Delay(trackBar1.Value * 1000);
+                    await Task.Delay(trackBar1.Value * 1000); // задержка каждого шага в автоматическом режиме
                 }
 
             }
@@ -96,42 +92,46 @@ namespace Model
             label110.Text = String.Format("Задержка: {0} секунд", trackBar1.Value);
         }
 
-        private int getRowOfInstruction()
+        private int getColumnOfInstruction() //Получаем номер столбца таблицы принятий решений  
         {
             int key = 0;
-            if (infixStringList.Count == 0)
+            if (infixStringList.Count == 0) //Если входная строка пустая, то возвращаем ноль (нулевой столбец)
             {
                 key = 0;
             }
-            else if (operatorDictionary.ContainsValue(infixStringList[0]))
+            else if (operatorDictionary.ContainsValue(infixStringList[0])) //Если текущий элемент входной строки оператор,
+                                                                           //то возвращаем ключ по значения из словаря operatorDictionary
+                                                                           //равный номеру столбца в таблице принятия решений
             {
                 key = operatorDictionary.FirstOrDefault(x => x.Value == infixStringList[0]).Key;
 
             }
-            else if (int.TryParse(infixStringList[0], out int Variable))
+            else if (int.TryParse(infixStringList[0], out int Variable)) //Если текущий элемент входной строки число, то возвращаем 9
             {
                 key = 9;
             }
-            else
+            else // Если текущий элемент входной строки функция, то возвращаем 8
             {
                 key = 8;
             }
             return key;
         }
 
-        private int getColumnOfInstruction()
+        private int getRowOfInstruction() //Получаем номер строки таблицы принятий решений  
         {
             int key = 0;
-            if (stack.Count == 0)
+            if (stack.Count == 0)  //Если стэк пустой, то возвращаем ноль (нулевой столбец)
             {
                 key = 0;
             }
-            else if (operatorDictionary.ContainsValue(stack.Peek()))
+            else if (operatorDictionary.ContainsValue(stack.Peek())) //Если в вершине стэка оператор,
+                                                                     //то возвращаем ключ по значения из словаря operatorDictionary, 
+                                                                     //равный номеру строки в таблице принятия решений
             {
                 key = operatorDictionary.FirstOrDefault(x => x.Value == stack.Peek()).Key;
 
             }
-            else
+            else // Если в вершине стэка функция, то возвращаем 8
             {
                 key = 7;
             }
@@ -144,15 +144,16 @@ namespace Model
 
         }
 
-        private void doOneStep()
+        private void doOneStep() // метод выполняющий один такт алгоритма перевода из инфиксной в постфиксную строку
         {
 
-            instruction = arrTable[getColumnOfInstruction(), getRowOfInstruction()];
+            instruction = arrTable[getRowOfInstruction(), getColumnOfInstruction()]; //По номеру строки и столбца таблицы принятия решения
+                                                                                     // получаем номер действия 
             textBoxRealTime.Text = "";
-            bool isSecondOperation = doInstruction();
-            if (infixStringList.Count != 0 && !isSecondOperation)
+            bool isSecondOperation = doInstruction(); // выполняем инструкцию и возвращаем true, если номер действия - второй
+            if (infixStringList.Count != 0 && !isSecondOperation) //если входная строка не пустая и номер действия не второй
             {
-                infixStringList.RemoveAt(0);
+                infixStringList.RemoveAt(0); //то удаляем текущий элемент входной строки
             }
 
             labelStack.Text = null;
@@ -160,26 +161,21 @@ namespace Model
             Stack<string> printStack = new Stack<string>(stack);
             for (int i = 0; i < stack.Count; i++)
             {
-                /*if (printStack.Count == 1)
                 {
-                    labelStack.Text = printStack.Pop() + "  <--" + labelStack.Text;
-                }
-                else*/
-                {
-                    labelStack.Text = "\n" + printStack.Pop() + labelStack.Text;
+                    labelStack.Text = "\n" + printStack.Pop() + labelStack.Text; //Выводим содержимое стэка 
                 }
             }
 
             for (int i = 0; i < infixStringList.Count; i++)
             {
-                textBoxRealTime.Text += infixStringList[i];
+                textBoxRealTime.Text += infixStringList[i]; //Выводим содержимое входной строки на текущем этапе
             }
             indStack();
 
 
         }
 
-        private void indStack()
+        private void indStack() // метод для графического отображения указателя на вершину стэка
         {
             panelInd1.Visible = false;
             panelInd2.Visible = false;
@@ -235,29 +231,28 @@ namespace Model
 
 
 
-        private bool doInstruction()
+        private bool doInstruction() //метод выполняющий конкретное действие по его номеру
         {
             bool isSecondOperation = false;
             switch (instruction)
             {
-                case 1:
+                case 1: // номер действия = 1, тогда заносим символ из входной строки в стэк
                     stack.Push(infixStringList[0]);
                     break;
-                case 2:
+                case 2: // номер действия = 2, тогда достаем вершину стэка и отправляем его в выходную строку
                     textBoxPostfix.Text += stack.Pop() + " ";
                     isSecondOperation = true;
                     break;
                 case 3:
-                    stack.Pop();
+                    stack.Pop(); // номер действия = 3, тогда удаляем вершину стэка
                     break;
-                case 4:
-                    //textBoxPostfix.Text += " успешное окончание преобразования;";
+                case 4: //Успешное окончание преобразований
                     break;
-                case 5:
+                case 5: // номер действия = 5, сообщаем об ошибке скобочной структуры и останавливаем работу
                     MessageBox.Show("Ошибка скобочной структуры;");
                     error = true;
                     break;
-                case 6:
+                case 6: // номер действия = 6, пересылаем символ из входной строки в выходную
                     textBoxPostfix.Text += infixStringList[0] + " ";
                     break;
             }
