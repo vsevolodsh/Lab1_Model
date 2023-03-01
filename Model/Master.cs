@@ -195,9 +195,9 @@ namespace Model
                     labelError.Text = "Напишите переменную!";
                     return false;
                 }
-                else if (!stringList[stringList.Count - 1].Equals(")")
-                    && operatorDictionary.ContainsValue(stringList[stringList.Count - 1])
-                    && stringList[stringList.Count - 1].Equals("("))
+                else if (!stringList[stringList.Count - 1].Equals(")") && !variableDictionary.ContainsValue(stringList[stringList.Count - 1])
+                    || operatorDictionary.ContainsValue(stringList[stringList.Count - 1])
+                    || stringList[stringList.Count - 1].Equals("("))
                 {
                     labelError.Text = "Напишите число!";
                     return false;
@@ -226,7 +226,6 @@ namespace Model
                     labelError.Text = "";
                     return false;
                 }
-
                 else
                 {
                     stringList.Add(symbol);

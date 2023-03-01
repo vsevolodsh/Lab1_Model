@@ -24,10 +24,10 @@ namespace Model
             {1, "+"}, {2, "-"}, {3, "*"},
             {4, "/"}, {5, "^"}, {6, "("}, {7, ")"}
         };
-        Dictionary<int, string> funcDictionary = new Dictionary<int, string>() //Словарь функций
+        Dictionary<int, string> variableDictionary = new Dictionary<int, string>() //Словарь имен переменных 
         {
-            {1, "cos"}, {2, "sin"}, {3, "ln"},
-            {4, "arcsin"}, {5, "arccos"},
+            {0, "a"}, {1, "b"}, {2, "c"},
+            {3, "d"}, {4, "e"}, {5, "f"}
         };
         Stack<string> stack = new Stack<string>(); //Стэк
         int instruction = 0;
@@ -106,7 +106,7 @@ namespace Model
                 key = operatorDictionary.FirstOrDefault(x => x.Value == infixStringList[0]).Key;
 
             }
-            else if (int.TryParse(infixStringList[0], out int Variable)) //Если текущий элемент входной строки число, то возвращаем 9
+            else if (variableDictionary.ContainsValue(infixStringList[0])) //Если текущий элемент входной строки число, то возвращаем 9
             {
                 key = 9;
             }
@@ -254,6 +254,10 @@ namespace Model
                     break;
                 case 6: // номер действия = 6, пересылаем символ из входной строки в выходную
                     textBoxPostfix.Text += infixStringList[0] + " ";
+                    break;
+                case 7:
+                    textBoxPostfix.Text += stack.Pop() + " ";
+                    isSecondOperation = true;
                     break;
             }
             return isSecondOperation;

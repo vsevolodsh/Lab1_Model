@@ -261,7 +261,6 @@ namespace Model
             this.button4 = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonTact = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -399,7 +398,7 @@ namespace Model
             this.buttonMasterF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMasterF.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
             this.buttonMasterF.Location = new System.Drawing.Point(0, 23);
-            this.buttonMasterF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMasterF.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMasterF.Name = "buttonMasterF";
             this.buttonMasterF.Size = new System.Drawing.Size(345, 23);
             this.buttonMasterF.TabIndex = 0;
@@ -410,7 +409,7 @@ namespace Model
             // textBoxPostfix
             // 
             this.textBoxPostfix.Location = new System.Drawing.Point(4, 72);
-            this.textBoxPostfix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPostfix.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPostfix.Multiline = true;
             this.textBoxPostfix.Name = "textBoxPostfix";
             this.textBoxPostfix.ReadOnly = true;
@@ -420,7 +419,7 @@ namespace Model
             // textBoxInfix
             // 
             this.textBoxInfix.Location = new System.Drawing.Point(361, 25);
-            this.textBoxInfix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxInfix.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxInfix.Multiline = true;
             this.textBoxInfix.Name = "textBoxInfix";
             this.textBoxInfix.ReadOnly = true;
@@ -544,14 +543,13 @@ namespace Model
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.buttonStart);
             this.panel1.Controls.Add(this.buttonTact);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(0, 100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(706, 338);
             this.panel1.TabIndex = 3;
@@ -560,7 +558,7 @@ namespace Model
             // 
             this.panelInd11.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd11.Location = new System.Drawing.Point(14, 38);
-            this.panelInd11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd11.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd11.Name = "panelInd11";
             this.panelInd11.Size = new System.Drawing.Size(50, 20);
             this.panelInd11.TabIndex = 14;
@@ -570,7 +568,7 @@ namespace Model
             // 
             this.panelInd10.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd10.Location = new System.Drawing.Point(14, 58);
-            this.panelInd10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd10.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd10.Name = "panelInd10";
             this.panelInd10.Size = new System.Drawing.Size(50, 20);
             this.panelInd10.TabIndex = 13;
@@ -581,7 +579,7 @@ namespace Model
             this.panel87.BackColor = System.Drawing.Color.White;
             this.panel87.Controls.Add(this.label36);
             this.panel87.Location = new System.Drawing.Point(363, 58);
-            this.panel87.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel87.Margin = new System.Windows.Forms.Padding(2);
             this.panel87.Name = "panel87";
             this.panel87.Size = new System.Drawing.Size(22, 24);
             this.panel87.TabIndex = 86;
@@ -601,7 +599,7 @@ namespace Model
             // 
             this.panelInd2.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd2.Location = new System.Drawing.Point(14, 218);
-            this.panelInd2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd2.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd2.Name = "panelInd2";
             this.panelInd2.Size = new System.Drawing.Size(50, 20);
             this.panelInd2.TabIndex = 13;
@@ -611,7 +609,7 @@ namespace Model
             // 
             this.panelInd1.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd1.Location = new System.Drawing.Point(14, 238);
-            this.panelInd1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd1.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd1.Name = "panelInd1";
             this.panelInd1.Size = new System.Drawing.Size(50, 20);
             this.panelInd1.TabIndex = 18;
@@ -622,7 +620,7 @@ namespace Model
             this.panel88.BackColor = System.Drawing.Color.White;
             this.panel88.Controls.Add(this.label53);
             this.panel88.Location = new System.Drawing.Point(386, 235);
-            this.panel88.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel88.Margin = new System.Windows.Forms.Padding(2);
             this.panel88.Name = "panel88";
             this.panel88.Size = new System.Drawing.Size(22, 24);
             this.panel88.TabIndex = 101;
@@ -642,7 +640,7 @@ namespace Model
             // 
             this.panelInd8.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd8.Location = new System.Drawing.Point(14, 98);
-            this.panelInd8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd8.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd8.Name = "panelInd8";
             this.panelInd8.Size = new System.Drawing.Size(50, 20);
             this.panelInd8.TabIndex = 17;
@@ -653,7 +651,7 @@ namespace Model
             this.panel63.BackColor = System.Drawing.Color.White;
             this.panel63.Controls.Add(this.label55);
             this.panel63.Location = new System.Drawing.Point(340, 235);
-            this.panel63.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel63.Margin = new System.Windows.Forms.Padding(2);
             this.panel63.Name = "panel63";
             this.panel63.Size = new System.Drawing.Size(22, 24);
             this.panel63.TabIndex = 93;
@@ -673,7 +671,7 @@ namespace Model
             // 
             this.panelInd7.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd7.Location = new System.Drawing.Point(14, 118);
-            this.panelInd7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd7.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd7.Name = "panelInd7";
             this.panelInd7.Size = new System.Drawing.Size(50, 20);
             this.panelInd7.TabIndex = 16;
@@ -684,7 +682,7 @@ namespace Model
             this.panel89.BackColor = System.Drawing.Color.White;
             this.panel89.Controls.Add(this.label78);
             this.panel89.Location = new System.Drawing.Point(363, 134);
-            this.panel89.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel89.Margin = new System.Windows.Forms.Padding(2);
             this.panel89.Name = "panel89";
             this.panel89.Size = new System.Drawing.Size(22, 24);
             this.panel89.TabIndex = 89;
@@ -704,7 +702,7 @@ namespace Model
             // 
             this.panelInd6.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd6.Location = new System.Drawing.Point(14, 138);
-            this.panelInd6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd6.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd6.Name = "panelInd6";
             this.panelInd6.Size = new System.Drawing.Size(50, 20);
             this.panelInd6.TabIndex = 15;
@@ -715,7 +713,7 @@ namespace Model
             this.panel39.BackColor = System.Drawing.Color.White;
             this.panel39.Controls.Add(this.label58);
             this.panel39.Location = new System.Drawing.Point(270, 235);
-            this.panel39.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel39.Margin = new System.Windows.Forms.Padding(2);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(22, 24);
             this.panel39.TabIndex = 69;
@@ -735,7 +733,7 @@ namespace Model
             // 
             this.panelInd9.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd9.Location = new System.Drawing.Point(14, 78);
-            this.panelInd9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd9.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd9.Name = "panelInd9";
             this.panelInd9.Size = new System.Drawing.Size(50, 20);
             this.panelInd9.TabIndex = 12;
@@ -745,7 +743,7 @@ namespace Model
             // 
             this.panelInd5.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd5.Location = new System.Drawing.Point(14, 158);
-            this.panelInd5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd5.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd5.Name = "panelInd5";
             this.panelInd5.Size = new System.Drawing.Size(50, 20);
             this.panelInd5.TabIndex = 14;
@@ -756,7 +754,7 @@ namespace Model
             this.panel90.BackColor = System.Drawing.Color.White;
             this.panel90.Controls.Add(this.label47);
             this.panel90.Location = new System.Drawing.Point(363, 84);
-            this.panel90.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel90.Margin = new System.Windows.Forms.Padding(2);
             this.panel90.Name = "panel90";
             this.panel90.Size = new System.Drawing.Size(22, 24);
             this.panel90.TabIndex = 87;
@@ -776,7 +774,7 @@ namespace Model
             // 
             this.panelInd3.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd3.Location = new System.Drawing.Point(14, 198);
-            this.panelInd3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd3.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd3.Name = "panelInd3";
             this.panelInd3.Size = new System.Drawing.Size(50, 20);
             this.panelInd3.TabIndex = 13;
@@ -787,7 +785,7 @@ namespace Model
             this.panel64.BackColor = System.Drawing.Color.White;
             this.panel64.Controls.Add(this.label33);
             this.panel64.Location = new System.Drawing.Point(293, 58);
-            this.panel64.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel64.Margin = new System.Windows.Forms.Padding(2);
             this.panel64.Name = "panel64";
             this.panel64.Size = new System.Drawing.Size(22, 24);
             this.panel64.TabIndex = 70;
@@ -807,7 +805,7 @@ namespace Model
             // 
             this.panelInd4.BackColor = System.Drawing.Color.IndianRed;
             this.panelInd4.Location = new System.Drawing.Point(14, 178);
-            this.panelInd4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelInd4.Margin = new System.Windows.Forms.Padding(2);
             this.panelInd4.Name = "panelInd4";
             this.panelInd4.Size = new System.Drawing.Size(50, 20);
             this.panelInd4.TabIndex = 13;
@@ -818,7 +816,7 @@ namespace Model
             this.panel91.BackColor = System.Drawing.Color.White;
             this.panel91.Controls.Add(this.label54);
             this.panel91.Location = new System.Drawing.Point(363, 235);
-            this.panel91.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel91.Margin = new System.Windows.Forms.Padding(2);
             this.panel91.Name = "panel91";
             this.panel91.Size = new System.Drawing.Size(22, 24);
             this.panel91.TabIndex = 93;
@@ -839,7 +837,7 @@ namespace Model
             this.panel65.BackColor = System.Drawing.Color.White;
             this.panel65.Controls.Add(this.label56);
             this.panel65.Location = new System.Drawing.Point(316, 235);
-            this.panel65.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel65.Margin = new System.Windows.Forms.Padding(2);
             this.panel65.Name = "panel65";
             this.panel65.Size = new System.Drawing.Size(22, 24);
             this.panel65.TabIndex = 85;
@@ -860,7 +858,7 @@ namespace Model
             this.panel92.BackColor = System.Drawing.Color.White;
             this.panel92.Controls.Add(this.label49);
             this.panel92.Location = new System.Drawing.Point(386, 134);
-            this.panel92.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel92.Margin = new System.Windows.Forms.Padding(2);
             this.panel92.Name = "panel92";
             this.panel92.Size = new System.Drawing.Size(22, 24);
             this.panel92.TabIndex = 97;
@@ -881,7 +879,7 @@ namespace Model
             this.panel31.BackColor = System.Drawing.Color.White;
             this.panel31.Controls.Add(this.label61);
             this.panel31.Location = new System.Drawing.Point(200, 235);
-            this.panel31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel31.Margin = new System.Windows.Forms.Padding(2);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(22, 24);
             this.panel31.TabIndex = 45;
@@ -902,7 +900,7 @@ namespace Model
             this.panel93.BackColor = System.Drawing.Color.White;
             this.panel93.Controls.Add(this.label80);
             this.panel93.Location = new System.Drawing.Point(363, 184);
-            this.panel93.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel93.Margin = new System.Windows.Forms.Padding(2);
             this.panel93.Name = "panel93";
             this.panel93.Size = new System.Drawing.Size(22, 24);
             this.panel93.TabIndex = 91;
@@ -923,7 +921,7 @@ namespace Model
             this.panel66.BackColor = System.Drawing.Color.White;
             this.panel66.Controls.Add(this.label87);
             this.panel66.Location = new System.Drawing.Point(293, 134);
-            this.panel66.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel66.Margin = new System.Windows.Forms.Padding(2);
             this.panel66.Name = "panel66";
             this.panel66.Size = new System.Drawing.Size(22, 24);
             this.panel66.TabIndex = 73;
@@ -944,7 +942,7 @@ namespace Model
             this.panel94.BackColor = System.Drawing.Color.White;
             this.panel94.Controls.Add(this.label52);
             this.panel94.Location = new System.Drawing.Point(386, 210);
-            this.panel94.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel94.Margin = new System.Windows.Forms.Padding(2);
             this.panel94.Name = "panel94";
             this.panel94.Size = new System.Drawing.Size(22, 24);
             this.panel94.TabIndex = 100;
@@ -965,7 +963,7 @@ namespace Model
             this.panel57.BackColor = System.Drawing.Color.White;
             this.panel57.Controls.Add(this.label30);
             this.panel57.Location = new System.Drawing.Point(224, 58);
-            this.panel57.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel57.Margin = new System.Windows.Forms.Padding(2);
             this.panel57.Name = "panel57";
             this.panel57.Size = new System.Drawing.Size(22, 24);
             this.panel57.TabIndex = 46;
@@ -986,7 +984,7 @@ namespace Model
             this.panel95.BackColor = System.Drawing.Color.White;
             this.panel95.Controls.Add(this.label38);
             this.panel95.Location = new System.Drawing.Point(386, 84);
-            this.panel95.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel95.Margin = new System.Windows.Forms.Padding(2);
             this.panel95.Name = "panel95";
             this.panel95.Size = new System.Drawing.Size(22, 24);
             this.panel95.TabIndex = 95;
@@ -1007,7 +1005,7 @@ namespace Model
             this.panel67.BackColor = System.Drawing.Color.White;
             this.panel67.Controls.Add(this.label82);
             this.panel67.Location = new System.Drawing.Point(340, 210);
-            this.panel67.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel67.Margin = new System.Windows.Forms.Padding(2);
             this.panel67.Name = "panel67";
             this.panel67.Size = new System.Drawing.Size(22, 24);
             this.panel67.TabIndex = 92;
@@ -1028,7 +1026,7 @@ namespace Model
             this.panel96.BackColor = System.Drawing.Color.White;
             this.panel96.Controls.Add(this.label51);
             this.panel96.Location = new System.Drawing.Point(386, 184);
-            this.panel96.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel96.Margin = new System.Windows.Forms.Padding(2);
             this.panel96.Name = "panel96";
             this.panel96.Size = new System.Drawing.Size(22, 24);
             this.panel96.TabIndex = 99;
@@ -1049,7 +1047,7 @@ namespace Model
             this.panel40.BackColor = System.Drawing.Color.White;
             this.panel40.Controls.Add(this.label59);
             this.panel40.Location = new System.Drawing.Point(247, 235);
-            this.panel40.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel40.Margin = new System.Windows.Forms.Padding(2);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(22, 24);
             this.panel40.TabIndex = 61;
@@ -1070,7 +1068,7 @@ namespace Model
             this.panel97.BackColor = System.Drawing.Color.White;
             this.panel97.Controls.Add(this.label81);
             this.panel97.Location = new System.Drawing.Point(363, 210);
-            this.panel97.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel97.Margin = new System.Windows.Forms.Padding(2);
             this.panel97.Name = "panel97";
             this.panel97.Size = new System.Drawing.Size(22, 24);
             this.panel97.TabIndex = 92;
@@ -1091,7 +1089,7 @@ namespace Model
             this.panel68.BackColor = System.Drawing.Color.White;
             this.panel68.Controls.Add(this.label44);
             this.panel68.Location = new System.Drawing.Point(293, 84);
-            this.panel68.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel68.Margin = new System.Windows.Forms.Padding(2);
             this.panel68.Name = "panel68";
             this.panel68.Size = new System.Drawing.Size(22, 24);
             this.panel68.TabIndex = 71;
@@ -1112,7 +1110,7 @@ namespace Model
             this.panel98.BackColor = System.Drawing.Color.White;
             this.panel98.Controls.Add(this.label37);
             this.panel98.Location = new System.Drawing.Point(386, 58);
-            this.panel98.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel98.Margin = new System.Windows.Forms.Padding(2);
             this.panel98.Name = "panel98";
             this.panel98.Size = new System.Drawing.Size(22, 24);
             this.panel98.TabIndex = 94;
@@ -1133,7 +1131,7 @@ namespace Model
             this.panel23.BackColor = System.Drawing.Color.White;
             this.panel23.Controls.Add(this.label62);
             this.panel23.Location = new System.Drawing.Point(177, 235);
-            this.panel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(22, 24);
             this.panel23.TabIndex = 37;
@@ -1154,7 +1152,7 @@ namespace Model
             this.panel99.BackColor = System.Drawing.Color.White;
             this.panel99.Controls.Add(this.label79);
             this.panel99.Location = new System.Drawing.Point(363, 159);
-            this.panel99.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel99.Margin = new System.Windows.Forms.Padding(2);
             this.panel99.Name = "panel99";
             this.panel99.Size = new System.Drawing.Size(22, 24);
             this.panel99.TabIndex = 90;
@@ -1175,7 +1173,7 @@ namespace Model
             this.panel69.BackColor = System.Drawing.Color.White;
             this.panel69.Controls.Add(this.label57);
             this.panel69.Location = new System.Drawing.Point(293, 235);
-            this.panel69.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel69.Margin = new System.Windows.Forms.Padding(2);
             this.panel69.Name = "panel69";
             this.panel69.Size = new System.Drawing.Size(22, 24);
             this.panel69.TabIndex = 77;
@@ -1196,7 +1194,7 @@ namespace Model
             this.panel100.BackColor = System.Drawing.Color.White;
             this.panel100.Controls.Add(this.label50);
             this.panel100.Location = new System.Drawing.Point(386, 159);
-            this.panel100.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel100.Margin = new System.Windows.Forms.Padding(2);
             this.panel100.Name = "panel100";
             this.panel100.Size = new System.Drawing.Size(22, 24);
             this.panel100.TabIndex = 98;
@@ -1217,7 +1215,7 @@ namespace Model
             this.panel62.BackColor = System.Drawing.Color.White;
             this.panel62.Controls.Add(this.label84);
             this.panel62.Location = new System.Drawing.Point(224, 134);
-            this.panel62.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel62.Margin = new System.Windows.Forms.Padding(2);
             this.panel62.Name = "panel62";
             this.panel62.Size = new System.Drawing.Size(22, 24);
             this.panel62.TabIndex = 49;
@@ -1238,7 +1236,7 @@ namespace Model
             this.panel101.BackColor = System.Drawing.Color.White;
             this.panel101.Controls.Add(this.label48);
             this.panel101.Location = new System.Drawing.Point(386, 109);
-            this.panel101.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel101.Margin = new System.Windows.Forms.Padding(2);
             this.panel101.Name = "panel101";
             this.panel101.Size = new System.Drawing.Size(22, 24);
             this.panel101.TabIndex = 96;
@@ -1259,7 +1257,7 @@ namespace Model
             this.panel70.BackColor = System.Drawing.Color.White;
             this.panel70.Controls.Add(this.label88);
             this.panel70.Location = new System.Drawing.Point(316, 134);
-            this.panel70.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel70.Margin = new System.Windows.Forms.Padding(2);
             this.panel70.Name = "panel70";
             this.panel70.Size = new System.Drawing.Size(22, 24);
             this.panel70.TabIndex = 81;
@@ -1280,7 +1278,7 @@ namespace Model
             this.panel102.BackColor = System.Drawing.Color.White;
             this.panel102.Controls.Add(this.label77);
             this.panel102.Location = new System.Drawing.Point(363, 109);
-            this.panel102.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel102.Margin = new System.Windows.Forms.Padding(2);
             this.panel102.Name = "panel102";
             this.panel102.Size = new System.Drawing.Size(22, 24);
             this.panel102.TabIndex = 88;
@@ -1301,7 +1299,7 @@ namespace Model
             this.panel32.BackColor = System.Drawing.Color.White;
             this.panel32.Controls.Add(this.label91);
             this.panel32.Location = new System.Drawing.Point(200, 210);
-            this.panel32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel32.Margin = new System.Windows.Forms.Padding(2);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(22, 24);
             this.panel32.TabIndex = 44;
@@ -1322,7 +1320,7 @@ namespace Model
             this.panel71.BackColor = System.Drawing.Color.White;
             this.panel71.Controls.Add(this.label76);
             this.panel71.Location = new System.Drawing.Point(340, 109);
-            this.panel71.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel71.Margin = new System.Windows.Forms.Padding(2);
             this.panel71.Name = "panel71";
             this.panel71.Size = new System.Drawing.Size(22, 24);
             this.panel71.TabIndex = 88;
@@ -1343,7 +1341,7 @@ namespace Model
             this.panel41.BackColor = System.Drawing.Color.White;
             this.panel41.Controls.Add(this.label108);
             this.panel41.Location = new System.Drawing.Point(270, 210);
-            this.panel41.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel41.Margin = new System.Windows.Forms.Padding(2);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(22, 24);
             this.panel41.TabIndex = 68;
@@ -1364,7 +1362,7 @@ namespace Model
             this.panel72.BackColor = System.Drawing.Color.White;
             this.panel72.Controls.Add(this.label106);
             this.panel72.Location = new System.Drawing.Point(293, 184);
-            this.panel72.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel72.Margin = new System.Windows.Forms.Padding(2);
             this.panel72.Name = "panel72";
             this.panel72.Size = new System.Drawing.Size(22, 24);
             this.panel72.TabIndex = 75;
@@ -1385,7 +1383,7 @@ namespace Model
             this.panel22.BackColor = System.Drawing.SystemColors.Info;
             this.panel22.Controls.Add(this.label27);
             this.panel22.Location = new System.Drawing.Point(154, 235);
-            this.panel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel22.Margin = new System.Windows.Forms.Padding(2);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(22, 24);
             this.panel22.TabIndex = 29;
@@ -1406,7 +1404,7 @@ namespace Model
             this.panel73.BackColor = System.Drawing.Color.White;
             this.panel73.Controls.Add(this.label92);
             this.panel73.Location = new System.Drawing.Point(316, 210);
-            this.panel73.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel73.Margin = new System.Windows.Forms.Padding(2);
             this.panel73.Name = "panel73";
             this.panel73.Size = new System.Drawing.Size(22, 24);
             this.panel73.TabIndex = 84;
@@ -1427,7 +1425,7 @@ namespace Model
             this.panel61.BackColor = System.Drawing.Color.White;
             this.panel61.Controls.Add(this.label40);
             this.panel61.Location = new System.Drawing.Point(224, 84);
-            this.panel61.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel61.Margin = new System.Windows.Forms.Padding(2);
             this.panel61.Name = "panel61";
             this.panel61.Size = new System.Drawing.Size(22, 24);
             this.panel61.TabIndex = 47;
@@ -1448,7 +1446,7 @@ namespace Model
             this.panel74.BackColor = System.Drawing.Color.White;
             this.panel74.Controls.Add(this.label42);
             this.panel74.Location = new System.Drawing.Point(316, 84);
-            this.panel74.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel74.Margin = new System.Windows.Forms.Padding(2);
             this.panel74.Name = "panel74";
             this.panel74.Size = new System.Drawing.Size(22, 24);
             this.panel74.TabIndex = 79;
@@ -1469,7 +1467,7 @@ namespace Model
             this.panel33.BackColor = System.Drawing.Color.White;
             this.panel33.Controls.Add(this.label69);
             this.panel33.Location = new System.Drawing.Point(200, 109);
-            this.panel33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel33.Margin = new System.Windows.Forms.Padding(2);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(22, 24);
             this.panel33.TabIndex = 40;
@@ -1490,7 +1488,7 @@ namespace Model
             this.panel75.BackColor = System.Drawing.Color.White;
             this.panel75.Controls.Add(this.label101);
             this.panel75.Location = new System.Drawing.Point(340, 159);
-            this.panel75.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel75.Margin = new System.Windows.Forms.Padding(2);
             this.panel75.Name = "panel75";
             this.panel75.Size = new System.Drawing.Size(22, 24);
             this.panel75.TabIndex = 90;
@@ -1511,7 +1509,7 @@ namespace Model
             this.panel42.BackColor = System.Drawing.Color.White;
             this.panel42.Controls.Add(this.label60);
             this.panel42.Location = new System.Drawing.Point(224, 235);
-            this.panel42.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel42.Margin = new System.Windows.Forms.Padding(2);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(22, 24);
             this.panel42.TabIndex = 53;
@@ -1532,7 +1530,7 @@ namespace Model
             this.panel76.BackColor = System.Drawing.Color.White;
             this.panel76.Controls.Add(this.label103);
             this.panel76.Location = new System.Drawing.Point(316, 184);
-            this.panel76.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel76.Margin = new System.Windows.Forms.Padding(2);
             this.panel76.Name = "panel76";
             this.panel76.Size = new System.Drawing.Size(22, 24);
             this.panel76.TabIndex = 83;
@@ -1553,7 +1551,7 @@ namespace Model
             this.panel24.BackColor = System.Drawing.Color.White;
             this.panel24.Controls.Add(this.label63);
             this.panel24.Location = new System.Drawing.Point(177, 210);
-            this.panel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel24.Margin = new System.Windows.Forms.Padding(2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(22, 24);
             this.panel24.TabIndex = 36;
@@ -1574,7 +1572,7 @@ namespace Model
             this.panel77.BackColor = System.Drawing.Color.White;
             this.panel77.Controls.Add(this.label109);
             this.panel77.Location = new System.Drawing.Point(293, 210);
-            this.panel77.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel77.Margin = new System.Windows.Forms.Padding(2);
             this.panel77.Name = "panel77";
             this.panel77.Size = new System.Drawing.Size(22, 24);
             this.panel77.TabIndex = 76;
@@ -1595,7 +1593,7 @@ namespace Model
             this.panel60.BackColor = System.Drawing.Color.White;
             this.panel60.Controls.Add(this.label85);
             this.panel60.Location = new System.Drawing.Point(247, 134);
-            this.panel60.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel60.Margin = new System.Windows.Forms.Padding(2);
             this.panel60.Name = "panel60";
             this.panel60.Size = new System.Drawing.Size(22, 24);
             this.panel60.TabIndex = 57;
@@ -1616,7 +1614,7 @@ namespace Model
             this.panel78.BackColor = System.Drawing.Color.White;
             this.panel78.Controls.Add(this.label34);
             this.panel78.Location = new System.Drawing.Point(316, 58);
-            this.panel78.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel78.Margin = new System.Windows.Forms.Padding(2);
             this.panel78.Name = "panel78";
             this.panel78.Size = new System.Drawing.Size(22, 24);
             this.panel78.TabIndex = 78;
@@ -1637,7 +1635,7 @@ namespace Model
             this.panel34.BackColor = System.Drawing.Color.White;
             this.panel34.Controls.Add(this.label90);
             this.panel34.Location = new System.Drawing.Point(200, 159);
-            this.panel34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel34.Margin = new System.Windows.Forms.Padding(2);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(22, 24);
             this.panel34.TabIndex = 42;
@@ -1658,7 +1656,7 @@ namespace Model
             this.panel79.BackColor = System.Drawing.Color.White;
             this.panel79.Controls.Add(this.label35);
             this.panel79.Location = new System.Drawing.Point(340, 58);
-            this.panel79.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel79.Margin = new System.Windows.Forms.Padding(2);
             this.panel79.Name = "panel79";
             this.panel79.Size = new System.Drawing.Size(22, 24);
             this.panel79.TabIndex = 86;
@@ -1680,7 +1678,7 @@ namespace Model
             this.panel43.Controls.Add(this.label73);
             this.panel43.Controls.Add(this.label72);
             this.panel43.Location = new System.Drawing.Point(270, 109);
-            this.panel43.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel43.Margin = new System.Windows.Forms.Padding(2);
             this.panel43.Name = "panel43";
             this.panel43.Size = new System.Drawing.Size(22, 24);
             this.panel43.TabIndex = 64;
@@ -1711,7 +1709,7 @@ namespace Model
             this.panel80.BackColor = System.Drawing.Color.White;
             this.panel80.Controls.Add(this.label99);
             this.panel80.Location = new System.Drawing.Point(293, 159);
-            this.panel80.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel80.Margin = new System.Windows.Forms.Padding(2);
             this.panel80.Name = "panel80";
             this.panel80.Size = new System.Drawing.Size(22, 24);
             this.panel80.TabIndex = 74;
@@ -1732,7 +1730,7 @@ namespace Model
             this.panel18.BackColor = System.Drawing.SystemColors.Info;
             this.panel18.Controls.Add(this.label26);
             this.panel18.Location = new System.Drawing.Point(154, 210);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(22, 24);
             this.panel18.TabIndex = 28;
@@ -1753,7 +1751,7 @@ namespace Model
             this.panel81.BackColor = System.Drawing.Color.White;
             this.panel81.Controls.Add(this.label102);
             this.panel81.Location = new System.Drawing.Point(340, 184);
-            this.panel81.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel81.Margin = new System.Windows.Forms.Padding(2);
             this.panel81.Name = "panel81";
             this.panel81.Size = new System.Drawing.Size(22, 24);
             this.panel81.TabIndex = 91;
@@ -1774,7 +1772,7 @@ namespace Model
             this.panel59.BackColor = System.Drawing.Color.White;
             this.panel59.Controls.Add(this.label95);
             this.panel59.Location = new System.Drawing.Point(224, 184);
-            this.panel59.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel59.Margin = new System.Windows.Forms.Padding(2);
             this.panel59.Name = "panel59";
             this.panel59.Size = new System.Drawing.Size(22, 24);
             this.panel59.TabIndex = 51;
@@ -1795,7 +1793,7 @@ namespace Model
             this.panel82.BackColor = System.Drawing.Color.White;
             this.panel82.Controls.Add(this.label100);
             this.panel82.Location = new System.Drawing.Point(316, 159);
-            this.panel82.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel82.Margin = new System.Windows.Forms.Padding(2);
             this.panel82.Name = "panel82";
             this.panel82.Size = new System.Drawing.Size(22, 24);
             this.panel82.TabIndex = 82;
@@ -1817,7 +1815,7 @@ namespace Model
             this.panel35.Controls.Add(this.label29);
             this.panel35.Controls.Add(this.label28);
             this.panel35.Location = new System.Drawing.Point(200, 58);
-            this.panel35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel35.Margin = new System.Windows.Forms.Padding(2);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(22, 24);
             this.panel35.TabIndex = 38;
@@ -1848,7 +1846,7 @@ namespace Model
             this.panel83.BackColor = System.Drawing.Color.White;
             this.panel83.Controls.Add(this.label75);
             this.panel83.Location = new System.Drawing.Point(316, 109);
-            this.panel83.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel83.Margin = new System.Windows.Forms.Padding(2);
             this.panel83.Name = "panel83";
             this.panel83.Size = new System.Drawing.Size(22, 24);
             this.panel83.TabIndex = 80;
@@ -1869,7 +1867,7 @@ namespace Model
             this.panel44.BackColor = System.Drawing.Color.White;
             this.panel44.Controls.Add(this.label107);
             this.panel44.Location = new System.Drawing.Point(247, 210);
-            this.panel44.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel44.Margin = new System.Windows.Forms.Padding(2);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(22, 24);
             this.panel44.TabIndex = 60;
@@ -1890,7 +1888,7 @@ namespace Model
             this.panel84.BackColor = System.Drawing.Color.White;
             this.panel84.Controls.Add(this.label89);
             this.panel84.Location = new System.Drawing.Point(340, 134);
-            this.panel84.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel84.Margin = new System.Windows.Forms.Padding(2);
             this.panel84.Name = "panel84";
             this.panel84.Size = new System.Drawing.Size(22, 24);
             this.panel84.TabIndex = 89;
@@ -1911,7 +1909,7 @@ namespace Model
             this.panel36.BackColor = System.Drawing.Color.White;
             this.panel36.Controls.Add(this.label94);
             this.panel36.Location = new System.Drawing.Point(200, 184);
-            this.panel36.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel36.Margin = new System.Windows.Forms.Padding(2);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(22, 24);
             this.panel36.TabIndex = 43;
@@ -1932,7 +1930,7 @@ namespace Model
             this.panel85.BackColor = System.Drawing.Color.White;
             this.panel85.Controls.Add(this.label43);
             this.panel85.Location = new System.Drawing.Point(340, 84);
-            this.panel85.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel85.Margin = new System.Windows.Forms.Padding(2);
             this.panel85.Name = "panel85";
             this.panel85.Size = new System.Drawing.Size(22, 24);
             this.panel85.TabIndex = 87;
@@ -1953,7 +1951,7 @@ namespace Model
             this.panel58.BackColor = System.Drawing.Color.White;
             this.panel58.Controls.Add(this.label45);
             this.panel58.Location = new System.Drawing.Point(247, 84);
-            this.panel58.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel58.Margin = new System.Windows.Forms.Padding(2);
             this.panel58.Name = "panel58";
             this.panel58.Size = new System.Drawing.Size(22, 24);
             this.panel58.TabIndex = 55;
@@ -1974,7 +1972,7 @@ namespace Model
             this.panel86.BackColor = System.Drawing.Color.White;
             this.panel86.Controls.Add(this.label74);
             this.panel86.Location = new System.Drawing.Point(293, 109);
-            this.panel86.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel86.Margin = new System.Windows.Forms.Padding(2);
             this.panel86.Name = "panel86";
             this.panel86.Size = new System.Drawing.Size(22, 24);
             this.panel86.TabIndex = 72;
@@ -1995,7 +1993,7 @@ namespace Model
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.Controls.Add(this.label68);
             this.panel25.Location = new System.Drawing.Point(177, 109);
-            this.panel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel25.Margin = new System.Windows.Forms.Padding(2);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(22, 24);
             this.panel25.TabIndex = 32;
@@ -2016,7 +2014,7 @@ namespace Model
             this.panel45.BackColor = System.Drawing.Color.White;
             this.panel45.Controls.Add(this.label98);
             this.panel45.Location = new System.Drawing.Point(270, 159);
-            this.panel45.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel45.Margin = new System.Windows.Forms.Padding(2);
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(22, 24);
             this.panel45.TabIndex = 66;
@@ -2037,7 +2035,7 @@ namespace Model
             this.panel37.BackColor = System.Drawing.Color.White;
             this.panel37.Controls.Add(this.label46);
             this.panel37.Location = new System.Drawing.Point(200, 84);
-            this.panel37.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel37.Margin = new System.Windows.Forms.Padding(2);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(22, 24);
             this.panel37.TabIndex = 39;
@@ -2058,7 +2056,7 @@ namespace Model
             this.panel56.BackColor = System.Drawing.Color.White;
             this.panel56.Controls.Add(this.label104);
             this.panel56.Location = new System.Drawing.Point(247, 184);
-            this.panel56.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel56.Margin = new System.Windows.Forms.Padding(2);
             this.panel56.Name = "panel56";
             this.panel56.Size = new System.Drawing.Size(22, 24);
             this.panel56.TabIndex = 59;
@@ -2079,7 +2077,7 @@ namespace Model
             this.panel16.BackColor = System.Drawing.SystemColors.Info;
             this.panel16.Controls.Add(this.label22);
             this.panel16.Location = new System.Drawing.Point(154, 109);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(22, 24);
             this.panel16.TabIndex = 24;
@@ -2100,7 +2098,7 @@ namespace Model
             this.panel46.BackColor = System.Drawing.Color.White;
             this.panel46.Controls.Add(this.label96);
             this.panel46.Location = new System.Drawing.Point(224, 210);
-            this.panel46.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel46.Margin = new System.Windows.Forms.Padding(2);
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(22, 24);
             this.panel46.TabIndex = 52;
@@ -2121,7 +2119,7 @@ namespace Model
             this.panel38.BackColor = System.Drawing.Color.White;
             this.panel38.Controls.Add(this.label83);
             this.panel38.Location = new System.Drawing.Point(200, 134);
-            this.panel38.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel38.Margin = new System.Windows.Forms.Padding(2);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(22, 24);
             this.panel38.TabIndex = 41;
@@ -2142,7 +2140,7 @@ namespace Model
             this.panel55.BackColor = System.Drawing.Color.White;
             this.panel55.Controls.Add(this.label31);
             this.panel55.Location = new System.Drawing.Point(247, 58);
-            this.panel55.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel55.Margin = new System.Windows.Forms.Padding(2);
             this.panel55.Name = "panel55";
             this.panel55.Size = new System.Drawing.Size(22, 24);
             this.panel55.TabIndex = 54;
@@ -2163,7 +2161,7 @@ namespace Model
             this.panel26.BackColor = System.Drawing.Color.White;
             this.panel26.Controls.Add(this.label65);
             this.panel26.Location = new System.Drawing.Point(177, 159);
-            this.panel26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel26.Margin = new System.Windows.Forms.Padding(2);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(22, 24);
             this.panel26.TabIndex = 34;
@@ -2184,7 +2182,7 @@ namespace Model
             this.panel47.BackColor = System.Drawing.Color.White;
             this.panel47.Controls.Add(this.label32);
             this.panel47.Location = new System.Drawing.Point(270, 58);
-            this.panel47.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel47.Margin = new System.Windows.Forms.Padding(2);
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(22, 24);
             this.panel47.TabIndex = 62;
@@ -2205,7 +2203,7 @@ namespace Model
             this.panel19.BackColor = System.Drawing.SystemColors.Info;
             this.panel19.Controls.Add(this.label24);
             this.panel19.Location = new System.Drawing.Point(154, 159);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(22, 24);
             this.panel19.TabIndex = 26;
@@ -2226,7 +2224,7 @@ namespace Model
             this.panel54.BackColor = System.Drawing.Color.White;
             this.panel54.Controls.Add(this.label93);
             this.panel54.Location = new System.Drawing.Point(224, 159);
-            this.panel54.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel54.Margin = new System.Windows.Forms.Padding(2);
             this.panel54.Name = "panel54";
             this.panel54.Size = new System.Drawing.Size(22, 24);
             this.panel54.TabIndex = 50;
@@ -2247,7 +2245,7 @@ namespace Model
             this.panel27.BackColor = System.Drawing.Color.White;
             this.panel27.Controls.Add(this.label19);
             this.panel27.Location = new System.Drawing.Point(177, 58);
-            this.panel27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel27.Margin = new System.Windows.Forms.Padding(2);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(22, 24);
             this.panel27.TabIndex = 30;
@@ -2268,7 +2266,7 @@ namespace Model
             this.panel48.BackColor = System.Drawing.Color.White;
             this.panel48.Controls.Add(this.label105);
             this.panel48.Location = new System.Drawing.Point(270, 184);
-            this.panel48.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel48.Margin = new System.Windows.Forms.Padding(2);
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(22, 24);
             this.panel48.TabIndex = 67;
@@ -2289,7 +2287,7 @@ namespace Model
             this.panel28.BackColor = System.Drawing.Color.White;
             this.panel28.Controls.Add(this.label64);
             this.panel28.Location = new System.Drawing.Point(177, 184);
-            this.panel28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel28.Margin = new System.Windows.Forms.Padding(2);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(22, 24);
             this.panel28.TabIndex = 35;
@@ -2310,7 +2308,7 @@ namespace Model
             this.panel53.BackColor = System.Drawing.Color.White;
             this.panel53.Controls.Add(this.label97);
             this.panel53.Location = new System.Drawing.Point(247, 159);
-            this.panel53.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel53.Margin = new System.Windows.Forms.Padding(2);
             this.panel53.Name = "panel53";
             this.panel53.Size = new System.Drawing.Size(22, 24);
             this.panel53.TabIndex = 58;
@@ -2331,7 +2329,7 @@ namespace Model
             this.panel15.BackColor = System.Drawing.SystemColors.Info;
             this.panel15.Controls.Add(this.label20);
             this.panel15.Location = new System.Drawing.Point(154, 58);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(22, 24);
             this.panel15.TabIndex = 22;
@@ -2351,7 +2349,7 @@ namespace Model
             this.panel49.BackColor = System.Drawing.Color.White;
             this.panel49.Controls.Add(this.label71);
             this.panel49.Location = new System.Drawing.Point(247, 109);
-            this.panel49.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel49.Margin = new System.Windows.Forms.Padding(2);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(22, 24);
             this.panel49.TabIndex = 56;
@@ -2372,7 +2370,7 @@ namespace Model
             this.panel29.BackColor = System.Drawing.Color.White;
             this.panel29.Controls.Add(this.label39);
             this.panel29.Location = new System.Drawing.Point(177, 84);
-            this.panel29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel29.Margin = new System.Windows.Forms.Padding(2);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(22, 24);
             this.panel29.TabIndex = 31;
@@ -2393,7 +2391,7 @@ namespace Model
             this.panel52.BackColor = System.Drawing.Color.White;
             this.panel52.Controls.Add(this.label86);
             this.panel52.Location = new System.Drawing.Point(270, 134);
-            this.panel52.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel52.Margin = new System.Windows.Forms.Padding(2);
             this.panel52.Name = "panel52";
             this.panel52.Size = new System.Drawing.Size(22, 24);
             this.panel52.TabIndex = 65;
@@ -2414,7 +2412,7 @@ namespace Model
             this.panel20.BackColor = System.Drawing.SystemColors.Info;
             this.panel20.Controls.Add(this.label25);
             this.panel20.Location = new System.Drawing.Point(154, 184);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(22, 24);
             this.panel20.TabIndex = 27;
@@ -2435,7 +2433,7 @@ namespace Model
             this.panel50.BackColor = System.Drawing.Color.White;
             this.panel50.Controls.Add(this.label41);
             this.panel50.Location = new System.Drawing.Point(270, 84);
-            this.panel50.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel50.Margin = new System.Windows.Forms.Padding(2);
             this.panel50.Name = "panel50";
             this.panel50.Size = new System.Drawing.Size(22, 24);
             this.panel50.TabIndex = 63;
@@ -2457,7 +2455,7 @@ namespace Model
             this.panel30.Controls.Add(this.label67);
             this.panel30.Controls.Add(this.label66);
             this.panel30.Location = new System.Drawing.Point(177, 134);
-            this.panel30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel30.Margin = new System.Windows.Forms.Padding(2);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(22, 24);
             this.panel30.TabIndex = 33;
@@ -2488,7 +2486,7 @@ namespace Model
             this.panel51.BackColor = System.Drawing.Color.White;
             this.panel51.Controls.Add(this.label70);
             this.panel51.Location = new System.Drawing.Point(224, 109);
-            this.panel51.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel51.Margin = new System.Windows.Forms.Padding(2);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(22, 24);
             this.panel51.TabIndex = 48;
@@ -2509,7 +2507,7 @@ namespace Model
             this.panel17.BackColor = System.Drawing.SystemColors.Info;
             this.panel17.Controls.Add(this.label21);
             this.panel17.Location = new System.Drawing.Point(154, 84);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(22, 24);
             this.panel17.TabIndex = 23;
@@ -2530,7 +2528,7 @@ namespace Model
             this.panel21.BackColor = System.Drawing.SystemColors.Info;
             this.panel21.Controls.Add(this.label23);
             this.panel21.Location = new System.Drawing.Point(154, 134);
-            this.panel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel21.Margin = new System.Windows.Forms.Padding(2);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(22, 24);
             this.panel21.TabIndex = 25;
@@ -2551,7 +2549,7 @@ namespace Model
             this.panel10.BackColor = System.Drawing.SystemColors.Info;
             this.panel10.Controls.Add(this.label18);
             this.panel10.Location = new System.Drawing.Point(386, 33);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(22, 24);
             this.panel10.TabIndex = 21;
@@ -2572,7 +2570,7 @@ namespace Model
             this.panel7.BackColor = System.Drawing.SystemColors.Info;
             this.panel7.Controls.Add(this.label13);
             this.panel7.Location = new System.Drawing.Point(270, 33);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(22, 24);
             this.panel7.TabIndex = 16;
@@ -2593,7 +2591,7 @@ namespace Model
             this.panel11.BackColor = System.Drawing.SystemColors.Info;
             this.panel11.Controls.Add(this.label15);
             this.panel11.Location = new System.Drawing.Point(316, 33);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(22, 24);
             this.panel11.TabIndex = 18;
@@ -2614,7 +2612,7 @@ namespace Model
             this.panel6.BackColor = System.Drawing.SystemColors.Info;
             this.panel6.Controls.Add(this.label10);
             this.panel6.Location = new System.Drawing.Point(200, 33);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(22, 24);
             this.panel6.TabIndex = 13;
@@ -2635,7 +2633,7 @@ namespace Model
             this.panel12.BackColor = System.Drawing.SystemColors.Info;
             this.panel12.Controls.Add(this.label17);
             this.panel12.Location = new System.Drawing.Point(363, 33);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(22, 24);
             this.panel12.TabIndex = 20;
@@ -2656,7 +2654,7 @@ namespace Model
             this.panel8.BackColor = System.Drawing.SystemColors.Info;
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(247, 33);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(22, 24);
             this.panel8.TabIndex = 15;
@@ -2677,7 +2675,7 @@ namespace Model
             this.panel13.BackColor = System.Drawing.SystemColors.Info;
             this.panel13.Controls.Add(this.label14);
             this.panel13.Location = new System.Drawing.Point(293, 33);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(22, 24);
             this.panel13.TabIndex = 17;
@@ -2698,7 +2696,7 @@ namespace Model
             this.panel14.BackColor = System.Drawing.SystemColors.Info;
             this.panel14.Controls.Add(this.label16);
             this.panel14.Location = new System.Drawing.Point(340, 33);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(22, 24);
             this.panel14.TabIndex = 19;
@@ -2719,7 +2717,7 @@ namespace Model
             this.panel5.BackColor = System.Drawing.SystemColors.Info;
             this.panel5.Controls.Add(this.label9);
             this.panel5.Location = new System.Drawing.Point(177, 33);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(22, 24);
             this.panel5.TabIndex = 12;
@@ -2740,7 +2738,7 @@ namespace Model
             this.panel9.BackColor = System.Drawing.SystemColors.Info;
             this.panel9.Controls.Add(this.label11);
             this.panel9.Location = new System.Drawing.Point(224, 33);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(22, 24);
             this.panel9.TabIndex = 14;
@@ -2760,7 +2758,7 @@ namespace Model
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Info;
             this.panel4.Location = new System.Drawing.Point(154, 33);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(22, 24);
             this.panel4.TabIndex = 11;
@@ -2770,7 +2768,7 @@ namespace Model
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.labelStack);
             this.panel3.Location = new System.Drawing.Point(68, 38);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(51, 220);
             this.panel3.TabIndex = 10;
@@ -2793,8 +2791,8 @@ namespace Model
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button4.Location = new System.Drawing.Point(408, 310);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(403, 303);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(105, 23);
             this.button4.TabIndex = 8;
@@ -2807,8 +2805,8 @@ namespace Model
             this.buttonStart.FlatAppearance.BorderSize = 0;
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStart.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.buttonStart.Location = new System.Drawing.Point(298, 310);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonStart.Location = new System.Drawing.Point(293, 303);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(105, 23);
             this.buttonStart.TabIndex = 7;
@@ -2823,8 +2821,8 @@ namespace Model
             this.buttonTact.FlatAppearance.BorderSize = 0;
             this.buttonTact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTact.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.buttonTact.Location = new System.Drawing.Point(189, 310);
-            this.buttonTact.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTact.Location = new System.Drawing.Point(184, 303);
+            this.buttonTact.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTact.Name = "buttonTact";
             this.buttonTact.Size = new System.Drawing.Size(105, 23);
             this.buttonTact.TabIndex = 6;
@@ -2832,28 +2830,13 @@ namespace Model
             this.buttonTact.UseVisualStyleBackColor = false;
             this.buttonTact.Click += new System.EventHandler(this.buttonTact_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button1.Location = new System.Drawing.Point(23, 283);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(669, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Таблица воответствия между именами функция и их обозначением на этапе преобразова" +
-    "ния выражения и вычисления его значения";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // label7
             // 
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(65, 262);
+            this.label7.Location = new System.Drawing.Point(38, 272);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(567, 19);
+            this.label7.Size = new System.Drawing.Size(618, 19);
             this.label7.TabIndex = 4;
             this.label7.Text = "Столбцам таблицы соответствуют элементы входной строки, а строкам — элементы, нах" +
     "одящиеся на вершине стека";
@@ -2864,9 +2847,9 @@ namespace Model
             this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(436, 173);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(263, 86);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -2929,9 +2912,9 @@ namespace Model
             this.groupBox1.Controls.Add(this.buttonMasterF);
             this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
             this.groupBox1.Location = new System.Drawing.Point(2, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(706, 439);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -2949,7 +2932,7 @@ namespace Model
             // textBoxRealTime
             // 
             this.textBoxRealTime.Location = new System.Drawing.Point(361, 72);
-            this.textBoxRealTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRealTime.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRealTime.Multiline = true;
             this.textBoxRealTime.Name = "textBoxRealTime";
             this.textBoxRealTime.ReadOnly = true;
@@ -2981,7 +2964,7 @@ namespace Model
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -2993,9 +2976,9 @@ namespace Model
             this.tabPage1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(709, 443);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Преобразование выражений к постфиксной форме";
@@ -3005,9 +2988,9 @@ namespace Model
             this.tabPage2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(709, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Вычисление выражений по их постфиксной форме";
@@ -3027,9 +3010,9 @@ namespace Model
             this.groupBox3.Controls.Add(this.radioButtonAuto);
             this.groupBox3.Controls.Add(this.radioButtonStep);
             this.groupBox3.Location = new System.Drawing.Point(4, 484);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(246, 62);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
@@ -3038,7 +3021,7 @@ namespace Model
             // radioButtonAuto
             // 
             this.radioButtonAuto.Location = new System.Drawing.Point(4, 36);
-            this.radioButtonAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonAuto.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonAuto.Name = "radioButtonAuto";
             this.radioButtonAuto.Size = new System.Drawing.Size(183, 20);
             this.radioButtonAuto.TabIndex = 1;
@@ -3049,7 +3032,7 @@ namespace Model
             // radioButtonStep
             // 
             this.radioButtonStep.Location = new System.Drawing.Point(4, 15);
-            this.radioButtonStep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonStep.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonStep.Name = "radioButtonStep";
             this.radioButtonStep.Size = new System.Drawing.Size(238, 20);
             this.radioButtonStep.TabIndex = 0;
@@ -3060,7 +3043,7 @@ namespace Model
             // checkBox1
             // 
             this.checkBox1.Location = new System.Drawing.Point(275, 477);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(400, 20);
             this.checkBox1.TabIndex = 7;
@@ -3070,7 +3053,7 @@ namespace Model
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(275, 501);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(416, 45);
             this.trackBar1.TabIndex = 8;
@@ -3096,7 +3079,7 @@ namespace Model
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Model";
             this.panel1.ResumeLayout(false);
@@ -3421,7 +3404,6 @@ namespace Model
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
