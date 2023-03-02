@@ -29,9 +29,11 @@ namespace Model
             {0, "a"}, {1, "b"}, {2, "c"},
             {3, "d"}, {4, "e"}, {5, "f"}
         };
-        Stack<string> stack = new Stack<string>(); //Стэк
+        List<string> stack = new List<string>();
+        int index = 1;
+        List<bool> isElementActive = new List<bool>();
         int instruction = 0;
-        bool error = false;
+        bool exit = false;
 
 
         int[,] arrTable = {
@@ -42,7 +44,7 @@ namespace Model
             {2, 2, 2, 2, 2, 1, 1, 2, 1, 6 },
             {2, 2, 2, 2, 2, 2, 1, 2, 1, 6 },
             {5, 1, 1, 1, 1, 1, 1, 3, 1, 6 },
-            {2, 2, 2, 2, 2, 1, 1, 7, 7, 6 },
+            {2, 2, 2, 2, 2, 1, 1, 2, 2, 6 },
         }; // Таблица принятий решений в виде двумерного массива
 
         void buttonMasterFClick(object sender, EventArgs e) // Запуск мастера функций 
@@ -50,10 +52,13 @@ namespace Model
             Master newForm = new Master();
             infixStringList.Clear(); //Перед запуском очистить все списки и строки
             stack.Clear();
+            stack.Add(" ");
+            isElementActive.Clear();
+            isElementActive.Add(true);
             textBoxRealTime.Text = "";
             textBoxInfix.Text = "";
             textBoxPostfix.Text = "";
-            error = false;
+            exit = false;
             newForm.FormClosing += (sender1, e1) =>
             {
                 infixStringList = newForm.stringList;
@@ -76,9 +81,9 @@ namespace Model
 
                 while (stack.Count != 0 || infixStringList.Count != 0) //Пока не пустой стэк и входная строка
                 {
-                    if (error) // Если ошибка скобочной структуры, остановить работу
+                    if (exit) // Если ошибка скобочной структуры, остановить работу
                     {
-                        return;    
+                        return;
                     }
                     doOneStep();
                     await Task.Delay(trackBar1.Value * 1000); // задержка каждого шага в автоматическом режиме
@@ -91,6 +96,7 @@ namespace Model
         {
             label110.Text = String.Format("Задержка: {0} секунд", trackBar1.Value);
         }
+
 
         private int getColumnOfInstruction() //Получаем номер столбца таблицы принятий решений  
         {
@@ -120,15 +126,16 @@ namespace Model
         private int getRowOfInstruction() //Получаем номер строки таблицы принятий решений  
         {
             int key = 0;
-            if (stack.Count == 0)  //Если стэк пустой, то возвращаем ноль (нулевой столбец)
+            if (index == 1)  //Если стэк пустой, то возвращаем ноль (нулевой столбец)
             {
                 key = 0;
             }
-            else if (operatorDictionary.ContainsValue(stack.Peek())) //Если в вершине стэка оператор,
-                                                                     //то возвращаем ключ по значения из словаря operatorDictionary, 
-                                                                     //равный номеру строки в таблице принятия решений
+            else if (operatorDictionary.ContainsValue(stack[index - 1])) //Если в вершине стэка оператор,
+                                                                             //то возвращаем ключ по значения из словаря operatorDictionary, 
+                                                                             //равный номеру строки в таблице принятия решений
             {
-                key = operatorDictionary.FirstOrDefault(x => x.Value == stack.Peek()).Key;
+                // key = operatorDictionary.FirstOrDefault(x => x.Value == stack.Peek()).Key;
+                key = operatorDictionary.FirstOrDefault(x => x.Value == stack[index - 1]).Key;
 
             }
             else // Если в вершине стэка функция, то возвращаем 8
@@ -158,13 +165,12 @@ namespace Model
 
             labelStack.Text = null;
 
-            Stack<string> printStack = new Stack<string>(stack);
-            for (int i = 0; i < stack.Count; i++)
+            //Stack<string> printStack = new Stack<string>(stack);
+            foreach (var item in stack)
             {
-                {
-                    labelStack.Text = "\n" + printStack.Pop() + labelStack.Text; //Выводим содержимое стэка 
-                }
+                labelStack.Text = "\n" + item + labelStack.Text; //Выводим содержимое стэка 
             }
+
 
             for (int i = 0; i < infixStringList.Count; i++)
             {
@@ -188,7 +194,7 @@ namespace Model
             panelInd9.Visible = false;
             panelInd10.Visible = false;
             panelInd11.Visible = false;
-            switch (stack.Count)
+            switch (index)
             {
                 case 0:
 
@@ -237,27 +243,54 @@ namespace Model
             switch (instruction)
             {
                 case 1: // номер действия = 1, тогда заносим символ из входной строки в стэк
-                    stack.Push(infixStringList[0]);
+                    stack.Add(infixStringList[0]);
+                    isElementActive.Add(true);
+                    index = stack.Count;
                     break;
                 case 2: // номер действия = 2, тогда достаем вершину стэка и отправляем его в выходную строку
-                    textBoxPostfix.Text += stack.Pop() + " ";
+                    if (isElementActive[index - 1])
+                    {
+                        textBoxPostfix.Text += stack[index - 1] + " ";
+                        isElementActive[index - 1] = false;
+                        if (stack.Count == 1)
+                        {
+                            index = 1;
+                            return true;
+                        }
+                        while (!isElementActive[index - 1] && index != 1)
+                        {
+
+                            index--;
+                        }
+                    }
                     isSecondOperation = true;
                     break;
                 case 3:
-                    stack.Pop(); // номер действия = 3, тогда удаляем вершину стэка
+                    // номер действия = 3, тогда удаляем вершину стэка
+                    if (isElementActive[index-1])
+                    {
+                        isElementActive[index - 1] = false;
+                        if (stack.Count == 1)
+                        {
+                            index = 1;
+                            return false;
+                        }
+                        while (!isElementActive[index - 1])
+                        {
+                            index--;
+                        }
+                    }
                     break;
                 case 4: //Успешное окончание преобразований
+                    MessageBox.Show("Успешное окончание преобразований!");
+                    exit = true;
                     break;
                 case 5: // номер действия = 5, сообщаем об ошибке скобочной структуры и останавливаем работу
-                    MessageBox.Show("Ошибка скобочной структуры;");
-                    error = true;
+                    MessageBox.Show("Ошибка скобочной структуры!");
+                    exit = true;
                     break;
                 case 6: // номер действия = 6, пересылаем символ из входной строки в выходную
                     textBoxPostfix.Text += infixStringList[0] + " ";
-                    break;
-                case 7:
-                    textBoxPostfix.Text += stack.Pop() + " ";
-                    isSecondOperation = true;
                     break;
             }
             return isSecondOperation;
