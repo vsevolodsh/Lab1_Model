@@ -1,30 +1,25 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Model
 {
-
     public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
-
         }
         List<string> infixStringList = new List<string>(); // входная строка
-        Dictionary<int, string> operatorDictionary = new Dictionary<int, string>() //Словарь операторов 
+        Dictionary<byte, string> operatorDictionary = new Dictionary<byte, string>() //Словарь операторов 
         {
             {1, "+"}, {2, "-"}, {3, "*"},
             {4, "/"}, {5, "^"}, {6, "("}, {7, ")"}
         };
-        Dictionary<int, string> variableDictionary = new Dictionary<int, string>() //Словарь имен переменных 
+        Dictionary<byte, string> variableDictionary = new Dictionary<byte, string>() //Словарь имен переменных 
         {
             {0, "a"}, {1, "b"}, {2, "c"},
             {3, "d"}, {4, "e"}, {5, "f"}
@@ -32,11 +27,9 @@ namespace Model
         List<string> stack = new List<string>();
         int index = 1;
         List<bool> isElementActive = new List<bool>();
-        int instruction = 0;
+        byte instruction = 0;
         bool exit = false;
-
-
-        int[,] arrTable = {
+        byte [,] arrTable = {
             {4, 1, 1, 1, 1, 1, 1, 5, 1, 6},
             {2, 2, 2, 1, 1, 1, 1, 2, 1, 6 },
             {2, 2, 2, 1, 1, 1, 1, 2, 1, 6 },
@@ -66,7 +59,6 @@ namespace Model
                 textBoxRealTime.Text = textBoxInfix.Text;
             }; // Получение входной строки из мастера функций
             newForm.Show();
-
         }
 
         private async void buttonStart_Click(object sender, EventArgs e) //Обработчик события кнопки старт
@@ -75,10 +67,8 @@ namespace Model
             {
                 buttonTact.Enabled = true;
             }
-
             if (radioButtonAuto.Checked) //Если автоматический режми
             {
-
                 while (stack.Count != 0 || infixStringList.Count != 0) //Пока не пустой стэк и входная строка
                 {
                     if (exit) // Если ошибка скобочной структуры, остановить работу
@@ -88,7 +78,6 @@ namespace Model
                     doOneStep();
                     await Task.Delay(trackBar1.Value * 1000); // задержка каждого шага в автоматическом режиме
                 }
-
             }
         }
 
@@ -100,7 +89,7 @@ namespace Model
 
         private int getColumnOfInstruction() //Получаем номер столбца таблицы принятий решений  
         {
-            int key = 0;
+            byte key = 0;
             if (infixStringList.Count == 0) //Если входная строка пустая, то возвращаем ноль (нулевой столбец)
             {
                 key = 0;
@@ -110,7 +99,6 @@ namespace Model
                                                                            //равный номеру столбца в таблице принятия решений
             {
                 key = operatorDictionary.FirstOrDefault(x => x.Value == infixStringList[0]).Key;
-
             }
             else if (variableDictionary.ContainsValue(infixStringList[0])) //Если текущий элемент входной строки число, то возвращаем 9
             {
@@ -125,7 +113,7 @@ namespace Model
 
         private int getRowOfInstruction() //Получаем номер строки таблицы принятий решений  
         {
-            int key = 0;
+            byte key = 0;
             if (index == 1)  //Если стэк пустой, то возвращаем ноль (нулевой столбец)
             {
                 key = 0;
@@ -136,7 +124,6 @@ namespace Model
             {
                 // key = operatorDictionary.FirstOrDefault(x => x.Value == stack.Peek()).Key;
                 key = operatorDictionary.FirstOrDefault(x => x.Value == stack[index - 1]).Key;
-
             }
             else // Если в вершине стэка функция, то возвращаем 8
             {
@@ -148,12 +135,10 @@ namespace Model
         private void buttonTact_Click(object sender, EventArgs e)
         {
             doOneStep();
-
         }
 
         private void doOneStep() // метод выполняющий один такт алгоритма перевода из инфиксной в постфиксную строку
         {
-
             instruction = arrTable[getRowOfInstruction(), getColumnOfInstruction()]; //По номеру строки и столбца таблицы принятия решения
                                                                                      // получаем номер действия 
             textBoxRealTime.Text = "";
@@ -162,23 +147,16 @@ namespace Model
             {
                 infixStringList.RemoveAt(0); //то удаляем текущий элемент входной строки
             }
-
             labelStack.Text = null;
-
-            //Stack<string> printStack = new Stack<string>(stack);
             foreach (var item in stack)
             {
                 labelStack.Text = "\n" + item + labelStack.Text; //Выводим содержимое стэка 
             }
-
-
             for (int i = 0; i < infixStringList.Count; i++)
             {
                 textBoxRealTime.Text += infixStringList[i]; //Выводим содержимое входной строки на текущем этапе
             }
             indStack();
-
-
         }
 
         private void indStack() // метод для графического отображения указателя на вершину стэка
@@ -235,49 +213,46 @@ namespace Model
             }
         }
 
-
-
         private bool doInstruction() //метод выполняющий конкретное действие по его номеру
         {
             bool isSecondOperation = false;
             switch (instruction)
             {
                 case 1: // номер действия = 1, тогда заносим символ из входной строки в стэк
-                    stack.Add(infixStringList[0]);
-                    isElementActive.Add(true);
-                    index = stack.Count;
+                    stack.Add(infixStringList[0]);// на вершину стэка заносится символ
+                    isElementActive.Add(true); // устанавливаем, что символ находится в стэке
+                    index = stack.Count; //индекс становится ранвым количеству символов в стэке
                     break;
                 case 2: // номер действия = 2, тогда достаем вершину стэка и отправляем его в выходную строку
-                    if (isElementActive[index - 1])
+                    if (isElementActive[index - 1]) //если истина - значит к элемент находится в стэке и к нему можно обращаться
                     {
                         textBoxPostfix.Text += stack[index - 1] + " ";
-                        isElementActive[index - 1] = false;
-                        if (stack.Count == 1)
+                        isElementActive[index - 1] = false; //достаем элемент из стэка и запрещаем к нему обращаться.
+                        if (stack.Count == 1) // если в стэке нет символов (первый элемент - пустая строка)
                         {
-                            index = 1;
+                            index = 1; 
                             return true;
                         }
-                        while (!isElementActive[index - 1] && index != 1)
+                        while (!isElementActive[index - 1] && index != 1) //пока не встретим активный элемент стэка или пока не дойдем до его конца
                         {
-
-                            index--;
+                            index--; // уменьшаем индекс на 1
                         }
                     }
                     isSecondOperation = true;
                     break;
                 case 3:
                     // номер действия = 3, тогда удаляем вершину стэка
-                    if (isElementActive[index-1])
-                    {
-                        isElementActive[index - 1] = false;
-                        if (stack.Count == 1)
+                    if (isElementActive[index - 1]) //если истина - значит к элемент находится в стэке и к нему можно обращаться
+                    {        
+                        isElementActive[index - 1] = false; //достаем элемент из стэка и запрещаем к нему обращаться.
+                        if (stack.Count == 1) // если в стэке нет символов (первый элемент - пустая строка)
                         {
                             index = 1;
-                            return false;
+                            return true;
                         }
-                        while (!isElementActive[index - 1])
+                        while (!isElementActive[index - 1] && index != 1) //пока не встретим активный элемент стэка или пока не дойдем до его конца
                         {
-                            index--;
+                            index--; // уменьшаем индекс на 1
                         }
                     }
                     break;
@@ -295,6 +270,5 @@ namespace Model
             }
             return isSecondOperation;
         }
-
     }
 }

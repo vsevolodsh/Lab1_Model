@@ -115,17 +115,17 @@ namespace Model
             InitializeComponent();
         }
         public List<string> stringList = new List<string>(80); // входная строка
-        Dictionary<int, string> variableDictionary = new Dictionary<int, string>() //Словарь имен переменных 
+        Dictionary<byte, string> variableDictionary = new Dictionary<byte, string>() //Словарь имен переменных 
         {
             {0, "a"}, {1, "b"}, {2, "c"},
             {3, "d"}, {4, "e"}, {5, "f"}
         };
-        Dictionary<int, string> operatorDictionary = new Dictionary<int, string>() //Словарь операторов 
+        Dictionary<byte, string> operatorDictionary = new Dictionary<byte, string>() //Словарь операторов 
         {
             {0, "+"}, {1, "-"}, {2, "*"},
             {3, "/"}, {4, "^"},
         };
-        Dictionary<int, string> funcDictionary = new Dictionary<int, string>() //Словарь функций
+        Dictionary<byte, string> funcDictionary = new Dictionary<byte, string>() //Словарь функций
         {
             {0, "sin"}, {1, "cos"}, {2, "ln"},
             {3, "arcsin"}, {4, "arccos"},
@@ -232,11 +232,11 @@ namespace Model
             }
         }
 
-        private bool isNewElementCorrect(string symbol) //Проверка на верное написание символа
+        private bool isNewElementCorrect(string symbol) //проверки ввода
         {
-            if (variableDictionary.ContainsValue(symbol))
+            if (variableDictionary.ContainsValue(symbol)) //Проверка на верное написание переменной 
             {
-                if (stringList.Count != 0 && variableDictionary.ContainsValue(stringList[stringList.Count - 1]))
+                if (stringList.Count != 0 && variableDictionary.ContainsValue(stringList[stringList.Count - 1])) //если строка пустая или предыдущей символ другая переменная
                 {
                     labelError.Text = "Перед переменной должен стоять символ операции!";
                     return false;
@@ -251,15 +251,14 @@ namespace Model
             }
             else if (symbol.Equals("(")) // Проверка для (
             {
-                if (stringList.Count == 0)
+                if (stringList.Count == 0) //если строка пустая
                 {
                     labelError.Text = "";
                     stringList.Add(symbol);
                     return true;
                 }
-                else if (!operatorDictionary.ContainsValue(stringList[stringList.Count - 1])
-                    && !funcDictionary.ContainsValue(stringList[stringList.Count - 1]) && variableDictionary.ContainsValue(stringList[stringList.Count - 1])
-                    && !stringList[stringList.Count - 1].Equals("("))
+                else if (variableDictionary.ContainsValue(stringList[stringList.Count - 1]) || stringList[stringList.Count - 1].Equals(")")) 
+                    // если перед скобкой стоит переменная или )
                 {
                     labelError.Text = "Перед скобкой должен стоять символ операции!";
                     return false;
@@ -274,20 +273,20 @@ namespace Model
             }
             else if (symbol.Equals(")"))// Проверка для )
             {
-                if (stringList.Count == 0)
+                if (stringList.Count == 0) //если строка пустая
                 {
                     labelError.Text = "Выражение не может начинаться с закрывающей скобки!";
                     return false;
                 }
-                else if (stringList[stringList.Count - 1].Equals("("))
+                else if (stringList[stringList.Count - 1].Equals("(")) //если предыдущий символ (
                 {
                     labelError.Text = "Скобки не могут быть пустыми!";
                     return false;
                 }
                 else if (!variableDictionary.ContainsValue(stringList[stringList.Count - 1])
-                    && !stringList[stringList.Count - 1].Equals(")"))
+                    && !stringList[stringList.Count - 1].Equals(")")) // если предыдщуий символ не переменная и не )
                 {
-                    labelError.Text = "Слева от закрывающей скобки должнв стоять какая-то переменная!";
+                    labelError.Text = "Слева от закрывающей скобки должна стоять какая-то переменная!";
                     return false;
                 }
                 else
@@ -299,14 +298,13 @@ namespace Model
             }
             else if (operatorDictionary.ContainsValue(symbol)) //проверка для символов
             {
-                if (stringList.Count == 0)
+                if (stringList.Count == 0) //если строка пустая
                 {
                     labelError.Text = "Напишите переменную!";
                     return false;
                 }
-                else if (!stringList[stringList.Count - 1].Equals(")") && !variableDictionary.ContainsValue(stringList[stringList.Count - 1])
-                    || operatorDictionary.ContainsValue(stringList[stringList.Count - 1])
-                    || stringList[stringList.Count - 1].Equals("("))
+                else if (!stringList[stringList.Count - 1].Equals(")") && !variableDictionary.ContainsValue(stringList[stringList.Count - 1]))
+                    // если предыдщуий символ не ) и не переменная 
                 {
                     labelError.Text = "Напишите число!";
                     return false;
@@ -319,7 +317,7 @@ namespace Model
             }
             else // Проверка для функций
             {
-                if (stringList.Count == 0)
+                if (stringList.Count == 0) //если строка пустая
                 {
                     labelError.Text = "";
                     stringList.Add(symbol);
