@@ -258,9 +258,9 @@ namespace Model
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelStack = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.buttonStart = new System.Windows.Forms.Button();
-            this.buttonTact = new System.Windows.Forms.Button();
+            this.buttonStop1 = new System.Windows.Forms.Button();
+            this.buttonStart1 = new System.Windows.Forms.Button();
+            this.buttonTact1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -276,43 +276,40 @@ namespace Model
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label119 = new System.Windows.Forms.Label();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.panel104 = new System.Windows.Forms.Panel();
-            this.label117 = new System.Windows.Forms.Label();
-            this.panel103 = new System.Windows.Forms.Panel();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label116 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonStart2 = new System.Windows.Forms.Button();
+            this.label114 = new System.Windows.Forms.Label();
+            this.buttonTact2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.panel103 = new System.Windows.Forms.Panel();
+            this.textBoxVarF = new System.Windows.Forms.TextBox();
+            this.textBoxVarE = new System.Windows.Forms.TextBox();
+            this.textBoxVarD = new System.Windows.Forms.TextBox();
+            this.textBoxVarC = new System.Windows.Forms.TextBox();
+            this.textBoxVarB = new System.Windows.Forms.TextBox();
+            this.textBoxVarA = new System.Windows.Forms.TextBox();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPostfixRealTime = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButtonAuto = new System.Windows.Forms.RadioButton();
             this.radioButtonStep = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label110 = new System.Windows.Forms.Label();
+            this.labelNumStack = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel87.SuspendLayout();
             this.panel88.SuspendLayout();
@@ -420,9 +417,8 @@ namespace Model
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel104.SuspendLayout();
-            this.panel103.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.panel103.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -579,9 +575,9 @@ namespace Model
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.buttonStart);
-            this.panel1.Controls.Add(this.buttonTact);
+            this.panel1.Controls.Add(this.buttonStop1);
+            this.panel1.Controls.Add(this.buttonStart1);
+            this.panel1.Controls.Add(this.buttonTact1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.label5);
@@ -2825,48 +2821,48 @@ namespace Model
             this.labelStack.Size = new System.Drawing.Size(0, 21);
             this.labelStack.TabIndex = 0;
             // 
-            // button4
+            // buttonStop1
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.button4.Enabled = false;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button4.Location = new System.Drawing.Point(402, 307);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Стоп";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonStop1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonStop1.Enabled = false;
+            this.buttonStop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStop1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
+            this.buttonStop1.Location = new System.Drawing.Point(402, 307);
+            this.buttonStop1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStop1.Name = "buttonStop1";
+            this.buttonStop1.Size = new System.Drawing.Size(105, 23);
+            this.buttonStop1.TabIndex = 8;
+            this.buttonStop1.Text = "Стоп";
+            this.buttonStop1.UseVisualStyleBackColor = false;
             // 
-            // buttonStart
+            // buttonStart1
             // 
-            this.buttonStart.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStart.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.buttonStart.Location = new System.Drawing.Point(293, 307);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(105, 23);
-            this.buttonStart.TabIndex = 7;
-            this.buttonStart.Text = "Старт";
-            this.buttonStart.UseVisualStyleBackColor = false;
-            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            this.buttonStart1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonStart1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStart1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
+            this.buttonStart1.Location = new System.Drawing.Point(293, 307);
+            this.buttonStart1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStart1.Name = "buttonStart1";
+            this.buttonStart1.Size = new System.Drawing.Size(105, 23);
+            this.buttonStart1.TabIndex = 7;
+            this.buttonStart1.Text = "Старт";
+            this.buttonStart1.UseVisualStyleBackColor = false;
+            this.buttonStart1.Click += new System.EventHandler(this.buttonStart_Click);
             // 
-            // buttonTact
+            // buttonTact1
             // 
-            this.buttonTact.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonTact.Enabled = false;
-            this.buttonTact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTact.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.buttonTact.Location = new System.Drawing.Point(184, 307);
-            this.buttonTact.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonTact.Name = "buttonTact";
-            this.buttonTact.Size = new System.Drawing.Size(105, 23);
-            this.buttonTact.TabIndex = 6;
-            this.buttonTact.Text = "Такт";
-            this.buttonTact.UseVisualStyleBackColor = false;
-            this.buttonTact.Click += new System.EventHandler(this.buttonTact_Click);
+            this.buttonTact1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonTact1.Enabled = false;
+            this.buttonTact1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTact1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
+            this.buttonTact1.Location = new System.Drawing.Point(184, 307);
+            this.buttonTact1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTact1.Name = "buttonTact1";
+            this.buttonTact1.Size = new System.Drawing.Size(105, 23);
+            this.buttonTact1.TabIndex = 6;
+            this.buttonTact1.Text = "Такт";
+            this.buttonTact1.UseVisualStyleBackColor = false;
+            this.buttonTact1.Click += new System.EventHandler(this.buttonTact_Click);
             // 
             // label7
             // 
@@ -3039,28 +3035,11 @@ namespace Model
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.White;
-            this.groupBox4.Controls.Add(this.label119);
-            this.groupBox4.Controls.Add(this.radioButton10);
-            this.groupBox4.Controls.Add(this.radioButton9);
-            this.groupBox4.Controls.Add(this.radioButton8);
-            this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton6);
-            this.groupBox4.Controls.Add(this.radioButton5);
-            this.groupBox4.Controls.Add(this.radioButton4);
             this.groupBox4.Controls.Add(this.panel104);
-            this.groupBox4.Controls.Add(this.panel103);
-            this.groupBox4.Controls.Add(this.label118);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.label116);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.panel2);
-            this.groupBox4.Controls.Add(this.label114);
-            this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.label112);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.textBoxPostfixRealTime);
             this.groupBox4.Location = new System.Drawing.Point(2, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(705, 441);
@@ -3068,146 +3047,31 @@ namespace Model
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Вычисление значений выражений по их постфиксной форме";
             // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.Location = new System.Drawing.Point(6, 413);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(59, 13);
-            this.label119.TabIndex = 27;
-            this.label119.Text = "Результат:";
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(216, 132);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(188, 17);
-            this.radioButton10.TabIndex = 26;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Выполнить бинарную операцию";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(216, 116);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(175, 17);
-            this.radioButton9.TabIndex = 25;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Вычислить значение функции";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(216, 100);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(152, 17);
-            this.radioButton8.TabIndex = 24;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Извлечь символ из стека";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(216, 84);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(335, 17);
-            this.radioButton7.TabIndex = 23;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Поместить результат выролнения операции (функции) в стек";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(216, 68);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(247, 17);
-            this.radioButton6.TabIndex = 11;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Поместить символ из входной строки в стек";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(481, 101);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(78, 17);
-            this.radioButton5.TabIndex = 22;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Операнд 2";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(397, 101);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(78, 17);
-            this.radioButton4.TabIndex = 11;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Операнд 1";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
             // panel104
             // 
-            this.panel104.BackColor = System.Drawing.Color.White;
-            this.panel104.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel104.Controls.Add(this.label117);
-            this.panel104.Location = new System.Drawing.Point(428, 179);
-            this.panel104.Margin = new System.Windows.Forms.Padding(2);
+            this.panel104.BackColor = System.Drawing.Color.Transparent;
+            this.panel104.Controls.Add(this.labelResult);
+            this.panel104.Controls.Add(this.button1);
+            this.panel104.Controls.Add(this.buttonStart2);
+            this.panel104.Controls.Add(this.label114);
+            this.panel104.Controls.Add(this.buttonTact2);
+            this.panel104.Controls.Add(this.panel2);
+            this.panel104.Controls.Add(this.panel103);
+            this.panel104.Controls.Add(this.label116);
+            this.panel104.Location = new System.Drawing.Point(8, 79);
             this.panel104.Name = "panel104";
-            this.panel104.Size = new System.Drawing.Size(272, 220);
-            this.panel104.TabIndex = 16;
+            this.panel104.Size = new System.Drawing.Size(694, 356);
+            this.panel104.TabIndex = 30;
             // 
-            // label117
+            // labelResult
             // 
-            this.label117.AutoSize = true;
-            this.label117.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label117.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label117.Location = new System.Drawing.Point(0, 197);
-            this.label117.Name = "label117";
-            this.label117.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label117.Size = new System.Drawing.Size(0, 21);
-            this.label117.TabIndex = 0;
-            // 
-            // panel103
-            // 
-            this.panel103.BackColor = System.Drawing.Color.White;
-            this.panel103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel103.Controls.Add(this.label115);
-            this.panel103.Location = new System.Drawing.Point(216, 179);
-            this.panel103.Margin = new System.Windows.Forms.Padding(2);
-            this.panel103.Name = "panel103";
-            this.panel103.Size = new System.Drawing.Size(208, 220);
-            this.panel103.TabIndex = 14;
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label115.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label115.Location = new System.Drawing.Point(0, 197);
-            this.label115.Name = "label115";
-            this.label115.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label115.Size = new System.Drawing.Size(0, 21);
-            this.label115.TabIndex = 0;
-            // 
-            // label118
-            // 
-            this.label118.BackColor = System.Drawing.Color.Gainsboro;
-            this.label118.Location = new System.Drawing.Point(428, 157);
-            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(272, 20);
-            this.label118.TabIndex = 15;
-            this.label118.Text = "Обозначения функций:";
-            this.label118.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelResult.AutoSize = true;
+            this.labelResult.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelResult.Location = new System.Drawing.Point(339, 247);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(68, 17);
+            this.labelResult.TabIndex = 27;
+            this.labelResult.Text = "Результат:";
             // 
             // button1
             // 
@@ -3215,7 +3079,7 @@ namespace Model
             this.button1.Enabled = false;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button1.Location = new System.Drawing.Point(402, 408);
+            this.button1.Location = new System.Drawing.Point(397, 331);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 23);
@@ -3223,70 +3087,24 @@ namespace Model
             this.button1.Text = "Стоп";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label116
+            // buttonStart2
             // 
-            this.label116.BackColor = System.Drawing.Color.Gainsboro;
-            this.label116.Location = new System.Drawing.Point(216, 157);
-            this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(208, 20);
-            this.label116.TabIndex = 13;
-            this.label116.Text = "Обозначения чисел:";
-            this.label116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button2.Location = new System.Drawing.Point(293, 408);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Старт";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Enabled = false;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.button3.Location = new System.Drawing.Point(184, 408);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Такт";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label113);
-            this.panel2.Location = new System.Drawing.Point(4, 179);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(208, 220);
-            this.panel2.TabIndex = 12;
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label113.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label113.Location = new System.Drawing.Point(0, 197);
-            this.label113.Name = "label113";
-            this.label113.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label113.Size = new System.Drawing.Size(0, 21);
-            this.label113.TabIndex = 0;
+            this.buttonStart2.BackColor = System.Drawing.Color.White;
+            this.buttonStart2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStart2.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
+            this.buttonStart2.Location = new System.Drawing.Point(288, 331);
+            this.buttonStart2.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStart2.Name = "buttonStart2";
+            this.buttonStart2.Size = new System.Drawing.Size(105, 23);
+            this.buttonStart2.TabIndex = 14;
+            this.buttonStart2.Text = "Старт";
+            this.buttonStart2.UseVisualStyleBackColor = false;
+            this.buttonStart2.Click += new System.EventHandler(this.buttonStart2_Click);
             // 
             // label114
             // 
             this.label114.BackColor = System.Drawing.Color.Gainsboro;
-            this.label114.Location = new System.Drawing.Point(4, 157);
+            this.label114.Location = new System.Drawing.Point(63, 6);
             this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(208, 20);
@@ -3294,90 +3112,203 @@ namespace Model
             this.label114.Text = "Стек";
             this.label114.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox5
+            // buttonTact2
             // 
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.textBox4);
-            this.groupBox5.Controls.Add(this.textBox3);
-            this.groupBox5.Controls.Add(this.radioButton3);
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Controls.Add(this.radioButton1);
-            this.groupBox5.Location = new System.Drawing.Point(4, 57);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(208, 95);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Тип первого символа входной строки";
+            this.buttonTact2.BackColor = System.Drawing.Color.White;
+            this.buttonTact2.Enabled = false;
+            this.buttonTact2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTact2.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
+            this.buttonTact2.Location = new System.Drawing.Point(179, 331);
+            this.buttonTact2.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTact2.Name = "buttonTact2";
+            this.buttonTact2.Size = new System.Drawing.Size(105, 23);
+            this.buttonTact2.TabIndex = 13;
+            this.buttonTact2.Text = "Такт";
+            this.buttonTact2.UseVisualStyleBackColor = false;
+            this.buttonTact2.Click += new System.EventHandler(this.buttonTact2_Click);
             // 
-            // textBox5
+            // panel2
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(157, 65);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(33, 22);
-            this.textBox5.TabIndex = 10;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.labelNumStack);
+            this.panel2.Controls.Add(this.label113);
+            this.panel2.Location = new System.Drawing.Point(63, 28);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(208, 288);
+            this.panel2.TabIndex = 12;
             // 
-            // textBox4
+            // label113
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(157, 42);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(33, 22);
-            this.textBox4.TabIndex = 9;
+            this.label113.AutoSize = true;
+            this.label113.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label113.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label113.Location = new System.Drawing.Point(0, 265);
+            this.label113.Name = "label113";
+            this.label113.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label113.Size = new System.Drawing.Size(0, 21);
+            this.label113.TabIndex = 0;
             // 
-            // textBox3
+            // panel103
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(157, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(33, 22);
-            this.textBox3.TabIndex = 8;
+            this.panel103.BackColor = System.Drawing.Color.White;
+            this.panel103.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel103.Controls.Add(this.textBoxVarF);
+            this.panel103.Controls.Add(this.textBoxVarE);
+            this.panel103.Controls.Add(this.textBoxVarD);
+            this.panel103.Controls.Add(this.textBoxVarC);
+            this.panel103.Controls.Add(this.textBoxVarB);
+            this.panel103.Controls.Add(this.textBoxVarA);
+            this.panel103.Controls.Add(this.label122);
+            this.panel103.Controls.Add(this.label123);
+            this.panel103.Controls.Add(this.label120);
+            this.panel103.Controls.Add(this.label121);
+            this.panel103.Controls.Add(this.label118);
+            this.panel103.Controls.Add(this.label117);
+            this.panel103.Controls.Add(this.label115);
+            this.panel103.Location = new System.Drawing.Point(342, 28);
+            this.panel103.Margin = new System.Windows.Forms.Padding(2);
+            this.panel103.Name = "panel103";
+            this.panel103.Size = new System.Drawing.Size(249, 197);
+            this.panel103.TabIndex = 28;
             // 
-            // radioButton3
+            // textBoxVarF
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(15, 67);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(55, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Число";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.textBoxVarF.Location = new System.Drawing.Point(43, 149);
+            this.textBoxVarF.Name = "textBoxVarF";
+            this.textBoxVarF.Size = new System.Drawing.Size(164, 22);
+            this.textBoxVarF.TabIndex = 36;
             // 
-            // radioButton2
+            // textBoxVarE
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(15, 44);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Функция";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.textBoxVarE.Location = new System.Drawing.Point(43, 121);
+            this.textBoxVarE.Name = "textBoxVarE";
+            this.textBoxVarE.Size = new System.Drawing.Size(164, 22);
+            this.textBoxVarE.TabIndex = 35;
             // 
-            // radioButton1
+            // textBoxVarD
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(15, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(125, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Бинарная операция";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.textBoxVarD.Location = new System.Drawing.Point(43, 93);
+            this.textBoxVarD.Name = "textBoxVarD";
+            this.textBoxVarD.Size = new System.Drawing.Size(164, 22);
+            this.textBoxVarD.TabIndex = 34;
+            // 
+            // textBoxVarC
+            // 
+            this.textBoxVarC.Location = new System.Drawing.Point(43, 65);
+            this.textBoxVarC.Name = "textBoxVarC";
+            this.textBoxVarC.Size = new System.Drawing.Size(164, 22);
+            this.textBoxVarC.TabIndex = 33;
+            // 
+            // textBoxVarB
+            // 
+            this.textBoxVarB.Location = new System.Drawing.Point(43, 37);
+            this.textBoxVarB.Name = "textBoxVarB";
+            this.textBoxVarB.Size = new System.Drawing.Size(164, 22);
+            this.textBoxVarB.TabIndex = 32;
+            // 
+            // textBoxVarA
+            // 
+            this.textBoxVarA.Location = new System.Drawing.Point(43, 9);
+            this.textBoxVarA.Name = "textBoxVarA";
+            this.textBoxVarA.Size = new System.Drawing.Size(164, 22);
+            this.textBoxVarA.TabIndex = 31;
+            // 
+            // label122
+            // 
+            this.label122.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label122.Location = new System.Drawing.Point(2, 149);
+            this.label122.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(36, 14);
+            this.label122.TabIndex = 11;
+            this.label122.Text = "f =";
+            // 
+            // label123
+            // 
+            this.label123.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label123.Location = new System.Drawing.Point(2, 121);
+            this.label123.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(36, 14);
+            this.label123.TabIndex = 10;
+            this.label123.Text = "e =";
+            // 
+            // label120
+            // 
+            this.label120.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label120.Location = new System.Drawing.Point(2, 93);
+            this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(36, 14);
+            this.label120.TabIndex = 9;
+            this.label120.Text = "d =";
+            // 
+            // label121
+            // 
+            this.label121.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label121.Location = new System.Drawing.Point(2, 65);
+            this.label121.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(36, 14);
+            this.label121.TabIndex = 8;
+            this.label121.Text = "c =";
+            // 
+            // label118
+            // 
+            this.label118.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label118.Location = new System.Drawing.Point(2, 37);
+            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(36, 14);
+            this.label118.TabIndex = 7;
+            this.label118.Text = "b =";
+            // 
+            // label117
+            // 
+            this.label117.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label117.Location = new System.Drawing.Point(2, 9);
+            this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(36, 14);
+            this.label117.TabIndex = 6;
+            this.label117.Text = "a =";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label115.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label115.Location = new System.Drawing.Point(0, 174);
+            this.label115.Name = "label115";
+            this.label115.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label115.Size = new System.Drawing.Size(0, 21);
+            this.label115.TabIndex = 0;
+            // 
+            // label116
+            // 
+            this.label116.BackColor = System.Drawing.Color.Gainsboro;
+            this.label116.Location = new System.Drawing.Point(342, 6);
+            this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(249, 20);
+            this.label116.TabIndex = 29;
+            this.label116.Text = "Задать значение переменных";
+            this.label116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label112
             // 
-            this.label112.Location = new System.Drawing.Point(355, 15);
+            this.label112.Location = new System.Drawing.Point(5, 34);
             this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(346, 14);
             this.label112.TabIndex = 6;
-            this.label112.Text = "Исходное выражение в инфиксной форме";
+            this.label112.Text = "Выражение в постфиксной форме в реальном времени";
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(4, 15);
+            this.label8.Location = new System.Drawing.Point(353, 34);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(346, 14);
@@ -3386,19 +3317,23 @@ namespace Model
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(355, 31);
+            this.textBox2.Location = new System.Drawing.Point(353, 51);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(346, 22);
             this.textBox2.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxPostfixRealTime
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(4, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBoxPostfixRealTime.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxPostfixRealTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxPostfixRealTime.Location = new System.Drawing.Point(4, 51);
+            this.textBoxPostfixRealTime.Name = "textBoxPostfixRealTime";
+            this.textBoxPostfixRealTime.ReadOnly = true;
+            this.textBoxPostfixRealTime.Size = new System.Drawing.Size(324, 22);
+            this.textBoxPostfixRealTime.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -3441,10 +3376,10 @@ namespace Model
             // checkBox1
             // 
             this.checkBox1.Font = new System.Drawing.Font("Yu Gothic UI", 8.2F);
-            this.checkBox1.Location = new System.Drawing.Point(275, 479);
+            this.checkBox1.Location = new System.Drawing.Point(261, 473);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(416, 20);
+            this.checkBox1.Size = new System.Drawing.Size(459, 20);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "В случае успешного завершения преобразования автопереход в режим вычисления";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -3467,6 +3402,17 @@ namespace Model
             this.label110.Size = new System.Drawing.Size(103, 13);
             this.label110.TabIndex = 9;
             this.label110.Text = "Задержка: 0 секунд";
+            // 
+            // labelNumStack
+            // 
+            this.labelNumStack.AutoSize = true;
+            this.labelNumStack.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelNumStack.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNumStack.Location = new System.Drawing.Point(0, 244);
+            this.labelNumStack.Name = "labelNumStack";
+            this.labelNumStack.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelNumStack.Size = new System.Drawing.Size(0, 21);
+            this.labelNumStack.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -3691,12 +3637,10 @@ namespace Model
             this.groupBox4.PerformLayout();
             this.panel104.ResumeLayout(false);
             this.panel104.PerformLayout();
-            this.panel103.ResumeLayout(false);
-            this.panel103.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.panel103.ResumeLayout(false);
+            this.panel103.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
@@ -3808,9 +3752,9 @@ namespace Model
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button buttonTact;
-        private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonTact1;
+        private System.Windows.Forms.Button buttonStart1;
+        private System.Windows.Forms.Button buttonStop1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
@@ -3944,36 +3888,33 @@ namespace Model
         private System.Windows.Forms.Panel panelInd11;
         private System.Windows.Forms.Panel panelInd10;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Panel panel103;
-        private System.Windows.Forms.Label label115;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonStart2;
+        private System.Windows.Forms.Button buttonTact2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label113;
         private System.Windows.Forms.Label label114;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel104;
+        private System.Windows.Forms.TextBox textBoxPostfixRealTime;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Panel panel103;
         private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Panel panel104;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label121;
         private System.Windows.Forms.Label label118;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.TextBox textBoxVarB;
+        private System.Windows.Forms.TextBox textBoxVarA;
+        private System.Windows.Forms.TextBox textBoxVarF;
+        private System.Windows.Forms.TextBox textBoxVarE;
+        private System.Windows.Forms.TextBox textBoxVarD;
+        private System.Windows.Forms.TextBox textBoxVarC;
+        private System.Windows.Forms.Label labelNumStack;
     }
 }
